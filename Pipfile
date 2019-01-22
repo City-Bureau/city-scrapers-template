@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+twisted = ">=18.9.0"
+scrapy = "*"
+scrapy-sentry = "*"
+legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
+city-scrapers-core = "*"
+
+[dev-packages]
+freezegun = "*"
+pytest = "*"
+"flake8" = "*"
+isort = "*"
+
+[pipenv]
+allow_prereleases = true

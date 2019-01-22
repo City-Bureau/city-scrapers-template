@@ -1,0 +1,25 @@
+language: python
+python:
+  - 3.5
+  - 3.6
+  - 3.7-dev
+install:
+  - pip install pipenv
+  - pipenv install --dev --three --system
+script:
+  - isort --check-only --diff || exit 1
+  - yapf --diff --recursive ./city_scrapers/ ./tests/ || exit 1
+  - flake8
+  - pytest
+  - scrapy validate
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script:
+      - export PYTHONPATH=$(pwd):$PYTHONPATH
+      - export SCRAPY_SETTINGS_MODULE=city_scrapers.settings.prod
+      - scrapy runall
+      - scrapy combinefeeds
+    on:
+      branch: master
+      condition: $TRAVIS_EVENT_TYPE = cron
