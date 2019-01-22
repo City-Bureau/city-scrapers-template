@@ -88,11 +88,11 @@
         },
         "city-scrapers-core": {
             "hashes": [
-                "sha256:1042ad07575f035f54bcef3f86eaffaa6eb25136403193697b92bdfa93dfa3bb",
-                "sha256:824751ffc894b8643d7f44c9c749885114a8b10b2896a53628ba3e726a152fbe"
+                "sha256:1e81289599c6f6675c851119c4656c23d8a984d3fe1a7c3a16f986c58c3a56fc",
+                "sha256:fa2dd21150b6512b464a9d7ead8c9fe644ae4da2065816986b9510bf38ecd6cd"
             ],
             "index": "pypi",
-            "version": "==0.1.6"
+            "version": "==0.1.8"
         },
         "constantly": {
             "hashes": [
@@ -218,7 +218,6 @@
         },
         "pycparser": {
             "hashes": [
-                "sha256:2c447b159a87a5145ee1b9d01ffd99dea5ca6af86fee6381e306a1f98a9d628b",
                 "sha256:a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
             ],
             "version": "==2.19"
