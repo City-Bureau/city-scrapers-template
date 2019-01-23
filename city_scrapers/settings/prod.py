@@ -5,8 +5,9 @@ USER_AGENT = "City Scrapers [production mode]. Learn more and say hello at https
 # Configure item pipelines
 ITEM_PIPELINES = {
     "city_scrapers_core.pipelines.DefaultValuesPipeline": 100,
-    "city_scrapers_core.pipelines.MeetingPipeline": 200,
-    "city_scrapers_core.pipelines.JSCalendarPipeline": 300,
+    "city_scrapers_core.pipelines.DiffPipeline": 200,
+    "city_scrapers_core.pipelines.MeetingPipeline": 300,
+    "city_scrapers_core.pipelines.JSCalendarPipeline": 400,
 }
 
 # Uncomment one of the StatusExtension classes to write an SVG badge of each scraper's status to
@@ -35,8 +36,8 @@ FEED_FORMAT = "jsonlines"
 # scraped results as cancelled.
 
 SPIDER_MIDDLEWARES = {
-    # "city_scrapers_core.middleware.S3DiffMiddleware": 100,
-    # "city_scrapers_core.middleware.AzureDiffMiddleware": 100,
+    # "city_scrapers_core.middleware.S3DiffMiddleware": 250,
+    # "city_scrapers_core.middleware.AzureDiffMiddleware": 250,
 }
 
 
