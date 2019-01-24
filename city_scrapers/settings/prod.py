@@ -36,10 +36,9 @@ FEED_FORMAT = "jsonlines"
 # scraped results as cancelled.
 
 SPIDER_MIDDLEWARES = {
-    # "city_scrapers_core.middleware.S3DiffMiddleware": 250,
-    # "city_scrapers_core.middleware.AzureDiffMiddleware": 250,
+    # "city_scrapers_core.middlewares.S3DiffMiddleware": 250,
+    # "city_scrapers_core.middlewares.AzureDiffMiddleware": 250,
 }
-
 
 # Uncomment S3 or Azure to write scraper results to static file storage as newline-delimited JSON
 # files made up of JSCalendar events following the meeting schema.
@@ -53,15 +52,18 @@ FEED_STORAGES = {
 
 # AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 # AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+# S3_BUCKET = os.getenv("S3_BUCKET")
+# CITY_SCRAPERS_STATUS_CONTAINER = S3_BUCKET
 
 # AZURE_ACCOUNT_NAME = os.getenv("AZURE_ACCOUNT_NAME")
 # AZURE_ACCOUNT_KEY = os.getenv("AZURE_ACCOUNT_KEY")
 # AZURE_CONTAINER = os.getenv("AZURE_CONTAINER")
+# CITY_SCRAPERS_STATUS_CONTAINER = AZURE_CONTAINER
 
 # Uncomment the FEED_URI for whichever provider you're using
 
 # FEED_URI = "s3://{bucket}/%(year)s/%(month)s/%(day)s/%(hour_min)s/%(name)s.json".format(
-#     bucket=CITY_SCRAPERS_STATUS_BUCKET
+#     bucket=S3_BUCKET
 # )
 
 # FEED_URI = (

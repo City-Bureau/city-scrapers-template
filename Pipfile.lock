@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f3a5fcf7587b670aff6813de791c02907ed989dd6954bd0fc0577d827ed5741e"
+            "sha256": "1f371dc97160c519159ff72c9a6e43d4e659498fb92335b797e9e70e6a44c35e"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -88,11 +88,11 @@
         },
         "city-scrapers-core": {
             "hashes": [
-                "sha256:0a2cd07f788d6fb9c3a210e44e07e79fc95abcdfbb327e32a230e62d9dc2b512",
-                "sha256:e62c99a712ae48adc6215a17d34f2ea5a069f8851d5254de8af4c54dfa219b3e"
+                "sha256:1b4dfce4a76b26edfd81b3cca740ff6f80f5484189c5fba65bf9bc0dff58e7ac",
+                "sha256:2b9317267517ee405e8393fac467d0e3aae8e62237d3fe1a9399dd7739dd3ff5"
             ],
             "index": "pypi",
-            "version": "==0.1.9"
+            "version": "==0.1.10"
         },
         "constantly": {
             "hashes": [
@@ -467,6 +467,14 @@
                 "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
             ],
             "version": "==1.12.0"
+        },
+        "yapf": {
+            "hashes": [
+                "sha256:8aa7f9abdb97b4da4d3227306b88477982daafef0a96cc41639754ca31f46d55",
+                "sha256:f2df5891481f94ddadfbf8ae8ae499080752cfb06005a31bbb102f3012f8b944"
+            ],
+            "index": "pypi",
+            "version": "==0.25.0"
         }
     }
 }
