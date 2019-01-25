@@ -2,11 +2,15 @@ from .base import *
 
 USER_AGENT = "City Scrapers [production mode]. Learn more and say hello at https://citybureau.org/city-scrapers"
 
+# Uncomment one of the following DiffPipeline classes to enable a diff pipeline class that will
+# deduplicate JSCalendar UIDs based on City Scrapers IDs and list any meetings in the future which
+# no longer appear in scraped results as cancelled.
+
 # Configure item pipelines
 ITEM_PIPELINES = {
     "city_scrapers.pipelines.MigrationPipeline": 50,
     "city_scrapers_core.pipelines.DefaultValuesPipeline": 100,
-    "city_scrapers_core.pipelines.DiffPipeline": 200,
+    "city_scrapers_core.pipelines.S3DiffPipeline": 200,
     "city_scrapers_core.pipelines.MeetingPipeline": 300,
     "city_scrapers_core.pipelines.JSCalendarPipeline": 400,
 }
@@ -30,14 +34,6 @@ FEED_EXPORTERS = {
 }
 
 FEED_FORMAT = "jsonlines"
-
-# Uncomment one of the following to enable a diff middleware class that will deduplicate JSCalendar
-# UIDs based on City Scrapers IDs and list any meetings in the future which no longer appear in
-# scraped results as cancelled.
-
-SPIDER_MIDDLEWARES = {
-    "city_scrapers_core.middlewares.S3DiffMiddleware": 250,
-}
 
 # Uncomment S3 or Azure to write scraper results to static file storage as newline-delimited JSON
 # files made up of JSCalendar events following the meeting schema.
