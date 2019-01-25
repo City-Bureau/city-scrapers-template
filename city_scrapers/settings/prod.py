@@ -4,6 +4,7 @@ USER_AGENT = "City Scrapers [production mode]. Learn more and say hello at https
 
 # Configure item pipelines
 ITEM_PIPELINES = {
+    "city_scrapers.pipelines.MigrationPipeline": 50,
     "city_scrapers_core.pipelines.DefaultValuesPipeline": 100,
     "city_scrapers_core.pipelines.DiffPipeline": 200,
     "city_scrapers_core.pipelines.MeetingPipeline": 300,
@@ -18,9 +19,8 @@ ITEM_PIPELINES = {
 # for S3 and Azure respectively.
 
 EXTENSIONS = {
-    # "city_scrapers_core.extensions.AzureBlobStatusExtension": 100,
-    # "city_scrapers_core.extensions.S3StatusExtension": 100,
-    "scrapy_sentry.extensions.Errors": 10,
+    "city_scrapers_core.extensions.S3StatusExtension": 100,
+    # "scrapy_sentry.extensions.Errors": 10,
     "scrapy.extensions.closespider.CloseSpider": None,
 }
 
@@ -36,39 +36,23 @@ FEED_FORMAT = "jsonlines"
 # scraped results as cancelled.
 
 SPIDER_MIDDLEWARES = {
-    # "city_scrapers_core.middleware.S3DiffMiddleware": 250,
-    # "city_scrapers_core.middleware.AzureDiffMiddleware": 250,
+    "city_scrapers_core.middlewares.S3DiffMiddleware": 250,
 }
-
 
 # Uncomment S3 or Azure to write scraper results to static file storage as newline-delimited JSON
 # files made up of JSCalendar events following the meeting schema.
 
 FEED_STORAGES = {
-    # "s3": "scrapy.extensions.feedexport.S3FeedStorage",
-    # "azure": "city_scrapers_core.extensions.AzureBlobFeedStorage",
+    "s3": "scrapy.extensions.feedexport.S3FeedStorage",
 }
 
 # Uncomment credentials for whichever provider you're using
 
-# AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-# AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
-# AZURE_ACCOUNT_NAME = os.getenv("AZURE_ACCOUNT_NAME")
-# AZURE_ACCOUNT_KEY = os.getenv("AZURE_ACCOUNT_KEY")
-# AZURE_CONTAINER = os.getenv("AZURE_CONTAINER")
+CITY_SCRAPERS_STATUS_BUCKET = "city-scrapers-pitt"
 
 # Uncomment the FEED_URI for whichever provider you're using
 
-# FEED_URI = "s3://{bucket}/%(year)s/%(month)s/%(day)s/%(hour_min)s/%(name)s.json".format(
-#     bucket=CITY_SCRAPERS_STATUS_BUCKET
-# )
-
-# FEED_URI = (
-#     "azure://{account_name}:{account_key}@{container}"
-#     "/%(year)s/%(month)s/%(day)s/%(hour_min)s/%(name)s.json"
-# ).format(
-#     account_name=AZURE_ACCOUNT_NAME,
-#     account_key=AZURE_ACCOUNT_KEY,
-#     container=AZURE_CONTAINER,
-# )
+FEED_URI = "s3://city-scrapers-pitt/%(year)s/%(month)s/%(day)s/%(hour_min)s/%(name)s.json"
