@@ -37,17 +37,17 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:31ca957a8df72956cc83dc3f178cc6ebd556fff3e8c602548ae83c65c282a18e",
-                "sha256:3fb5b501f9550a8c0c2aaff18be91b01e691d01044ca1374b5a99f262b708dda"
+                "sha256:96296871863e0245b04931df7dd5c583e53cadbe1d54197829b34b03b0d048a8",
+                "sha256:acfd27967cf1ba7f9d83ad6fc2011764541e4c295fe0d896ea7b495cc2f03336"
             ],
-            "version": "==1.9.84"
+            "version": "==1.9.85"
         },
         "botocore": {
             "hashes": [
-                "sha256:7691463aa1e2e66cd5889342a58bb7ca7a12f4d6343cb515a66dbe58caaffe42",
-                "sha256:a1281df7bf371c15e81fd1e81deabcb3d33c57764f761a3a2eb8f97905efa271"
+                "sha256:af727d4af0cf1ddbf84eaf1cc9d0160ff066eac7f9e6a2fe6a75ccbed4452c98",
+                "sha256:c381fd05b777f41a608ea0846a8d8ecc32077a83e456d05e824cce8d6b213e32"
             ],
-            "version": "==1.12.84"
+            "version": "==1.12.85"
         },
         "certifi": {
             "hashes": [
@@ -105,11 +105,11 @@
                 "aws"
             ],
             "hashes": [
-                "sha256:1b4dfce4a76b26edfd81b3cca740ff6f80f5484189c5fba65bf9bc0dff58e7ac",
-                "sha256:2b9317267517ee405e8393fac467d0e3aae8e62237d3fe1a9399dd7739dd3ff5"
+                "sha256:0b1222af676b80e4c953f8b459fb0bb98a9a7fa6b4e3212055781f0145ade8a8",
+                "sha256:1fdae1b4419084fe56133fe02c8da73229cfc337723bfe7024f7f183a9f59865"
             ],
             "index": "pypi",
-            "version": "==0.1.10"
+            "version": "==0.2.0"
         },
         "constantly": {
             "hashes": [
