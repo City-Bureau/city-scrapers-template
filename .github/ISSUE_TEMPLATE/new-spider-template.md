@@ -1,7 +1,7 @@
 ---
 name: New Spider Template
 about: Template for creating new spider issues
-title: "[SPIDER]"
+title: 'Spider: '
 labels: New Spider
 assignees: ''
 
