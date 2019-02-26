@@ -2,8 +2,7 @@ from datetime import datetime, timedelta
 from legistar.events import LegistarEventsScraper
 
 from city_scrapers_core.constants import NOT_CLASSIFIED
-from city_scrapers_core.items import Meeting
-from city_scrapers_core.spiders import Spider, LegistarSpider
+from city_scrapers_core.spiders import LegistarSpider, CityScrapersSpider
 
 
 class PittCityCouncilSpider(LegistarSpider):
@@ -39,16 +38,20 @@ class PittCityCouncilSpider(LegistarSpider):
             data = {
                 '_type': 'event',
                 'name': name,
-                'event_description': self._parse_description(item),
+                'title': name,
+                'description': self._parse_description(item),
+                'timezone': 'America/New_York',
                 'start': self._parse_start(item),
                 'end': self._parse_end(item),
                 'all_day': self._parse_all_day(item),
+                'time_notes': 'Estimated 3 hour meeting length',
                 'location': self._parse_location(item),
                 'sources': self._parse_sources(item),
-                'documents': self._parse_documents(item)
+                'documents': self._parse_documents(item),
+                'links': self.legistar_links(item),
             }
-            data['status'] = self._generate_status(data, item['Meeting Location'])
-            data['id'] = self._generate_id(data)
+            data['status'] = self._get_status(data, item.get('Meeting Location'))
+            data['id'] = self._get_id(data)
             yield data
 
     def _parse_documents(self, item):
@@ -56,35 +59,35 @@ class PittCityCouncilSpider(LegistarSpider):
         Returns meeting details, agenda, minutes, video, if available.
         """
         documents = []
-        details = item['Meeting Details']
+        details = item.get('Meeting Details')
         if type(details) == dict:
             documents.append({
                 'note': 'Meeting Details',
-                'url': details['url'],
+                'url': details.get('url'),
                 'media_type': 'text',
                 'date': ''
             })
-        agenda = item['Agenda']
+        agenda = item.get('Agenda')
         if type(agenda) == dict:
             documents.append({
                 'note': 'Agenda',
-                'url': agenda['url'],
+                'url': agenda.get('url'),
                 'media_type': 'text',
                 'date': ''
             })
-        minutes = item['Minutes']
-        if type(agenda) == dict:
+        minutes = item.get('Minutes')
+        if type(minutes) == dict:
             documents.append({
                 'note': 'Minutes',
-                'url': minutes['url'],
+                'url': minutes.get('url'),
                 'media_type': 'text',
                 'date': ''
             })
-        video = item['Video']
+        video = item.get('Video')
         if type(video) == dict:
             documents.append({
                 'note': 'Video',
-                'url': video['url'],
+                'url': video.get('url'),
                 'media_type': 'video',
                 'date': ''
             })
@@ -94,13 +97,13 @@ class PittCityCouncilSpider(LegistarSpider):
         """
         Parse or generate location.
         """
-        location = item['Meeting Location'].split('/n')[0]
+        location = item.get('Meeting Location').split('\n')[0]
         address = ''
         if 'Council Chambers' in location:
             address = '414 Grant Street, Pittsburgh, PA 15219'
         return {
             'address': address,
-            'location': location,
+            'location': 'Council Chambers, 5th Floor',
             'name': '',
             'neighborhood': ''
         }
@@ -108,7 +111,8 @@ class PittCityCouncilSpider(LegistarSpider):
     def _parse_all_day(self, item):
         """
         Parse or generate all-day status. Defaults to false.
-        This currently isn't denoted on the council site; we can update this function if that changes.
+        This currently isn't denoted on the council site; 
+        we can update this function if that changes.
         """
         return False
 
@@ -116,12 +120,12 @@ class PittCityCouncilSpider(LegistarSpider):
         """
         Parse or generate event name.
         """
-        name = item['Name']['label']
+        name = item.get('Name')
         if 'City Council' in name:
-            name + ' : meeting'
+            name = name + ' : meeting'
         return name
 
-    def _parse_start_datetime(self, item):
+    def _parse_start(self, item):
         """
         Return the start date and time as a datetime object.
         """
@@ -132,29 +136,12 @@ class PittCityCouncilSpider(LegistarSpider):
             return datetime.strptime(time_string, '%m/%d/%Y %I:%M %p')
         return None
 
-    def _parse_start(self, item):
-        """
-        Parse the start date and time.
-        """
-        start_datetime = self._parse_start_datetime(item)
-        if start_datetime:
-            return {
-                'date': start_datetime.date(),
-                'time': start_datetime.time(),
-                'note': ''
-            }
-        return {
-            'date': None,
-            'time': None,
-            'note': ''
-        }
-
     def _parse_end(self, item):
         """
         No end times are listed, so estimate the end time to
         be 3 hours after the start time.
         """
-        start_datetime = self._parse_start_datetime(item)
+        start_datetime = self._parse_start(item)
         if start_datetime:
             return {
                 'date': start_datetime.date(),
@@ -172,42 +159,20 @@ class PittCityCouncilSpider(LegistarSpider):
         Parse sources.
         """
         try:
-            url = item['Name']['url']
-        except:
+            url = item.get('Meeting Details').get('url')
+        except ValueError:
             url = 'https://pittsburgh.legistar.com/Calendar.aspx'
         return [{'url': url, 'note': ''}]
 
-    # def parse_legistar(self, events):
-    #     """
-    #     `parse_legistar` should always `yield` Meeting items.
-
-    #     Change the `_parse_id`, `_parse_name`, etc methods to fit your scraping
-    #     needs.
-    #     """
-    #     for event, _ in events:
-    #         meeting = Meeting(
-    #             title=event["Name"]["label"],
-    #             description=self._parse_description(event),
-    #             classification=self._parse_classification(event),
-    #             start=self.legistar_start(event),
-    #             end=self._parse_end(event),
-    #             all_day=self._parse_all_day(event),
-    #             time_notes=self._parse_time_notes(event),
-    #             location=self._parse_location(event),
-    #             links=self.legistar_links(event),
-    #             source=self.legistar_source(event),
-    #         )
-
-    #         meeting["status"] = self._get_status(meeting)
-    #         meeting["id"] = self._get_id(meeting)
-
-    #         yield meeting
-
     def _parse_description(self, item):
-        """Parse or generate meeting description."""
-        if item['Meeting Location'].split('/n')[1]:
-            return item['Meeting Location'].split('/n')[0]
-        else:
+        """
+        Parse or generate meeting description.
+        In Pittsburgh's case the meeting info comes on a new line
+        in the location section, italicized.
+        """
+        try:
+            return item.get('Meeting Location').split('\n')[1].split('--em--')[1]
+        except IndexError:
             return 'no description'
 
     def _parse_classification(self, item):
