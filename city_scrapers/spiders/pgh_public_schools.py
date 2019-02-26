@@ -23,10 +23,12 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         """
         json_response = loads(response.body_as_unicode())
         token = json_response["Token"]
-        api_gateway = "https://awsapieast1-prod2.schoolwires.com/REST/api/v4/"
+        # api_server = json_response["ApiServer"]
+        api_server = "https://awsapieast1-prod2.schoolwires.com/REST/"
+        api_gateway = api_server+"api/v4/"
         api_function = "CalendarEvents/GetEvents/1?"
         start_date = "2019-02-01"
-        end_date  = "2019-02-01"
+        end_date  = "2019-02-28"
         dates = "StartDate={}&EndDate={}".format(start_date,end_date)
         modules = "&ModuleInstanceFilter="
 
@@ -36,11 +38,13 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         category = "&CategoryFilter={}".format(category_filters)
         dbstream = "&IsDBStreamAndShowAll=true"
         url = api_gateway+api_function+dates+modules+category+dbstream
-        req = Request(url, headers={"Authorization":"Bearer "+token, "Accept":"application/json"}, callback=self._parse_api)
-        
+
+        req = Request(url, headers={"Authorization":"Bearer "+token, "Accept":"application/json", "Referer":"https://www.pghschools.org/calendar"}, callback=self._parse_api)
+
         yield req
 
     def _parse_api(self,response):
+
         meetings = loads(response.body_as_unicode())
         for item in meetings:
             meeting = Meeting(
@@ -59,11 +63,12 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
             meeting["status"] = self._get_status(meeting)
             meeting["id"] = self._get_id(meeting)
 
-            return meeting
+            yield meeting
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
         title = item["Title"]
+        print (title)
         return title
 
     def _parse_description(self, item):
