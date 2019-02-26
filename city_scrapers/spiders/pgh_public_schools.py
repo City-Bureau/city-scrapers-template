@@ -29,11 +29,15 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         end_date  = "2019-02-01"
         dates = "StartDate={}&EndDate={}".format(start_date,end_date)
         modules = "&ModuleInstanceFilter="
+
+        #this line is to filter just school board meetings.
         category_filters="0-49-40-21-16-4-3-44-39-1-57-43-64-65-58-62-28-25-52-50-55-38-59-17-13-51-56-8-63-53-37-54-7-47-46-33-60-10-19-66-61-48-34-45-41-42-"
+        
         category = "&CategoryFilter={}".format(category_filters)
         dbstream = "&IsDBStreamAndShowAll=true"
         url = api_gateway+api_function+dates+modules+category+dbstream
         req = Request(url, headers={"Authorization":"Bearer "+token, "Accept":"application/json"}, callback=self._parse_api)
+        
         yield req
 
     def _parse_api(self,response):
