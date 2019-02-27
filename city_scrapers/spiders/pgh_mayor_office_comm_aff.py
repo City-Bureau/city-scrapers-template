@@ -1,10 +1,11 @@
+from datetime import datetime
+from json import loads
+
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-from scrapy import Request
-from scrapy import FormRequest
-from json import loads
-from datetime import datetime
+from scrapy import FormRequest, Request
+
 
 class PghMayorOfficeCommAffSpider(CityScrapersSpider):
     name = "pgh_mayor_office_comm_aff"
@@ -20,42 +21,41 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
         Change the `_parse_id`, `_parse_name`, etc methods to fit your scraping
         needs.
         """
-        token = response.xpath("//div[@class='login-form']//*[@name='csrfmiddlewaretoken']/@value").extract_first()
+        xpath_string = "//div[@class='login-form']//*[@name='csrfmiddlewaretoken']/@value"
+        token = response.xpath(xpath_string).extract_first()
 
         username = USERNAME_GOES_HERE
         password = PASSWORD_GOES_HERE
 
         data = {
-            "username": username, 
-            "password": password, 
-            "remember_me": "on", 
-            "next": "/profile/2376387/", 
-            "csrfmiddlewaretoken":token, 
-            "social_id": "", 
-            "social_network": "", 
+            "username": username,
+            "password": password,
+            "remember_me": "on",
+            "next": "/profile/2376387/",
+            "csrfmiddlewaretoken": token,
+            "social_id": "",
+            "social_network": "",
             "link_account_version": "0"
-            }
+        }
 
         headers = {
-            "Accept":"text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8",
-            "Accept-Encoding":"gzip, deflate, br",
-            "Accept-Language":"en-US,en;q=0.5",
-            "Connection":"keep-alive",
-            "Content-Length":"217",
-            "Content-Type":"application/x-www-form-urlencoded",
-            "Host":"nextdoor.com",
-            "Referer":"https://nextdoor.com/login/?ucl=1",
-            "Upgrade-Insecure-Requests":"1",
+            "Accept": "text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Connection": "keep-alive",
+            "Content-Length": "217",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Host": "nextdoor.com",
+            "Referer": "https://nextdoor.com/login/?ucl=1",
+            "Upgrade-Insecure-Requests": "1",
             "origin": "https://nextdoor.com",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
+            "user-agent":
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
         }
 
         formReq = FormRequest.from_response(
-            response,
-            formdata=data,
-            headers=headers,
-            callback=self._authenticated
-            )
+            response, formdata=data, headers=headers, callback=self._authenticated
+        )
         yield formReq
 
     def _authenticated(self, response):
@@ -63,18 +63,17 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
         req = Request(url, callback=self._get_posts)
         yield req
 
-
     def _get_posts(self, response):
         jsonData = loads(response.body_as_unicode())
         activities = jsonData["activities"]
         for item in activities:
             if "meeting" in item["message_parts"][1]["text"].lower():
-                url = "https://nextdoor.com/web/feeds/post/"+str(item["post_id"])+"/"
+                url = "https://nextdoor.com/web/feeds/post/" + str(item["post_id"]) + "/"
                 req = Request(url, callback=self._get_post)
                 yield req
         if jsonData["show_more"]:
             url = "https://nextdoor.com/api/profile/2376387/activity/posts/?next_page="
-            req = Request(url+jsonData["next_page"], callback=self._get_posts)
+            req = Request(url + jsonData["next_page"], callback=self._get_posts)
             yield req
 
     def _get_post(self, response):
@@ -116,7 +115,7 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
         """Parse start datetime as a naive datetime object."""
         creation_date = item["creation_date"]
         creation_date = datetime.utcfromtimestamp(creation_date)
-        now_words = ["today","tonight"]
+        now_words = ["today", "tonight"]
         tom_words = ["tomorrow"]
         if any(word in item["subject"].lower() for word in now_words):
             return creation_date
