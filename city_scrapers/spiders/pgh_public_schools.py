@@ -1,16 +1,18 @@
-from city_scrapers_core.constants import NOT_CLASSIFIED
+from datetime import datetime
+from json import loads
+
+from city_scrapers_core.constants import BOARD
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-from json import loads
 from scrapy import Request
-from datetime import datetime
+
 
 class PghPublicSchoolsSpider(CityScrapersSpider):
     name = "pgh_public_schools"
     agency = "Pittsburgh Public Schools"
     timezone = "US/Eastern"
     allowed_domains = ["www.pghschools.org", "awsapieast1-prod2.schoolwires.com"]
-    
+
     # start_urls = ["https://www.pghschools.org/calendar"]
     start_urls = ["https://www.pghschools.org/Generator/TokenGenerator.ashx/ProcessRequest"]
 
@@ -25,29 +27,29 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         token = json_response["Token"]
         # api_server = json_response["ApiServer"]
         api_server = "https://awsapieast1-prod2.schoolwires.com/REST/"
-        api_gateway = api_server+"api/v4/"
+        api_gateway = api_server + "api/v4/"
         api_function = "CalendarEvents/GetEvents/1?"
         start_date = "2019-02-01"
-        end_date  = "2019-02-28"
-        dates = "StartDate={}&EndDate={}".format(start_date,end_date)
+        end_date = "2019-02-28"
+        dates = "StartDate={}&EndDate={}".format(start_date, end_date)
         modules = "&ModuleInstanceFilter="
 
-        #this line is to filter just school board meetings.
-        category_filters="0-49-40-21-16-4-3-44-39-1-57-43-64-65-58-62-28-25-52-50-55-38-59-17-13-51-56-8-63-53-37-54-7-47-46-33-60-10-19-66-61-48-34-45-41-42-"
-        
+        # this line is to filter just school board meetings.
+        category_filters = "0-49-40-21-16-4-3-44-39-1-57-43-64-65-58-62-28-25-52-50-55-38-59-17-13-51-56-8-63-53-37-54-7-47-46-33-60-10-19-66-61-48-34-45-41-42-"
+
         category = "&CategoryFilter={}".format(category_filters)
         dbstream = "&IsDBStreamAndShowAll=true"
-        url = api_gateway+api_function+dates+modules+category+dbstream
-        headers = {"Authorization":"Bearer "+token, "Accept":"application/json"}
+        url = api_gateway + api_function + dates + modules + category + dbstream
+        headers = {"Authorization": "Bearer " + token, "Accept": "application/json"}
         req = Request(url, headers=headers, callback=self._parse_api)
 
         yield req
 
-    def _parse_api(self,response):
+    def _parse_api(self, response):
         headers = response.request.headers
 
         api_server = "https://awsapieast1-prod2.schoolwires.com/REST/"
-        api_gateway = api_server+"api/v4/"
+        api_gateway = api_server + "api/v4/"
         api_function = "CalendarEvents/GetEventDate/1/"
         url = api_gateway + api_function
 
@@ -58,7 +60,7 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
             meeting = Request(detail_url, headers=headers, callback=self._parse_detail_api)
             yield meeting
 
-    def _parse_detail_api(self,response):
+    def _parse_detail_api(self, response):
         item = loads(response.body_as_unicode())
         meeting = Meeting(
             title=self._parse_title(item["Event"]),
@@ -77,7 +79,6 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         meeting["id"] = self._get_id(meeting)
         yield meeting
 
-
     def _parse_title(self, item):
         """Parse or generate meeting title."""
         title = item["Title"]
@@ -90,7 +91,7 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
 
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
-        return "BOARD"
+        return BOARD
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""

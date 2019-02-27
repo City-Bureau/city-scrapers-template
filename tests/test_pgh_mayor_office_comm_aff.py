@@ -6,15 +6,15 @@ from freezegun import freeze_time
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
 
-from city_scrapers.spiders.pgh_public_schools import PghPublicSchoolsSpider
+from city_scrapers.spiders.pgh_mayor_office_comm_aff import PghMayorOfficeCommAffSpider
 
 test_response = file_response(
-    join(dirname(__file__), "files", "pgh_public_schools.html"),
-    url="https://www.pghschools.org/calendar#calendar1/20190223/month",
+    join(dirname(__file__), "files", "pgh_mayor_office_comm_aff.html"),
+    url="https://nextdoor.com/profile/2376387/",
 )
-spider = PghPublicSchoolsSpider()
+spider = PghMayorOfficeCommAffSpider()
 
-freezer = freeze_time("2019-02-26")
+freezer = freeze_time("2019-02-27")
 freezer.start()
 
 parsed_items = [item for item in spider.parse(test_response)]
