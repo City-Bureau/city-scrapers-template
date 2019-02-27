@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
+from pytz import timezone as tz
 from legistar.events import LegistarEventsScraper
 
-from city_scrapers_core.constants import NOT_CLASSIFIED
+from city_scrapers_core.constants import NOT_CLASSIFIED, CANCELLED, PASSED, TENTATIVE
 from city_scrapers_core.spiders import LegistarSpider, CityScrapersSpider
 
 
@@ -9,6 +10,7 @@ class PittCityCouncilSpider(LegistarSpider):
     name = "pitt_city_council"
     agency = "Pittsburgh City Council"
     timezone = "America/New_York"
+    eastern = tz(timezone)
     allowed_domains = ["pittsburgh.legistar.com"]
     start_urls = ["https://pittsburgh.legistar.com"]
     # Add the titles of any links not included in the scraped results
@@ -40,15 +42,16 @@ class PittCityCouncilSpider(LegistarSpider):
                 'name': name,
                 'title': name,
                 'description': self._parse_description(item),
-                'timezone': 'America/New_York',
+                'timezone': self.timezone,
                 'start': self._parse_start(item),
                 'end': self._parse_end(item),
                 'all_day': self._parse_all_day(item),
-                'time_notes': 'Estimated 3 hour meeting length',
+                'time_notes': 'Estimated three-hour meeting length',
                 'location': self._parse_location(item),
-                'sources': self._parse_sources(item),
+                'source': self._parse_sources(item),
                 'documents': self._parse_documents(item),
                 'links': self.legistar_links(item),
+                'classification': self._parse_classification(item),
             }
             data['status'] = self._get_status(data, item.get('Meeting Location'))
             data['id'] = self._get_id(data)
@@ -127,13 +130,13 @@ class PittCityCouncilSpider(LegistarSpider):
 
     def _parse_start(self, item):
         """
-        Return the start date and time as a datetime object.
+        Return the start date and time as a localized datetime object.
         """
         time = item.get('Meeting Time', None)
         date = item.get('Meeting Date', None)
         if date and time:
             time_string = '{0} {1}'.format(date, time)
-            return datetime.strptime(time_string, '%m/%d/%Y %I:%M %p')
+            return self.eastern.localize(datetime.strptime(time_string, '%m/%d/%Y %I:%M %p'))
         return None
 
     def _parse_end(self, item):
@@ -141,18 +144,7 @@ class PittCityCouncilSpider(LegistarSpider):
         No end times are listed, so estimate the end time to
         be 3 hours after the start time.
         """
-        start_datetime = self._parse_start(item)
-        if start_datetime:
-            return {
-                'date': start_datetime.date(),
-                'time': (start_datetime + timedelta(hours=3)).time(),
-                'note': 'Estimated 3 hours after start time'
-            }
-        return {
-            'date': None,
-            'time': None,
-            'note': ''
-        }
+        return self._parse_start(item) + timedelta(hours=3)
 
     def _parse_sources(self, item):
         """
@@ -178,3 +170,21 @@ class PittCityCouncilSpider(LegistarSpider):
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
         return NOT_CLASSIFIED
+
+    def _get_status(self, item, text=""):
+        """
+        Generates one of the allowed statuses from constants based on the title and time
+        of the meeting.
+        This method duplicates one in city-scrapers-core that has a bug preventing
+        it from handling timezone-aware datetime objects:
+        https://github.com/City-Bureau/city-scrapers-core/blob/master/city_scrapers_core/spiders/spider.py#L49
+        I'll submit to a PR to have that fixed in a future release
+        """
+        meeting_text = " ".join(
+            [item.get("title", ""), item.get("description", ""), text]
+        ).lower()
+        if any(word in meeting_text for word in ["cancel", "rescheduled", "postpone"]):
+            return CANCELLED
+        if item["start"] < self.eastern.localize(datetime.now()):
+            return PASSED
+        return TENTATIVE
