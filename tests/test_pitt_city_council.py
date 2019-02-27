@@ -1,11 +1,11 @@
 import json
 from datetime import datetime
-from pytz import timezone as tz
 from os.path import dirname, join
 
 import pytest
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from freezegun import freeze_time
+from pytz import timezone as tz
 
 from city_scrapers.spiders.pitt_city_council import PittCityCouncilSpider
 
@@ -60,13 +60,20 @@ def test_location():
 
 
 def test_source():
-    assert parsed_items[0]["source"][0].get('url') == "https://pittsburgh.legistar.com/MeetingDetail.aspx?ID=681042&GUID=631BD673-830F-4759-9DDE-EB16B3F1E681&Options=info&Search="
+    assert parsed_items[0]["source"][0].get('url') == (
+        "https://pittsburgh.legistar.com/MeetingDeta"
+        "il.aspx?ID=681042&GUID=631BD673-830F-4759-"
+        "9DDE-EB16B3F1E681&Options=info&Search="
+    )
 
 
 def test_links():
     assert parsed_items[0]["links"] == [{
-      "href": "https://pittsburgh.legistar.com/View.ashx?M=A&ID=681042&GUID=631BD673-830F-4759-9DDE-EB16B3F1E681",
-      "title": "Agenda"
+        "href": (
+            "https://pittsburgh.legistar.com/View.ashx?M="
+            "A&ID=681042&GUID=631BD673-830F-4759-9DDE-EB16B3F1E681"
+        ),
+        "title": "Agenda"
     }]
 
 

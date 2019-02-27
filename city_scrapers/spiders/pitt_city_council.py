@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
-from pytz import timezone as tz
-from legistar.events import LegistarEventsScraper
 
-from city_scrapers_core.constants import NOT_CLASSIFIED, CANCELLED, PASSED, TENTATIVE
-from city_scrapers_core.spiders import LegistarSpider, CityScrapersSpider
+from city_scrapers_core.constants import CANCELLED, NOT_CLASSIFIED, PASSED, TENTATIVE
+from city_scrapers_core.spiders import LegistarSpider
+from legistar.events import LegistarEventsScraper
+from pytz import timezone as tz
 
 
 class PittCityCouncilSpider(LegistarSpider):
@@ -114,7 +114,7 @@ class PittCityCouncilSpider(LegistarSpider):
     def _parse_all_day(self, item):
         """
         Parse or generate all-day status. Defaults to false.
-        This currently isn't denoted on the council site; 
+        This currently isn't denoted on the council site;
         we can update this function if that changes.
         """
         return False
@@ -180,9 +180,7 @@ class PittCityCouncilSpider(LegistarSpider):
         https://github.com/City-Bureau/city-scrapers-core/blob/master/city_scrapers_core/spiders/spider.py#L49
         I'll submit to a PR to have that fixed in a future release
         """
-        meeting_text = " ".join(
-            [item.get("title", ""), item.get("description", ""), text]
-        ).lower()
+        meeting_text = " ".join([item.get("title", ""), item.get("description", ""), text]).lower()
         if any(word in meeting_text for word in ["cancel", "rescheduled", "postpone"]):
             return CANCELLED
         if item["start"] < self.eastern.localize(datetime.now()):
