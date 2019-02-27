@@ -38,56 +38,69 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         category = "&CategoryFilter={}".format(category_filters)
         dbstream = "&IsDBStreamAndShowAll=true"
         url = api_gateway+api_function+dates+modules+category+dbstream
-
-        req = Request(url, headers={"Authorization":"Bearer "+token, "Accept":"application/json", "Referer":"https://www.pghschools.org/calendar"}, callback=self._parse_api)
+        headers = {"Authorization":"Bearer "+token, "Accept":"application/json"}
+        req = Request(url, headers=headers, callback=self._parse_api)
 
         yield req
 
     def _parse_api(self,response):
+        headers = response.request.headers
+
+        api_server = "https://awsapieast1-prod2.schoolwires.com/REST/"
+        api_gateway = api_server+"api/v4/"
+        api_function = "CalendarEvents/GetEventDate/1/"
+        url = api_gateway + api_function
 
         meetings = loads(response.body_as_unicode())
+
         for item in meetings:
-            meeting = Meeting(
-                title=self._parse_title(item),
-                description=self._parse_description(item),
-                classification=self._parse_classification(item),
-                start=self._parse_start(item),
-                end=self._parse_end(item),
-                all_day=self._parse_all_day(item),
-                time_notes=self._parse_time_notes(item),
-                location=self._parse_location(item),
-                links=self._parse_links(item),
-                source=self._parse_source(response),
-            )
-
-            meeting["status"] = self._get_status(meeting)
-            meeting["id"] = self._get_id(meeting)
-
+            detail_url = url + str(item["Id"])
+            meeting = Request(detail_url, headers=headers, callback=self._parse_detail_api)
             yield meeting
+
+    def _parse_detail_api(self,response):
+        item = loads(response.body_as_unicode())
+        meeting = Meeting(
+            title=self._parse_title(item["Event"]),
+            description=self._parse_description(item["Event"]),
+            classification=self._parse_classification(item),
+            start=self._parse_start(item),
+            end=self._parse_end(item),
+            all_day=self._parse_all_day(item),
+            time_notes=self._parse_time_notes(item),
+            location=self._parse_location(item),
+            links=self._parse_links(item),
+            source=self._parse_source(response),
+        )
+
+        meeting["status"] = self._get_status(meeting)
+        meeting["id"] = self._get_id(meeting)
+        yield meeting
+
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
         title = item["Title"]
-        print (title)
         return title
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
-        return ""
+        description = item["Description"]
+        return description
 
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
-        return NOT_CLASSIFIED
+        return "BOARD"
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""
-        start_string = item["Start"]
+        start_string = item["StartDate"]
         start_time = datetime.strptime(start_string, '%Y-%m-%dT%H:%M:%S')
         return start_time
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
-        end_string = item["End"]
+        end_string = item["EndDate"]
         end_time = datetime.strptime(end_string, '%Y-%m-%dT%H:%M:%S')
         return end_time
 
@@ -97,7 +110,7 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
 
     def _parse_all_day(self, item):
         """Parse or generate all-day status. Defaults to False."""
-        all_day = item["AllDay"] == "True"
+        all_day = item["AllDayEvent"] == "True"
         return all_day
 
     def _parse_location(self, item):
@@ -113,4 +126,5 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
 
     def _parse_source(self, response):
         """Parse or generate source."""
+        # https://www.pghschools.org/calendar#calendar1/20190205/event/19034
         return response.url
