@@ -40,6 +40,7 @@ class PittCityCouncilSpider(LegistarSpider):
             data = {
                 '_type': 'event',
                 'name': name,
+                # OCD standard wants 'name', but city_scrapers_core wants 'title'
                 'title': name,
                 'description': self._parse_description(item),
                 'timezone': self.timezone,
