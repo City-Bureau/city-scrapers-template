@@ -5,11 +5,9 @@ from os.path import dirname, join
 import pytest
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from freezegun import freeze_time
-from pytz import timezone as tz
 
 from city_scrapers.spiders.pitt_city_council import PittCityCouncilSpider
 
-eastern = tz("America/New_York")
 freezer = freeze_time("2019-02-25")
 freezer.start()
 
@@ -31,11 +29,11 @@ def test_description():
 
 
 def test_start():
-    assert parsed_items[0]["start"] == eastern.localize(datetime(2019, 2, 27, 9, 30))
+    assert parsed_items[0]["start"] == datetime(2019, 2, 27, 9, 30)
 
 
 def test_end():
-    assert parsed_items[0]["end"] == eastern.localize(datetime(2019, 2, 27, 12, 30))
+    assert parsed_items[0]["end"] == datetime(2019, 2, 27, 12, 30)
 
 
 def test_time_notes():
