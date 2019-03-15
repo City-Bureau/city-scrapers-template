@@ -1,7 +1,13 @@
 # -*- coding: utf-8 -*-
-import scrapy
-from city_scrapers.spider import Spider
 
+import unicodedata
+from datetime import timedelta
+
+from city_scrapers_core.constants import BOARD, COMMITTEE
+from city_scrapers_core.items import Meeting
+from city_scrapers_core.spiders import CityScrapersSpider
+from dateutil.parser import parse
+from lxml import html
 
 
 fetch("http://pittsburghpa.gov/dcp/notices")
@@ -10,10 +16,6 @@ title = response.css('div.col-md-12 p').extract()
 #the events are all stored in the first 'div.col-md-12'
 everything = response.css('div.col-md-12').extract()[0]
 
-#the start of each event
-#use re to store the location of each title (indicated by bold text)
-import re
-title_index = [m.start() for m in re.finditer('<p><strong>', everything)]
 
 #ugly way to break everything up into a list of separate events, splitting by title location
 events=[]
