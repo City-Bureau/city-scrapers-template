@@ -9,6 +9,28 @@ class CityPlanningSpider(CityScrapersSpider):
     timezone = "America/Chicago"
     allowed_domains = ["pittsburghpa.gov"]
     start_urls = ["http://pittsburghpa.gov/dcp/notices"]
+    
+    import re
+    
+    
+    def _build_list(self,response):
+        """
+        Create list of events
+        """
+        everything = response.css('div.col-md-12').extract()[0]
+        title_index = [m.start() for m in re.finditer('<p><strong>', everything)]
+        events=[]
+        for i in range(0,len(title_index)-1):
+            start=title_index[i]
+        #for the last event, need to make the end point just the end of everything
+            if i ==len(title_index)-1:
+                end=len(everything)-len('<p><strong>')
+            else:
+                end=title_index[i+1]-len('<p><strong>')
+    
+            events.append(everything[start:end])
+            return events
+
 
     def parse(self, response):
         """
@@ -17,7 +39,8 @@ class CityPlanningSpider(CityScrapersSpider):
         Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
         """
-        for item in response.css(".meetings"):
+        events=self._build_list(response)
+        for item in events:
             meeting = Meeting(
                 title=self._parse_title(item),
                 description=self._parse_description(item),
@@ -38,7 +61,8 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        return ""
+        title=re.search('<strong>(.*?)</strong>',item).group(1)
+        return title
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
@@ -50,7 +74,8 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""
-        return None
+        date_text=re.search('<li>(.*?)</li>',item).group(1)
+        return date
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
@@ -66,10 +91,14 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_location(self, item):
         """Parse or generate location."""
-        return {
+        e2=item[re.search('<li>(.*?)</li>',item).end():]
+        location=re.search('<li>(.*?)</li>',e2).group(1)
+
+        return location """{
+            
             "address": "",
             "name": "",
-        }
+        }"""
 
     def _parse_links(self, item):
         """Parse or generate links."""
