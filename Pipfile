@@ -10,6 +10,7 @@ scrapy = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 python-dateutil = "*"
 city-scrapers-core = {extras = ["aws"],version = "*"}
+scrapy-sentry = "*"
 
 [dev-packages]
 freezegun = "*"
