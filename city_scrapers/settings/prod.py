@@ -24,7 +24,6 @@ ITEM_PIPELINES = {
 
 EXTENSIONS = {
     "city_scrapers_core.extensions.S3StatusExtension": 100,
-    # "scrapy_sentry.extensions.Errors": 10,
     "scrapy.extensions.closespider.CloseSpider": None,
 }
 

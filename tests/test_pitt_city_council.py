@@ -15,7 +15,7 @@ with open(join(dirname(__file__), "files", "pitt_city_council.json"), "r") as f:
     test_response = json.load(f)
 
 spider = PittCityCouncilSpider()
-parsed_items = [item for item in spider.parse(test_response)]
+parsed_items = [item for item in spider._parse_events(test_response)]
 
 freezer.stop()
 
@@ -29,11 +29,11 @@ def test_description():
 
 
 def test_start():
-    assert parsed_items[0]["start"] == datetime(2019, 2, 27, 9, 30)
+    assert parsed_items[0]["start"] == datetime(2019, 2, 27, 10)
 
 
 def test_end():
-    assert parsed_items[0]["end"] == datetime(2019, 2, 27, 12, 30)
+    assert parsed_items[0]["end"] == datetime(2019, 2, 27, 13)
 
 
 def test_time_notes():
@@ -41,7 +41,7 @@ def test_time_notes():
 
 
 def test_id():
-    assert parsed_items[0]["id"] == "pitt_city_council/201902270930/x/standing_committee"
+    assert parsed_items[0]["id"] == "pitt_city_council/201902271000/x/standing_committee"
 
 
 def test_status():
@@ -66,10 +66,10 @@ def test_source():
 
 
 def test_links():
-    assert parsed_items[0]["links"] == [{
+    assert parsed_items[2]["links"] == [{
         "href": (
             "https://pittsburgh.legistar.com/View.ashx?M="
-            "A&ID=681042&GUID=631BD673-830F-4759-9DDE-EB16B3F1E681"
+            "A&ID=681276&GUID=78186660-60BC-459B-86C7-B97156416708"
         ),
         "title": "Agenda"
     }]

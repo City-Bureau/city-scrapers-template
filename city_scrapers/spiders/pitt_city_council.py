@@ -151,7 +151,7 @@ class PittCityCouncilSpider(LegistarSpider):
         """
         try:
             url = item.get('Meeting Details').get('url')
-        except ValueError:
+        except (ValueError, AttributeError):
             url = 'https://pittsburgh.legistar.com/Calendar.aspx'
         return [{'url': url, 'note': ''}]
 
