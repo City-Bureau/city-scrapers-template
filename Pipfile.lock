@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "020b974a05d2f72c08f5d80e778f08b0f01254edffa606bf5a08ce349632f095"
+            "sha256": "f6c10775efffe807957ab1fc13595eab821c33fdaad5ed90859cd386c5f50311"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -299,13 +299,6 @@
             ],
             "version": "==1.5.0"
         },
-        "raven": {
-            "hashes": [
-                "sha256:3fa6de6efa2493a7c827472e984ce9b020797d0da16f1db67197bcc23c8fae54",
-                "sha256:44a13f87670836e153951af9a3c80405d36b43097db869a36e92809673692ce4"
-            ],
-            "version": "==6.10.0"
-        },
         "requests": {
             "hashes": [
                 "sha256:502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e",
@@ -328,13 +321,6 @@
             ],
             "index": "pypi",
             "version": "==1.6.0"
-        },
-        "scrapy-sentry": {
-            "hashes": [
-                "sha256:4c78e0fb5a5940639f11ae2a1fb28d4ea1a41180d88289efc6d8e39e1e14227f"
-            ],
-            "index": "pypi",
-            "version": "==0.9.0"
         },
         "service-identity": {
             "hashes": [
