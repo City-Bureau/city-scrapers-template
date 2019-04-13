@@ -2,6 +2,8 @@ from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
+import re
+from datetime import datetime
 
 class CityPlanningSpider(CityScrapersSpider):
     name = "city_planning"
@@ -9,9 +11,6 @@ class CityPlanningSpider(CityScrapersSpider):
     timezone = "America/Chicago"
     allowed_domains = ["pittsburghpa.gov"]
     start_urls = ["http://pittsburghpa.gov/dcp/notices"]
-    
-    import re
-    
     
     def _build_list(self,response):
         """
@@ -74,7 +73,14 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""
-        date_text=re.search('<li>(.*?)</li>',item).group(1)
+        date_text=re.search('\xa0(.*?)</li>',item).group(1)
+        try:
+            date = datetime.strptime(date_text, '%B %d, %Y %I:%M %p')
+        except:
+            try:
+                date = datetime.strptime(date_text, '%B %d, %Y %I %p')
+            except:
+                date = datetime.datetime(1111, 11, 11)
         return date
 
     def _parse_end(self, item):
@@ -94,15 +100,16 @@ class CityPlanningSpider(CityScrapersSpider):
         e2=item[re.search('<li>(.*?)</li>',item).end():]
         location=re.search('<li>(.*?)</li>',e2).group(1)
 
-        return location """{
-            
-            "address": "",
-            "name": "",
-        }"""
+        return location
 
     def _parse_links(self, item):
-        """Parse or generate links."""
-        return [{"href": "", "title": ""}]
+        e2=item[re.search('<li>(.*?)</li>',item).end():]
+        href=re.findall('href="(.*?)"', e2)
+        title=re.findall('"_blank">(.*?)</a>', e2)
+        links=[]
+        for n in range(0, len(href)):
+            links.append({"href": href[n], "title": title[n]})
+        return links
 
     def _parse_source(self, response):
         """Parse or generate source."""
