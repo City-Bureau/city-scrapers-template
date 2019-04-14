@@ -3,7 +3,7 @@ from datetime import datetime
 from os.path import dirname, join
 
 import pytest
-from city_scrapers_core.constants import NOT_CLASSIFIED
+from city_scrapers_core.constants import COMMITTEE, TENTATIVE
 from freezegun import freeze_time
 
 from city_scrapers.spiders.pitt_city_council import PittCityCouncilSpider
@@ -15,7 +15,7 @@ with open(join(dirname(__file__), "files", "pitt_city_council.json"), "r") as f:
     test_response = json.load(f)
 
 spider = PittCityCouncilSpider()
-parsed_items = [item for item in spider._parse_events(test_response)]
+parsed_items = [item for item in spider.parse_legistar(test_response)]
 
 freezer.stop()
 
@@ -25,7 +25,7 @@ def test_title():
 
 
 def test_description():
-    assert parsed_items[0]["description"] == "no description"
+    assert parsed_items[0]["description"] == ""
 
 
 def test_start():
@@ -37,7 +37,7 @@ def test_end():
 
 
 def test_time_notes():
-    assert parsed_items[0]["time_notes"] == "Estimated three-hour meeting length"
+    assert parsed_items[0]["time_notes"] == "Estimated 3 hour meeting length"
 
 
 def test_id():
@@ -45,7 +45,7 @@ def test_id():
 
 
 def test_status():
-    assert parsed_items[0]["status"] == "tentative"
+    assert parsed_items[0]["status"] == TENTATIVE
 
 
 def test_location():
@@ -58,7 +58,7 @@ def test_location():
 
 
 def test_source():
-    assert parsed_items[0]["source"][0].get('url') == (
+    assert parsed_items[0]["source"] == (
         "https://pittsburgh.legistar.com/MeetingDeta"
         "il.aspx?ID=681042&GUID=631BD673-830F-4759-"
         "9DDE-EB16B3F1E681&Options=info&Search="
@@ -76,7 +76,7 @@ def test_links():
 
 
 def test_classification():
-    assert parsed_items[0]["classification"] == NOT_CLASSIFIED
+    assert parsed_items[0]["classification"] == COMMITTEE
 
 
 @pytest.mark.parametrize("item", parsed_items)

@@ -23,6 +23,7 @@ ITEM_PIPELINES = {
 # for S3 and Azure respectively.
 
 EXTENSIONS = {
+    "scrapy_sentry.extensions.Errors": 10,
     "city_scrapers_core.extensions.S3StatusExtension": 100,
     "scrapy.extensions.closespider.CloseSpider": None,
 }
