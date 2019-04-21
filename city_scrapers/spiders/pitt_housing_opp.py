@@ -135,7 +135,7 @@ class PittHousingOppSpider(CityScrapersSpider):
         return times_clean
 
     def _parse_start_time_of_day(self, item):
-            return re.sub(' ', '', self._parse_times_helper(item)[0][0])
+        return re.sub(' ', '', self._parse_times_helper(item)[0][0])
 
     def _parse_end_time_of_day(self, item):
         return re.sub(' ', '', self._parse_times_helper(item)[1][0])
