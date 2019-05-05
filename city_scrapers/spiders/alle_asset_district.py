@@ -5,6 +5,7 @@ from urllib.parse import urljoin
 import scrapy
 from datetime import datetime
 from datetime import time
+import re
 
 class AlleAssetDistrictSpider(CityScrapersSpider):
     name = "alle_asset_district"
@@ -25,20 +26,12 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
             yield scrapy.Request(url, callback=self.parse_meeting)
 
     def parse_meeting(self, response):
-        up_startdate = response.css(".published::text").extract_first().strip()
-        description = response.xpath("//div[@class='body-wizy']/p//text()").extract_first()
-        p_startdate = datetime.strptime(up_startdate, "%a, %b %d, %Y")
-        p_startdate = datetime.combine(p_startdate.date(), '00:00')
-        print(p_startdate)
-        print(p_startdate)
         meeting = Meeting(
-            title = response.css(".post-title h1::text").extract_first(),
-            location = {
-                "name": response.xpath("(//div[@class='body-wizy']//div[@class='row'])[1]").css(".info p::text").extract_first(),
-                "address": response.xpath("(//div[@class='body-wizy']//div[@class='row'])[2]").css(".info p::text").extract_first()
-            },
-            description = description,
-            source = response.url
+            title = self._parse_title(response),
+            location = self._parse_location(response),
+            description = self._parse_description(response),
+            source = self._parse_source(response),
+            start = self._parse_start(response)
         )
 
         meeting["id"] = self._get_id(meeting)
@@ -48,19 +41,36 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        return ""
+        return item.css(".post-title h1::text").extract_first()
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
-        return ""
+        return item.xpath("//div[@class='body-wizy']/p//text()").extract_first()
 
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
         return NOT_CLASSIFIED
 
     def _parse_start(self, item):
-        """Parse start datetime as a naive datetime object."""
-        return None
+        up_startdate = item.css(".published::text").extract_first().strip()
+        p_startdate = datetime.strptime(up_startdate, "%a, %b %d, %Y")
+        description = self._parse_description(item)
+        TIME_REGEX = re.compile('\d{1,2}:\d{2}[AaPp][Mm]')
+        tm_found = TIME_REGEX.search(description)
+        if tm_found:
+            up_starttime = tm_found[0]
+            p_starttime = datetime.strptime(up_starttime, '%I:%M%p').time()
+            startdatetime = datetime.combine(p_startdate, p_starttime)
+        else:
+            TIME2_REGEX = re.compile('\d{1,2}[AaPp][Mm]')
+            tm_found = TIME2_REGEX.search(description)
+            if tm_found:
+                up_starttime = tm_found[0]
+                p_starttime = datetime.strptime(up_starttime, '%I%p').time()
+                startdatetime = datetime.combine(p_startdate, p_starttime)
+            else:
+                startdatetime = p_startdate
+        return startdatetime
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
@@ -77,8 +87,8 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
     def _parse_location(self, item):
         """Parse or generate location."""
         return {
-            "address": "",
-            "name": "",
+            "address": item.xpath("(//div[@class='body-wizy']//div[@class='row'])[2]").css(".info p::text").extract_first(),
+            "name": item.xpath("(//div[@class='body-wizy']//div[@class='row'])[1]").css(".info p::text").extract_first(),
         }
 
     def _parse_links(self, item):
