@@ -99,7 +99,14 @@ class CityPlanningSpider(CityScrapersSpider):
         """Parse or generate location."""
         e2=item[re.search('<li>(.*?)</li>',item).end():]
         location=re.search('<li>(.*?)</li>',e2).group(1)
-
+        """test if the location starts with a number"""
+        if bool(re.search("^[0-9]",location)):
+            location_name=""
+            address=location
+        else:
+            location_name=re.search('^(.+?),',location).group(1)
+            address=re.search('^'+address+', '+'(.*?)$',location).group(1)
+            location={"name":location_name,"address":address}
         return location
 
     def _parse_links(self, item):
