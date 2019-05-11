@@ -1,9 +1,10 @@
+import re
+from datetime import datetime
+
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
-import re
-from datetime import datetime
 
 class CityPlanningSpider(CityScrapersSpider):
     name = "city_planning"
@@ -11,25 +12,24 @@ class CityPlanningSpider(CityScrapersSpider):
     timezone = "America/Chicago"
     allowed_domains = ["pittsburghpa.gov"]
     start_urls = ["http://pittsburghpa.gov/dcp/notices"]
-    
-    def _build_list(self,response):
+
+    def _build_list(self, response):
         """
         Create list of events
         """
         everything = response.css('div.col-md-12').extract()[0]
         title_index = [m.start() for m in re.finditer('<p><strong>', everything)]
-        events=[]
-        for i in range(0,len(title_index)-1):
-            start=title_index[i]
-        #for the last event, need to make the end point just the end of everything
-            if i ==len(title_index)-1:
-                end=len(everything)-len('<p><strong>')
+        events = []
+        for i in range(0, len(title_index)-1):
+            start = title_index[i]
+        # for the last event, need to make the end point just the end of everything
+            if i == len(title_index)-1:
+                end = len(everything)-len('<p><strong>')
             else:
-                end=title_index[i+1]-len('<p><strong>')
-    
+                end = title_index[i+1]-len('<p><strong>')
+
             events.append(everything[start:end])
             return events
-
 
     def parse(self, response):
         """
@@ -38,7 +38,7 @@ class CityPlanningSpider(CityScrapersSpider):
         Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
         """
-        events=self._build_list(response)
+        events = self._build_list(response)
         for item in events:
             meeting = Meeting(
                 title=self._parse_title(item),
@@ -60,7 +60,7 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        title=re.search('<strong>(.*?)</strong>',item).group(1)
+        title = re.search('<strong>(.*?)</strong>', item).group(1)
         return title
 
     def _parse_description(self, item):
@@ -73,7 +73,7 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""
-        date_text=re.search('\xa0(.*?)</li>',item).group(1)
+        date_text = re.search('\xa0(.*?)</li>', item).group(1)
         try:
             date = datetime.strptime(date_text, '%B %d, %Y %I:%M %p')
         except:
@@ -97,23 +97,23 @@ class CityPlanningSpider(CityScrapersSpider):
 
     def _parse_location(self, item):
         """Parse or generate location."""
-        e2=item[re.search('<li>(.*?)</li>',item).end():]
-        location=re.search('<li>(.*?)</li>',e2).group(1)
+        e2 = item[re.search('<li>(.*?)</li>', item).end():]
+        loc = re.search('<li>(.*?)</li>', e2).group(1)
         """test if the location starts with a number"""
-        if bool(re.search("^[0-9]",location)):
-            location_name=""
-            address=location
+        if bool(re.search("^[0-9]", loc)):
+            location_name = ""
+            address = loc
         else:
-            location_name=re.search('^(.+?),',location).group(1)
-            address=re.search('^'+address+', '+'(.*?)$',location).group(1)
-            location={"name":location_name,"address":address}
+            location_name = re.search('^(.+?),', loc).group(1)
+            address = re.search('^'+address+', '+'(.*?)$', loc).group(1)
+        location = {"name": location_name, "address": address}
         return location
 
     def _parse_links(self, item):
-        e2=item[re.search('<li>(.*?)</li>',item).end():]
-        href=re.findall('href="(.*?)"', e2)
-        title=re.findall('"_blank">(.*?)</a>', e2)
-        links=[]
+        e2 = item[re.search('<li>(.*?)</li>', item).end():]
+        href = re.findall('href="(.*?)"', e2)
+        title = re.findall('"_blank">(.*?)</a>', e2)
+        links = []
         for n in range(0, len(href)):
             links.append({"href": href[n], "title": title[n]})
         return links
