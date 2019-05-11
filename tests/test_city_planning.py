@@ -2,9 +2,9 @@ from datetime import datetime
 from os.path import dirname, join
 
 import pytest
-from freezegun import freeze_time
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
+from freezegun import freeze_time
 
 from city_scrapers.spiders.city_planning import CityPlanningSpider
 
@@ -31,7 +31,7 @@ Uncomment below
 """
 
 def test_title():
-    assert parsed_items[0]["title"] == "Inclusionary Zoning Interim Planning Overlay District (IPOD-6)"
+    assert parsed_items[0]["title"] == "Inclusionary Zoning Interim Planning Overlay District (IPOD-6)\xa0"
 
 
 def test_description():
@@ -60,8 +60,8 @@ def test_time_notes():
 
 def test_location():
     assert parsed_items[0]["location"] == {
-        "name": "EXPECTED NAME",
-        "address": "EXPECTED ADDRESS"
+        "name": '',
+        "address": '200 Ross Street, 1st Floor Conference Room'
     }
 
 
