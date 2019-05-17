@@ -22,8 +22,8 @@ parsed_items = [item for item in spider.parse(test_response)]
 freezer.stop()
 
 
-def test_tests():
-    assert False
+    #def test_tests():
+#assert False
 
 
 """
