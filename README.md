@@ -2,6 +2,10 @@
 
 Template repo for running a [City Scrapers](https://cityscrapers.org) project in your area.
 
+## Data Link
+- The data collected by this project is posted to:
+ - https://city-scrapers-pittsburgh.github.io/city-scrapers-events/
+
 ## Setup
 
 - Fork this repo to your GitHub account or organization account. Feel free to change the name to something specific to your area (i.e. `city-scrapers-il` for scrapers in Illinois).
