@@ -20,23 +20,6 @@ parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
-
-def test_tests():
-    test_title()
-    test_description()
-    test_start()
-    test_end()
-    test_time_notes()
-    test_start()
-    test_id()
-    test_status()
-    test_location()
-    test_source()
-    test_links()
-    test_classification()
-    test_all_day(parsed_items[0])
-
-
 def test_title():
     assert parsed_items[0]["title"] == "Rescheduled – PEDFA Board Meeting"
 
