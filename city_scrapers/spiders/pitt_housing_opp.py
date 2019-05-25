@@ -75,9 +75,6 @@ class PittHousingOppSpider(CityScrapersSpider):
     timezone = "America/New_York"
     allowed_domains = ["www.ura.org"]
     start_urls = get_ura_urls()
-    f = open('log', 'a+')
-    f.write(str(start_urls))
-    f.close()
 
     def parse(self, item):
         """
