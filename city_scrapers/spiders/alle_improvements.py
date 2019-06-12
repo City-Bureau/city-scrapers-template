@@ -2,12 +2,10 @@ import datetime
 import re
 from urllib.parse import urljoin
 
-from scrapy.utils.response import get_base_url
-
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-
+from scrapy.utils.response import get_base_url
 
 RE_URL = re.compile(r'(?P<date>(\d{1,2}-\d{1,2}-\d{1,2}))-(?P<dtype>(\w+)).aspx')
 
