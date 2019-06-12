@@ -20,7 +20,10 @@ class AlleImprovementsSpider(CityScrapersSpider):
     timezone = "America/New_York"
     allowed_domains = ["county.allegheny.pa.us"]
     start_urls = [
-        "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx"
+        (
+            "https://www.county.allegheny.pa.us/economic-development/"
+            "authorities/meetings-reports/aim/meetings.aspx"
+        ),
     ]
 
     def parse(self, response):
@@ -59,7 +62,10 @@ class AlleImprovementsSpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        return "Authority For Improvements In Municipalities Board Of Directors Regular And Public Hearing"
+        return (
+            "Authority For Improvements In Municipalities Board Of Directors "
+            "Regular And Public Hearing"
+        )
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
