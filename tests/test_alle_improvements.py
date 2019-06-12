@@ -10,7 +10,8 @@ from city_scrapers.spiders.alle_improvements import AlleImprovementsSpider
 
 test_response = file_response(
     join(dirname(__file__), "files", "alle_improvements.html"),
-    url="https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx",
+    url=
+    "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx",
 )
 spider = AlleImprovementsSpider()
 
@@ -23,11 +24,13 @@ freezer.stop()
 
 
 def test_title():
-    assert parsed_items[0]["title"] == "Authority For Improvements In Municipalities Board Of Directors Regular And Public Hearing"
+    assert parsed_items[0][
+        "title"
+    ] == "Authority For Improvements In Municipalities Board Of Directors Regular And Public Hearing"
 
 
 # def test_description():
-#     assert parsed_items[0]["description"] == "EXPECTED DESCRIPTION"
+#   assert parsed_items[0]["description"] == "EXPECTED DESCRIPTION"
 
 
 def test_num_items():
@@ -47,8 +50,7 @@ def test_time_notes():
 
 
 # def test_id():
-    # assert parsed_items[0]["id"] == "EXPECTED ID"
-
+#   assert parsed_items[0]["id"] == "EXPECTED ID"
 
 # def test_status():
 #     assert parsed_items[0]["status"] == "EXPECTED STATUS"
@@ -62,20 +64,26 @@ def test_location():
 
 
 def test_source():
-    assert parsed_items[0]["source"] == "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx"
+    assert parsed_items[0][
+        "source"
+    ] == "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx"
 
 
 def test_links():
     assert len(parsed_items[0]["links"]) == 0
 
     assert parsed_items[1]["links"] == [
-            {
-                "href": "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/2019/02-26-19-agenda.aspx",
-                "title": "Agenda 02-26-19"},
-            {
-                "href": "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/2019/02-26-19-minutes.aspx",
-                "title": "Minutes 02-26-19"},
-            ]
+        {
+            "href":
+                "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/2019/02-26-19-agenda.aspx",
+            "title": "Agenda 02-26-19"
+        },
+        {
+            "href":
+                "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/2019/02-26-19-minutes.aspx",
+            "title": "Minutes 02-26-19"
+        },
+    ]
 
 
 def test_classification():

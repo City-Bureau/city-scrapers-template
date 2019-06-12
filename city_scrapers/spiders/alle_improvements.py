@@ -19,7 +19,9 @@ class AlleImprovementsSpider(CityScrapersSpider):
     agency = "Allegheny County Authority for Improvements in Municipalities (AIM)"
     timezone = "America/New_York"
     allowed_domains = ["county.allegheny.pa.us"]
-    start_urls = ["https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx"]
+    start_urls = [
+        "https://www.county.allegheny.pa.us/economic-development/authorities/meetings-reports/aim/meetings.aspx"
+    ]
 
     def parse(self, response):
         data = response.xpath("//table[@dropzone='copy']")
@@ -91,10 +93,14 @@ class AlleImprovementsSpider(CityScrapersSpider):
 
     def _parse_location(self, item):
         """Parse or generate location."""
-        raw = [r.strip() for r in item.xpath(".//td[contains(., 'Location')]/following-sibling::td/text()").extract()]
+        raw = [
+            r.strip() for r in
+            item.xpath(".//td[contains(., 'Location')]/following-sibling::td/text()").extract()
+        ]
+
         return {
-                "address": '\n'.join(raw[1:]),
-                "name": raw[0],
+            "address": '\n'.join(raw[1:]),
+            "name": raw[0],
         }
 
     def _parse_source(self, response):
@@ -103,7 +109,9 @@ class AlleImprovementsSpider(CityScrapersSpider):
 
     def _parse_pdf_links(self, response):
         """Generate dict of (date, link) key values for agenda and minutes"""
-        urls = response.xpath('//a[contains(@href, "-minutes.aspx") or contains(@href, "-agenda.aspx")]/@href').extract()
+        urls = response.xpath(
+            '//a[contains(@href, "-minutes.aspx") or contains(@href, "-agenda.aspx")]/@href'
+        ).extract()
 
         agendas = {}
         minutes = {}
