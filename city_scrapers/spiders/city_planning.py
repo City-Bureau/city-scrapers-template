@@ -22,7 +22,7 @@ class CityPlanningSpider(CityScrapersSpider):
         events = []
         for i in range(0, len(title_index) - 1):
             start = title_index[i]
-# for the last event, need to make the end point just the end of everything
+            # for the last event, need to make the end point just the end of everything
             if i == len(title_index) - 1:
                 end = len(everything) - len('<p><strong>')
             else:
