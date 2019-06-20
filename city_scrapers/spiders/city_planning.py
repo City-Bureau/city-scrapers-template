@@ -75,7 +75,7 @@ class CityPlanningSpider(CityScrapersSpider):
         """Parse start datetime as a naive datetime object."""
         # replace /xao encoding with space in lines where it appears
         item2=item.replace(u'\xa0',u' ')
-        date_text = re.search('\xa0(.*?)</li>', item2).group(1)
+        date_text=re.search('<li>.*?: (.*?)</li>',item2).group(1)
         	# check if the word "at" is in date_text, to see if time is specified
         date_text=date_text.replace(' at ',' ')
         #remove commas since those aren't consistently used
