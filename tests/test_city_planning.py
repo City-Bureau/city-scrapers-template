@@ -52,8 +52,8 @@ def test_time_notes():
 # def test_id():
 #     assert parsed_items[0]["id"] == "EXPECTED ID"
 
-# def test_status():
-#     assert parsed_items[0]["status"] == "EXPECTED STATUS"
+#def test_status():
+#    assert parsed_items[0]["status"] == "PASSED"
 
 
 def test_location():

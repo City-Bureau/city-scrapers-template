@@ -11,6 +11,7 @@ scrapy-sentry = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 python-dateutil = "*"
 city-scrapers-core = "*"
+freezegun = "*"
 
 [dev-packages]
 freezegun = "*"

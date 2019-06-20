@@ -109,7 +109,7 @@ class CityPlanningSpider(CityScrapersSpider):
         location = {"name": location_name, "address": address}
         return location
 
-    def _parse_links(self, item, response):
+    def _parse_links(self, item):
         e2 = item[re.search('<li>(.*?)</li>', item).end():]
         href = re.findall('href="(.*?)"', e2)
         title = re.findall('"_blank">(.*?)</a>', e2)
