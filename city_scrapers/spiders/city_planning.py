@@ -20,13 +20,13 @@ class CityPlanningSpider(CityScrapersSpider):
         everything = response.css('div.col-md-12').extract()[0]
         title_index = [m.start() for m in re.finditer('<p><strong>', everything)]
         events = []
-        for i in range(0, len(title_index)-1):
+        for i in range(0, len(title_index) - 1):
             start = title_index[i]
-        # for the last event, need to make the end point just the end of everything
-            if i == len(title_index)-1:
-                end = len(everything)-len('<p><strong>')
+# for the last event, need to make the end point just the end of everything
+            if i == len(title_index) - 1:
+                end = len(everything) - len('<p><strong>')
             else:
-                end = title_index[i+1]-len('<p><strong>')
+                end = title_index[i + 1] - len('<p><strong>')
 
             events.append(everything[start:end])
             return events
@@ -76,10 +76,10 @@ class CityPlanningSpider(CityScrapersSpider):
         date_text = re.search('\xa0(.*?)</li>', item).group(1)
         try:
             date = datetime.strptime(date_text, '%B %d, %Y %I:%M %p')
-        except:
+        except ValueError:
             try:
                 date = datetime.strptime(date_text, '%B %d, %Y %I %p')
-            except:
+            except ValueError:
                 date = datetime.datetime(1111, 11, 11)
         return date
 
@@ -105,11 +105,11 @@ class CityPlanningSpider(CityScrapersSpider):
             address = loc
         else:
             location_name = re.search('^(.+?),', loc).group(1)
-            address = re.search('^'+address+', '+'(.*?)$', loc).group(1)
+            address = re.search('^' + address + ', ' + '(.*?)$', loc).group(1)
         location = {"name": location_name, "address": address}
         return location
 
-    def _parse_links(self, item):
+    def _parse_links(self, item, response):
         e2 = item[re.search('<li>(.*?)</li>', item).end():]
         href = re.findall('href="(.*?)"', e2)
         title = re.findall('"_blank">(.*?)</a>', e2)

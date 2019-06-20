@@ -21,17 +21,16 @@ parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
-
-    #def test_tests():
+#def test_tests():
 #assert False
-
-
 """
 Uncomment below
 """
 
+
 def test_title():
-    assert parsed_items[0]["title"] == "Inclusionary Zoning Interim Planning Overlay District (IPOD-6)\xa0"
+    assert parsed_items[0]["title"
+                           ] == "Inclusionary Zoning Interim Planning Overlay District (IPOD-6)\xa0"
 
 
 def test_description():
@@ -53,7 +52,6 @@ def test_time_notes():
 # def test_id():
 #     assert parsed_items[0]["id"] == "EXPECTED ID"
 
-
 # def test_status():
 #     assert parsed_items[0]["status"] == "EXPECTED STATUS"
 
@@ -71,8 +69,8 @@ def test_location():
 
 def test_links():
     assert parsed_items[0]["links"] == [{
-      "href": "http://pittsburghpa.gov/dcp/ipod6",
-      "title": "here"
+        "href": "http://pittsburghpa.gov/dcp/ipod6",
+        "title": "here"
     }]
 
 
