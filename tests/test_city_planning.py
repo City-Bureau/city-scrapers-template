@@ -1,7 +1,7 @@
 from datetime import datetime
 from os.path import dirname, join
 
-import pytest
+# import pytest
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
@@ -21,8 +21,8 @@ parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
-#def test_tests():
-#assert False
+# def test_tests():
+# assert False
 """
 Uncomment below
 """
