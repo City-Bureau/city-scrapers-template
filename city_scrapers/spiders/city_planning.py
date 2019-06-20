@@ -74,12 +74,12 @@ class CityPlanningSpider(CityScrapersSpider):
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""
         # replace /xao encoding with space in lines where it appears
-        item2=item.replace(u'\xa0',u' ')
-        date_text=re.search('<li>.*?: (.*?)</li>',item2).group(1)
-        	# check if the word "at" is in date_text, to see if time is specified
-        date_text=date_text.replace(' at ',' ')
-        #remove commas since those aren't consistently used
-        date_text=date_text.replace(',','')
+        item2 = item.replace(u'\xa0', u' ')
+        date_text = re.search('<li>.*?: (.*?)</li>', item2).group(1)
+        # check if the word "at" is in date_text, to see if time is specified
+        date_text = date_text.replace(' at ', ' ')
+        # remove commas since those aren't consistently used
+        date_text = date_text.replace(',', '')
         try:
             date = datetime.strptime(date_text, '%A %B %d %Y %I:%M %p')
         except ValueError:
