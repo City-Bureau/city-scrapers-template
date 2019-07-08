@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
-twisted = ">=18.9.0"
+twisted = "*"
 scrapy = "*"
 scrapy-sentry = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
