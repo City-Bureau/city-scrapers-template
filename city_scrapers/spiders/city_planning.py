@@ -80,13 +80,23 @@ class CityPlanningSpider(CityScrapersSpider):
         date_text = date_text.replace(' at ', ' ')
         # remove commas since those aren't consistently used
         date_text = date_text.replace(',', '')
+        # remove leading and trailing spaces
+        date_text = date_text.strip()
         try:
             date = datetime.strptime(date_text, '%A %B %d %Y %I:%M %p')
         except ValueError:
             try:
-                date = datetime.strptime(date_text, '%A %B %d %Y %I%p')
+                date = datetime.strptime(date_text, '%A %B %d %Y %I %p')
             except ValueError:
-                date = datetime(1111, 11, 11, 11, 11)
+                try:
+                    date=datetime.strptime(date_text,'%B %d %Y %I %p')
+                except ValueError:
+                    try:
+                        date=datetime.strptime(date_text, '%A %B %d %Y')
+                    except ValueError:
+                        try:
+                            date=datetime.strptime(date_text,'%A %B %d %Y %I:%M %p')
+                        date = datetime(1111, 11, 11, 11, 11)
         return date
 
     def _parse_end(self, item):
