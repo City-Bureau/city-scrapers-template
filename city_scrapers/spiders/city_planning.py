@@ -96,7 +96,8 @@ class CityPlanningSpider(CityScrapersSpider):
                     except ValueError:
                         try:
                             date=datetime.strptime(date_text,'%A %B %d %Y %I:%M %p')
-                        date = datetime(1111, 11, 11, 11, 11)
+                        except ValueError:
+                            date = datetime.datetime(1111, 11, 11, 11, 11)
         return date
 
     def _parse_end(self, item):
