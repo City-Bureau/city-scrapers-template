@@ -1,8 +1,8 @@
+from datetime import datetime
+import re
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-from datetime import datetime
-import re
 
 class AlleHealthSpider(CityScrapersSpider):
     name = "alle_health"
