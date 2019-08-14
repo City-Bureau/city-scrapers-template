@@ -29,7 +29,9 @@ class CityPlanningSpider(CityScrapersSpider):
                 end = title_index[i + 1] - len('<p><strong>')
 
             events.append(everything[start:end])
-            return events
+        # replace '\x0' with space
+        events = [i.replace(u'\xa0', u'') for i in events]
+        return events
 
     def parse(self, response):
         """
@@ -97,7 +99,7 @@ class CityPlanningSpider(CityScrapersSpider):
                         try:
                             date = datetime.strptime(date_text, '%A %B %d %Y %I:%M %p')
                         except ValueError:
-                            date = datetime.datetime(1111, 11, 11, 11, 11)
+                            date = datetime(1111, 11, 11, 11, 11)
         return date
 
     def _parse_end(self, item):
@@ -122,7 +124,7 @@ class CityPlanningSpider(CityScrapersSpider):
             address = loc
         else:
             location_name = re.search('^(.+?),', loc).group(1)
-            address = re.search('^' + address + ', ' + '(.*?)$', loc).group(1)
+            address = re.search('^' + location_name + ', ' + '(.*?)$', loc).group(1)
         location = {"name": location_name, "address": address}
         return location
 

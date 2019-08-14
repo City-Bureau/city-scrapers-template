@@ -6,6 +6,7 @@ from city_scrapers_core.items import Meeting
 
 class MigrationPipeline:
     """Migrates to city_scrapers_core Meeting object instead of dictionaries"""
+
     @ignore_jscalendar
     def process_item(self, item, spider):
         if isinstance(item, Meeting):
