@@ -9,8 +9,8 @@ twisted = ">=18.9.0"
 scrapy = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 python-dateutil = "*"
-city-scrapers-core = {extras = ["aws"],version = "*"}
 scrapy-sentry = "*"
+city-scrapers-core = "*"
 
 [dev-packages]
 freezegun = "*"
