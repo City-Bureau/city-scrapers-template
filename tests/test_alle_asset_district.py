@@ -2,9 +2,9 @@ from datetime import datetime
 from os.path import dirname, join
 
 import pytest
-from freezegun import freeze_time
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
+from freezegun import freeze_time
 
 from city_scrapers.spiders.alle_asset_district import AlleAssetDistrictSpider
 

@@ -1,16 +1,20 @@
-from city_scrapers_core.constants import NOT_CLASSIFIED, BOARD
-from city_scrapers_core.items import Meeting
-from city_scrapers_core.spiders import CityScrapersSpider
-import re
 from datetime import datetime
 
+from city_scrapers_core.constants import BOARD
+from city_scrapers_core.items import Meeting
+from city_scrapers_core.spiders import CityScrapersSpider
 
-class PaLiquorboardSpider(CityScrapersSpider): # Spider is a class that scapy provides to us, this spider will inherit properties from the base spider class
-    name = "pa_liquorboard" # How we refer to the spider when we want to run it
+
+class PaLiquorboardSpider(CityScrapersSpider):
+    """Spider is a class that scapy provides to us,
+        this spider will inherit properties from the base spider class
+    """
+    name = "pa_liquorboard"  # How we refer to the spider when we want to run it
     agency = "Pennsylvania Liquor Control Board"
     timezone = "America/New_York"
     allowed_domains = ["www.lcb.pa.gov"]
-    start_urls = ["https://www.lcb.pa.gov/About-Us/Board/Pages/Public-Meetings.aspx"] # List of urls that we are going to scrape content from
+    start_urls = ["https://www.lcb.pa.gov/About-Us/Board/Pages/Public-Meetings.aspx"]
+    # List of urls that we are going to scrape content from
 
     # We are extracting the entire html content -- all of the html content and saving it
     def parse(self, response):
@@ -20,8 +24,8 @@ class PaLiquorboardSpider(CityScrapersSpider): # Spider is a class that scapy pr
         Change the `_parse_id`, `_parse_name`, etc methods to fit your scraping
         needs.
         """
-        select_txt = "//*[@id='ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField']/blockquote[1]/font/text()" # Identify CSS node or XPath you're interested in
-        meetings = response.xpath(select_txt).extract() # Make variable of that text
+        select_txt = "//*[@id='ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField']/blockquote[1]/font/text()"  # Identify CSS node or XPath you're interested in
+        meetings = response.xpath(select_txt).extract()  # Make variable of that text
 
         for item in meetings:
             meeting = Meeting(
@@ -40,7 +44,7 @@ class PaLiquorboardSpider(CityScrapersSpider): # Spider is a class that scapy pr
             # meeting["status"] = self._get_status(meeting)
             # meeting["id"] = self._get_id(meeting)
 
-            yield meeting # This is what you want to have
+            yield meeting  # This is what you want to have
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
@@ -54,7 +58,7 @@ class PaLiquorboardSpider(CityScrapersSpider): # Spider is a class that scapy pr
         """Parse or generate classification from allowed options."""
         return BOARD
 
-    def _parse_start(self, item): # Put regular expression to clean, get day here
+    def _parse_start(self, item):  # Put regular expression to clean, get day here
         """Parse start datetime as a naive datetime object."""
         date_object = datetime.date(datetime.strptime(" ".join(item.split()[-3:]), '%B %d, %Y'))
         return date_object
@@ -71,7 +75,7 @@ class PaLiquorboardSpider(CityScrapersSpider): # Spider is a class that scapy pr
         """Parse or generate all-day status. Defaults to False."""
         return False
 
-    def _parse_location(self, item): # Put function to get location
+    def _parse_location(self, item):  # Put function to get location
         """Parse or generate location."""
         return {
             "address": "Room 117, 604 Northwest Office Building, Harrisburg, PA 17124",

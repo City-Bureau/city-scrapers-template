@@ -2,9 +2,9 @@ from datetime import datetime
 from os.path import dirname, join
 
 import pytest
-from freezegun import freeze_time
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
+from freezegun import freeze_time
 
 from city_scrapers.spiders.pa_liquorboard import PaLiquorboardSpider
 
@@ -24,7 +24,7 @@ freezer.stop()
 
 def test_tests():
     print("Please write some tests for this spider or at least disable this one.")
-    assert False
+    assert True
 
 
 """
@@ -39,8 +39,8 @@ Uncomment below
 #     assert parsed_items[0]["description"] == "EXPECTED DESCRIPTION"
 
 
-# def test_start():
-#     assert parsed_items[0]["start"] == datetime(2019, 1, 1, 0, 0)
+def test_start():
+    assert parsed_items[0]["start"] > datetime(2000, 1, 1, 0, 0)
 
 
 # def test_end():
