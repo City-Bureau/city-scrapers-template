@@ -11,7 +11,7 @@ from city_scrapers_core.spiders import CityScrapersSpider
 class AlleAssetDistrictSpider(CityScrapersSpider):
     name = "alle_asset_district"
     agency = "Allegheny Regional Asset District"
-    timezone = "America/Chicago"
+    timezone = "America/New_York"
     allowed_domains = ["radworkshere.org"]
     start_urls = ["https://radworkshere.org/pages/whats-happening?cal=board-meetings"]
 

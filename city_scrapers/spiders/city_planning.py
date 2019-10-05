@@ -9,7 +9,7 @@ from city_scrapers_core.spiders import CityScrapersSpider
 class CityPlanningSpider(CityScrapersSpider):
     name = "city_planning"
     agency = "City Of Pittsburgh Planning Commission Notices"
-    timezone = "America/Chicago"
+    timezone = "America/New_York"
     allowed_domains = ["pittsburghpa.gov"]
     start_urls = ["http://pittsburghpa.gov/dcp/notices"]
 
