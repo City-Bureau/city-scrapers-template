@@ -55,11 +55,12 @@ class PaDevelopmentSpider(CityScrapersSpider):
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""
-        return datetime.strptime(item['utc_start_date'], '%Y-%m-%d %H:%M:%S')
+        start_time = datetime.strptime(item['start_date'], '%Y-%m-%d %H:%M:%S')
+        return start_time
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
-        return datetime.strptime(item['utc_end_date'], '%Y-%m-%d %H:%M:%S')
+        return datetime.strptime(item['end_date'], '%Y-%m-%d %H:%M:%S')
 
     def _parse_time_notes(self, item):
         """Parse any additional notes on the timing of the meeting"""

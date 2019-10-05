@@ -30,11 +30,11 @@ def test_description():
 
 
 def test_start():
-    assert parsed_items[0]["start"] == datetime(2019, 3, 13, 17, 0)
+    assert parsed_items[0]["start"] == datetime(2019, 3, 13, 13, 0)
 
 
 def test_end():
-    assert parsed_items[0]["end"] == datetime(2019, 3, 13, 18, 0)
+    assert parsed_items[0]["end"] == datetime(2019, 3, 13, 14, 0)
 
 
 def test_time_notes():
@@ -42,7 +42,7 @@ def test_time_notes():
 
 
 def test_id():
-    assert parsed_items[0]["id"] == "pa_development/201903131700/x/_pedfa_board_meeting"
+    assert parsed_items[0]["id"] == "pa_development/201903131300/x/_pedfa_board_meeting"
 
 
 def test_status():
