@@ -24,7 +24,10 @@ class PaLiquorboardSpider(CityScrapersSpider):
         Change the `_parse_id`, `_parse_name`, etc methods to fit your scraping
         needs.
         """
-        select_txt = "//*[@id='ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField']/blockquote[1]/font/text()"  # Identify CSS node or XPath you're interested in
+        sel_id = "ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField"
+        sel_path = "/blockquote[1]/font/text()"
+        select_txt = "//*[@id='" + sel_id + "']" + sel_path
+        # Identify CSS node or XPath you're interested in
         meetings = response.xpath(select_txt).extract()  # Make variable of that text
 
         for item in meetings:

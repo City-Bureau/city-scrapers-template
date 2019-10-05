@@ -1,5 +1,5 @@
 import re
-from datetime import datetime, time
+from datetime import datetime
 from urllib.parse import urljoin
 
 import scrapy
@@ -22,7 +22,10 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
         Change the `_parse_id`, `_parse_name`, etc methods to fit your scraping
         needs.
         """
-        for rel_url in response.css('#board-meetings .pages .post-title a::attr("href")').extract():
+
+        res = response.css('#board-meetings .pages .post-title a::attr("href")')
+        res_urls = res.extract()
+        for rel_url in res_urls:
             url = urljoin(response.url, rel_url)
             yield scrapy.Request(url, callback=self.parse_meeting)
 
@@ -55,14 +58,14 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
         up_startdate = item.css(".published::text").extract_first().strip()
         p_startdate = datetime.strptime(up_startdate, "%a, %b %d, %Y")
         description = self._parse_description(item)
-        TIME_REGEX = re.compile('\d{1,2}:\d{2}[AaPp][Mm]')
+        TIME_REGEX = re.compile(r'\d{1,2}:\d{2}[AaPp][Mm]')
         tm_found = TIME_REGEX.search(description)
         if tm_found:
             up_starttime = tm_found[0]
             p_starttime = datetime.strptime(up_starttime, '%I:%M%p').time()
             startdatetime = datetime.combine(p_startdate, p_starttime)
         else:
-            TIME2_REGEX = re.compile('\d{1,2}[AaPp][Mm]')
+            TIME2_REGEX = re.compile(r'\d{1,2}[AaPp][Mm]')
             tm_found = TIME2_REGEX.search(description)
             if tm_found:
                 up_starttime = tm_found[0]
@@ -86,9 +89,13 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
 
     def _parse_location(self, item):
         """Parse or generate location."""
+        add_row = item.xpath("(//div[@class='body-wizy']//div[@class='row'])[2]")
+        address = add_row.css(".info p::text").extract_first()
+        name_row = item.xpath("(//div[@class='body-wizy']//div[@class='row'])[1]")
+        name = name_row.css(".info p::text").extract_first()
         return {
-            "address": item.xpath("(//div[@class='body-wizy']//div[@class='row'])[2]").css(".info p::text").extract_first(),
-            "name": item.xpath("(//div[@class='body-wizy']//div[@class='row'])[1]").css(".info p::text").extract_first(),
+            "address": address,
+            "name": name,
         }
 
     def _parse_links(self, item):
