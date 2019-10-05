@@ -1,11 +1,12 @@
+import re
+from datetime import datetime, time
+from urllib.parse import urljoin
+
+import scrapy
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
-from urllib.parse import urljoin
-import scrapy
-from datetime import datetime
-from datetime import time
-import re
+
 
 class AlleAssetDistrictSpider(CityScrapersSpider):
     name = "alle_asset_district"
@@ -27,17 +28,16 @@ class AlleAssetDistrictSpider(CityScrapersSpider):
 
     def parse_meeting(self, response):
         meeting = Meeting(
-            title = self._parse_title(response),
-            location = self._parse_location(response),
-            description = self._parse_description(response),
-            source = self._parse_source(response),
-            start = self._parse_start(response)
+            title=self._parse_title(response),
+            location=self._parse_location(response),
+            description=self._parse_description(response),
+            source=self._parse_source(response),
+            start=self._parse_start(response)
         )
 
         meeting["id"] = self._get_id(meeting)
 
         yield meeting
-
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""

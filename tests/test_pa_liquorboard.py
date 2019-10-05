@@ -6,13 +6,13 @@ from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
 
-from city_scrapers.spiders.alle_asset_district import AlleAssetDistrictSpider
+from city_scrapers.spiders.pa_liquorboard import PaLiquorboardSpider
 
 test_response = file_response(
-    join(dirname(__file__), "files", "alle_asset_district.html"),
-    url="https://radworkshere.org/pages/whats-happening?cal=board-meetings",
+    join(dirname(__file__), "files", "pa_liquorboard.html"),
+    url="https://www.lcb.pa.gov/About-Us/Board/Pages/Public-Meetings.aspx",
 )
-spider = AlleAssetDistrictSpider()
+spider = PaLiquorboardSpider()
 
 freezer = freeze_time("2019-02-08")
 freezer.start()
@@ -39,8 +39,8 @@ Uncomment below
 #     assert parsed_items[0]["description"] == "EXPECTED DESCRIPTION"
 
 
-# def test_start():
-#     assert parsed_items[0]["start"] == datetime(2019, 1, 1, 0, 0)
+def test_start():
+    assert parsed_items[0]["start"] > datetime(2000, 1, 1, 0, 0)
 
 
 # def test_end():
