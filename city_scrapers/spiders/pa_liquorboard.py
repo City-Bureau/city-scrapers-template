@@ -14,8 +14,8 @@ class PaLiquorboardSpider(CityScrapersSpider):
     timezone = "America/New_York"
     allowed_domains = ["www.lcb.pa.gov"]
     start_urls = ["https://www.lcb.pa.gov/About-Us/Board/Pages/Public-Meetings.aspx"]
-    # List of urls that we are going to scrape content from
 
+    # List of urls that we are going to scrape content from
     # We are extracting the entire html content -- all of the html content and saving it
     def parse(self, response):
         """
