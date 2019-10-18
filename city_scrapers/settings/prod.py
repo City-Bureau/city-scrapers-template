@@ -22,6 +22,8 @@ ITEM_PIPELINES = {
 # configured by adding a value in the CITY_SCRAPERS_STATUS_BUCKET or CITY_SCRAPERS_STATUS_CONTAINER
 # for S3 and Azure respectively.
 
+SENTRY_DSN = os.getenv("SENTRY_DSN")
+
 EXTENSIONS = {
     # "city_scrapers_core.extensions.AzureBlobStatusExtension": 100,
     # "city_scrapers_core.extensions.S3StatusExtension": 100,
