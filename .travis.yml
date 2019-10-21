@@ -8,7 +8,10 @@ script:
   - yapf --diff --recursive ./city_scrapers/ ./tests/ || exit 1
   - flake8
   - pytest
-  - scrapy validate
+  - if [ $TRAVIS_PULL_REQUEST == 'false' ];
+    then echo "Not a pull request, ignoring";
+    else git diff --name-only --diff-filter=AM $TRAVIS_COMMIT_RANGE | grep -Pio '(?<=/spiders/).*(?=\.py)' | xargs scrapy validate;
+    fi
 before_deploy:
   - export PYTHONPATH=$(pwd):$PYTHONPATH
   - export SCRAPY_SETTINGS_MODULE=city_scrapers.settings.prod
