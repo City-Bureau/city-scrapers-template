@@ -25,7 +25,6 @@ class AlleHealthSpider(CityScrapersSpider):
         """
 
         unicode_text = response.text
-#        page_encoding = response.encoding
 
         paragraphs = re.findall(r'<p.*?</p>', unicode_text, re.S)
 
