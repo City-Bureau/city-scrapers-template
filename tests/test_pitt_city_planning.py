@@ -6,13 +6,13 @@ from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
 
-from city_scrapers.spiders.city_planning import CityPlanningSpider
+from city_scrapers.spiders.pitt_city_planning import PittCityPlanningSpider
 
 test_response = file_response(
-    join(dirname(__file__), "files", "city_planning.html"),
+    join(dirname(__file__), "files", "pitt_city_planning.html"),
     url="http://pittsburghpa.gov/dcp/notices",
 )
-spider = CityPlanningSpider()
+spider = PittCityPlanningSpider()
 
 freezer = freeze_time("2019-08-14")
 freezer.start()
