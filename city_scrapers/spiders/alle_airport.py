@@ -27,7 +27,8 @@ class AlleAirportSpider(CityScrapersSpider):
 
         DEFAULT_LOCATION = [
             "Pittsburgh International Airport",
-            "Conference Room A, 4th Flr Mezzanine, Landside Terminal, Pittsburgh International Airport"
+            "Conference Room A, 4th Flr Mezzanine, Landside Terminal",
+            "Pittsburgh International Airport"
         ]
         DEFAULT_TIME = [11, 30, 0]
 

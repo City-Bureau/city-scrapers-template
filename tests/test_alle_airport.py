@@ -58,8 +58,9 @@ def test_time_notes():
 def test_location():
     assert parsed_items[0]["location"] == {
         "name": "Pittsburgh International Airport",
-        "address": "Conference Room A, 4th Flr Mezzanine,"
-                   " Landside Terminal, Pittsburgh International Airport"
+        "address":
+            "Conference Room A, 4th Flr Mezzanine,"
+            " Landside Terminal, Pittsburgh International Airport"
     }
 
 
