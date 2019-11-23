@@ -7,6 +7,7 @@ name = "pypi"
 requests = "*"
 twisted = ">=18.9.0"
 scrapy = "*"
+legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 python-dateutil = "*"
 scrapy-sentry = "*"
 city-scrapers-core = "*"
