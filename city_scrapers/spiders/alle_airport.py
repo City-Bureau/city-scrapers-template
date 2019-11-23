@@ -24,9 +24,11 @@ class AlleAirportSpider(CityScrapersSpider):
         # I didn't know how to list defualt locations and time other than
         # hard code them in.
         # It was elsewhere in the page in a paragraph
-        DEFAULT_LOCATION = ["Pittsburgh International Airport",
-                            "Conference Room A, 4th Flr Mezzanine,"
-                            " Landside Terminal, Pittsburgh International Airport"]
+
+        DEFAULT_LOCATION = [
+            "Pittsburgh International Airport",
+            "Conference Room A, 4th Flr Mezzanine, Landside Terminal, Pittsburgh International Airport"
+        ]
         DEFAULT_TIME = [11, 30, 0]
 
         print("\n\n\n\n\nBEGIN SPIDER\n\n\n\n")
@@ -122,8 +124,10 @@ class AlleAirportSpider(CityScrapersSpider):
     # Function to determine if the line is a date by seeing
     # if a month is in the string
     def getDate(self, string):
-        month_lst = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-                     'August', 'September', 'October', 'November', 'December']
+        month_lst = [
+            'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+            'October', 'November', 'December'
+        ]
         for i in range(len(month_lst)):
             if month_lst[i].lower() in string.lower():
                 # regex to remove all non-numeric chars from string
@@ -173,9 +177,10 @@ class AlleAirportSpider(CityScrapersSpider):
                 newStr = self.removeStrings(val.strip(), ["strong", "<", ">", "/"])
                 dateLocation = []
                 # Creates a date-time event given defaultTime and date.
-                eventDateTime = datetime(datetime.today().year, date[0],
-                                         date[1], defaultTime[0], defaultTime[1],
-                                         defaultTime[2])
+                eventDateTime = datetime(
+                    datetime.today().year, date[0], date[1], defaultTime[0], defaultTime[1],
+                    defaultTime[2]
+                )
                 # If an "*" is present meeting is either moved or cancelled
                 if "*" in newStr:
                     location = self.checkIfCancelledOrMoved(newStr, defaultTime)
