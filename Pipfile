@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = "*"
 twisted = "*"
 scrapy = "*"
 scrapy-sentry = "*"
@@ -15,6 +14,7 @@ pywin32 = {version = "*", sys_platform = "== 'win32'"}
 [dev-packages]
 freezegun = "*"
 pytest = "*"
+pathlib2 = {version = "*", python_version = "< '3.6'"}
 "flake8" = "*"
 isort = "*"
 yapf = "*"
