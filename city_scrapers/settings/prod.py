@@ -8,7 +8,6 @@ USER_AGENT = "City Scrapers [production mode]. Learn more and say hello at https
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    "city_scrapers_core.pipelines.DefaultValuesPipeline": 100,
     # "city_scrapers_core.pipelines.S3DiffPipeline": 200,
     # "city_scrapers_core.pipelines.AzureDiffPipeline": 200,
     "city_scrapers_core.pipelines.MeetingPipeline": 300,

@@ -23,9 +23,14 @@ ROBOTSTXT_OBEY = True
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
 
+# Throttle results by default
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = float(os.getenv("AUTOTHROTTLE_START_DELAY", 1.0))
+AUTOTHROTTLE_MAX_DELAY = float(os.getenv("AUTOTHROTTLE_MAX_DELAY", 30.0))
+AUTOTHROTTLE_TARGET_CONCURRENCY = float(os.getenv("AUTOTHROTTLE_TARGET_CONCURRENCY", 1.0))
+
 # Configure item pipelines
 ITEM_PIPELINES = {
-    "city_scrapers_core.pipelines.DefaultValuesPipeline": 100,
     "city_scrapers_core.pipelines.MeetingPipeline": 200,
 }
 
