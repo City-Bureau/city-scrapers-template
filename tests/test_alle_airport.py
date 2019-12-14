@@ -60,7 +60,7 @@ def test_location():
         "name": "Pittsburgh International Airport",
         "address":
             "Conference Room A, 4th Flr Mezzanine,"
-            " Landside Terminal, Pittsburgh International Airport"
+            " Landside Terminal"
     }
 
 
