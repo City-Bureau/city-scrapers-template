@@ -21,11 +21,12 @@ class PittArtCommissionSpider(CityScrapersSpider):
 
     def parse(self, response):
         """
-        `parse` should always `yield` Meeting items.
+        Parse Meeting items from the Art Commission website.
 
-        Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
-        needs.
+        Meeting objects are extracted from an HTML table. Each row has information about the date of
+        the meeting, along with a few potential links to relevant meeting documents.
         """
+
         meeting_rows = response.xpath("//table//tr[@class='data']")
         for row in meeting_rows:
             columns = row.xpath(".//td")
