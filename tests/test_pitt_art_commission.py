@@ -1,7 +1,7 @@
 from datetime import datetime
 from os.path import dirname, join
 
-from city_scrapers_core.constants import CANCELLED, NOT_CLASSIFIED, PASSED
+from city_scrapers_core.constants import CANCELLED, COMMISSION, PASSED
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
 
@@ -132,7 +132,7 @@ def test_links():
 
 def test_classification():
     for item in parsed_items:
-        assert item["classification"] == NOT_CLASSIFIED
+        assert item["classification"] == COMMISSION
 
 
 def test_status():

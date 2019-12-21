@@ -1,6 +1,6 @@
 from datetime import datetime, time
 
-from city_scrapers_core.constants import CANCELLED, NOT_CLASSIFIED
+from city_scrapers_core.constants import CANCELLED, COMMISSION
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
@@ -67,7 +67,7 @@ class PittArtCommissionSpider(CityScrapersSpider):
 
     def _parse_classification(self, row):
         """Parse or generate classification from allowed options."""
-        return NOT_CLASSIFIED
+        return COMMISSION
 
     def _parse_start(self, date_str):
         """Parse start datetime as a naive datetime object.
