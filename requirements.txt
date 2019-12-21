@@ -22,7 +22,6 @@ incremental==17.5.0
 isort==4.3.21
 jmespath==0.9.4
 jsonschema==3.1.1
-legistar==0.0.1
 lxml==4.4.1
 mccabe==0.6.1
 more-itertools==7.2.0
