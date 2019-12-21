@@ -1,0 +1,5012 @@
+{
+  "events": [
+    {
+      "id": 88285,
+      "global_id": "dced.pa.gov?id=88285",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88285"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:50:46",
+      "date_utc": "2019-01-10 13:50:46",
+      "modified": "2019-02-25 16:24:21",
+      "modified_utc": "2019-02-25 21:24:21",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88285",
+      "title": "Rescheduled &#8211; PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-03-13 13:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "13",
+        "hour": "13",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-03-13 14:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "13",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-03-13 17:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "13",
+        "hour": "17",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-03-13 18:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "13",
+        "hour": "18",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 88658,
+        "author": "16",
+        "status": "publish",
+        "date": "2019-02-25 16:24:21",
+        "date_utc": "2019-02-25 21:24:21",
+        "modified": "2019-02-25 16:24:21",
+        "modified_utc": "2019-02-25 21:24:21",
+        "url": "https://dced.pa.gov/venue/keystone-building-4th-floor-conference-room-4-east/",
+        "venue": "Keystone Building 4th Floor, Conference Room 4 East",
+        "slug": "keystone-building-4th-floor-conference-room-4-east",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17011",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=88658",
+        "global_id_lineage": [
+          "dced.pa.gov?id=88658"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88311,
+      "global_id": "dced.pa.gov?id=88311",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88311"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 09:00:54",
+      "date_utc": "2019-01-10 14:00:54",
+      "modified": "2019-01-10 09:00:54",
+      "modified_utc": "2019-01-10 14:00:54",
+      "url": "https://dced.pa.gov/event/pcd-bank-board-meeting/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88311",
+      "title": "PCD Bank Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pcd-bank-board-meeting",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-03-20 09:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "09",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-03-20 10:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-03-20 13:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-03-20 14:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PCD Bank Board Meetings",
+          "slug": "pcd-bank-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 825,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 12,
+          "filter": "raw",
+          "id": 822,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/822",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88659,
+      "global_id": "dced.pa.gov?id=88659",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88659"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-02-25 16:30:49",
+      "date_utc": "2019-02-25 21:30:49",
+      "modified": "2019-02-25 16:30:49",
+      "modified_utc": "2019-02-25 21:30:49",
+      "url": "https://dced.pa.gov/event/canceled-pedfa-board-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88659",
+      "title": "Canceled – PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "canceled-pedfa-board-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-03-20 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-03-20 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-03-20 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-03-20 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "20",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 52664,
+        "author": "13",
+        "status": "publish",
+        "date": "2015-11-05 13:28:40",
+        "date_utc": "2015-11-05 18:28:40",
+        "modified": "2018-08-29 14:01:32",
+        "modified_utc": "2018-08-29 18:01:32",
+        "url": "https://dced.pa.gov/venue/event-cancelled-commonwealth-keystone-building/",
+        "venue": "EVENT CANCELED &#8211; Commonwealth Keystone Building",
+        "slug": "event-cancelled-commonwealth-keystone-building",
+        "address": "400 North Street, 2nd Floor",
+        "city": "harrisburg",
+        "zip": "17120-0225",
+        "show_map": false,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=52664",
+        "global_id_lineage": [
+          "dced.pa.gov?id=52664"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 87412,
+      "global_id": "dced.pa.gov?id=87412",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87412"
+      ],
+      "author": "4",
+      "status": "publish",
+      "date": "2018-10-10 14:04:53",
+      "date_utc": "2018-10-10 18:04:53",
+      "modified": "2018-10-10 14:09:22",
+      "modified_utc": "2018-10-10 18:09:22",
+      "url": "https://dced.pa.gov/event/commonwealth-financing-authority-cfa-board-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87412",
+      "title": "Commonwealth Financing Authority (CFA) Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "commonwealth-financing-authority-cfa-board-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-03-26 10:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "26",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-03-26 13:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "26",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-03-26 14:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "26",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-03-26 17:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "03",
+        "day": "26",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Commonwealth Financing Authority",
+          "slug": "commonwealth-financing-authority",
+          "term_group": 0,
+          "term_taxonomy_id": 819,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 14,
+          "filter": "raw",
+          "id": 816,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/816",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 78196,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-10-02 10:06:17",
+        "date_utc": "2017-10-02 14:06:17",
+        "modified": "2018-08-29 13:09:59",
+        "modified_utc": "2018-08-29 17:09:59",
+        "url": "https://dced.pa.gov/venue/forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2/",
+        "venue": "Forest Room, CKB Meeting Center, 1st Floor (plaza) Commonwealth Keystone Building",
+        "slug": "forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "province": "PA",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": false,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=78196",
+        "global_id_lineage": [
+          "dced.pa.gov?id=78196"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88060,
+      "global_id": "dced.pa.gov?id=88060",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88060"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:53:32",
+      "date_utc": "2018-12-18 19:53:32",
+      "modified": "2018-12-18 14:53:32",
+      "modified_utc": "2018-12-18 19:53:32",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-11/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88060",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-11",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-04-03 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "03",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-04-03 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "03",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-04-03 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "03",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-04-03 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "03",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88286,
+      "global_id": "dced.pa.gov?id=88286",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88286"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:51:22",
+      "date_utc": "2019-01-10 13:51:22",
+      "modified": "2019-01-10 09:22:26",
+      "modified_utc": "2019-01-10 14:22:26",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-3/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88286",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-3",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-04-17 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "17",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-04-17 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "17",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-04-17 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "17",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-04-17 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "17",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 87543,
+      "global_id": "dced.pa.gov?id=87543",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87543"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2018-10-23 11:23:21",
+      "date_utc": "2018-10-23 15:23:21",
+      "modified": "2018-10-23 11:23:33",
+      "modified_utc": "2018-10-23 15:23:33",
+      "url": "https://dced.pa.gov/event/board-of-property-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87543",
+      "title": "Board of Property Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "board-of-property-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-04-18 14:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "18",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-04-18 15:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "18",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-04-18 18:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "18",
+        "hour": "18",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-04-18 19:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "18",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Board of Property Meetings",
+          "slug": "board-of-property-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 1698,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 8,
+          "filter": "raw",
+          "id": 1695,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/1695",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 87546,
+        "author": "16",
+        "status": "publish",
+        "date": "2018-10-23 11:19:05",
+        "date_utc": "2018-10-23 15:19:05",
+        "modified": "2018-10-23 13:07:44",
+        "modified_utc": "2018-10-23 17:07:44",
+        "url": "https://dced.pa.gov/venue/puc-hearing-room-2-first-floor-commonwealth-keystone-building/",
+        "venue": "PUC Hearing Room #2, Plaza Level, Commonwealth Keystone Building",
+        "slug": "puc-hearing-room-2-first-floor-commonwealth-keystone-building",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120-0225",
+        "phone": "1.866.466.3972",
+        "website": "dced.pa.gov",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=87546",
+        "global_id_lineage": [
+          "dced.pa.gov?id=87546"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 81566,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-01-10 12:54:27",
+          "date_utc": "2018-01-10 17:54:27",
+          "modified": "2018-01-10 12:54:27",
+          "modified_utc": "2018-01-10 17:54:27",
+          "url": "https://dced.pa.gov/organizer/kari-dwyer-administrator-2/",
+          "organizer": "Kari Dwyer, Administrator",
+          "slug": "kari-dwyer-administrator-2",
+          "email": "kadwyer@pa.gov",
+          "global_id": "dced.pa.gov?id=81566",
+          "global_id_lineage": [
+            "dced.pa.gov?id=81566"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88221,
+      "global_id": "dced.pa.gov?id=88221",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88221"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-03 11:50:34",
+      "date_utc": "2019-01-03 16:50:34",
+      "modified": "2019-01-03 11:50:34",
+      "modified_utc": "2019-01-03 16:50:34",
+      "url": "https://dced.pa.gov/event/bftda-board-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88221",
+      "title": "BFTDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "bftda-board-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-04-25 10:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "25",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-04-25 17:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "25",
+        "hour": "17",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-04-25 14:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "25",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-04-25 21:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "04",
+        "day": "25",
+        "hour": "21",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "BFTDA Board Meetings",
+          "slug": "bftda-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 1838,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 4,
+          "filter": "raw",
+          "id": 1835,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/1835",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 88216,
+        "author": "16",
+        "status": "publish",
+        "date": "2019-01-03 11:42:38",
+        "date_utc": "2019-01-03 16:42:38",
+        "modified": "2019-01-03 13:08:58",
+        "modified_utc": "2019-01-03 18:08:58",
+        "url": "https://dced.pa.gov/venue/keystone-building-meeting-center-forest-room/",
+        "venue": "Keystone Building Meeting Center &#8211; Forest Room (Keystone Building, First Floor)",
+        "slug": "keystone-building-meeting-center-forest-room",
+        "address": "Commonwealth Keystone Building, First Floor 400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": false,
+        "show_map_link": false,
+        "global_id": "dced.pa.gov?id=88216",
+        "global_id_lineage": [
+          "dced.pa.gov?id=88216"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 88218,
+          "author": "16",
+          "status": "publish",
+          "date": "2019-01-03 11:44:15",
+          "date_utc": "2019-01-03 16:44:15",
+          "modified": "2019-01-03 11:44:15",
+          "modified_utc": "2019-01-03 16:44:15",
+          "url": "https://dced.pa.gov/organizer/jennifer-leinbach/",
+          "organizer": "Jennifer Leinbach",
+          "slug": "jennifer-leinbach",
+          "phone": "717.720.7388",
+          "email": "jeleinbach@pa.gov",
+          "global_id": "dced.pa.gov?id=88218",
+          "global_id_lineage": [
+            "dced.pa.gov?id=88218"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88062,
+      "global_id": "dced.pa.gov?id=88062",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88062"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:54:29",
+      "date_utc": "2018-12-18 19:54:29",
+      "modified": "2018-12-18 14:54:29",
+      "modified_utc": "2018-12-18 19:54:29",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-12/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88062",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-12",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-05-08 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "08",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-05-08 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "08",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-05-08 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "08",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-05-08 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "08",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88312,
+      "global_id": "dced.pa.gov?id=88312",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88312"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 09:01:32",
+      "date_utc": "2019-01-10 14:01:32",
+      "modified": "2019-01-10 09:01:32",
+      "modified_utc": "2019-01-10 14:01:32",
+      "url": "https://dced.pa.gov/event/pcd-bank-board-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88312",
+      "title": "PCD Bank Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pcd-bank-board-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-05-15 09:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "09",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-05-15 10:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-05-15 13:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-05-15 14:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PCD Bank Board Meetings",
+          "slug": "pcd-bank-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 825,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 12,
+          "filter": "raw",
+          "id": 822,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/822",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88287,
+      "global_id": "dced.pa.gov?id=88287",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88287"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:51:55",
+      "date_utc": "2019-01-10 13:51:55",
+      "modified": "2019-01-10 09:22:31",
+      "modified_utc": "2019-01-10 14:22:31",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-4/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88287",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-4",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-05-15 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-05-15 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-05-15 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-05-15 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "15",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 87414,
+      "global_id": "dced.pa.gov?id=87414",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87414"
+      ],
+      "author": "4",
+      "status": "publish",
+      "date": "2018-10-10 14:06:50",
+      "date_utc": "2018-10-10 18:06:50",
+      "modified": "2019-02-04 10:30:50",
+      "modified_utc": "2019-02-04 15:30:50",
+      "url": "https://dced.pa.gov/event/commonwealth-financing-authority-cfa-board-meeting-3/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87414",
+      "title": "Commonwealth Financing Authority (CFA) Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "commonwealth-financing-authority-cfa-board-meeting-3",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-05-22 10:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "22",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-05-22 13:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "22",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-05-22 14:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "22",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-05-22 17:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "05",
+        "day": "22",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Commonwealth Financing Authority",
+          "slug": "commonwealth-financing-authority",
+          "term_group": 0,
+          "term_taxonomy_id": 819,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 14,
+          "filter": "raw",
+          "id": 816,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/816",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 70032,
+        "author": "16",
+        "status": "publish",
+        "date": "2017-01-18 15:25:16",
+        "date_utc": "2017-01-18 20:25:16",
+        "modified": "2017-01-19 09:06:05",
+        "modified_utc": "2017-01-19 14:06:05",
+        "url": "https://dced.pa.gov/venue/puc-hearing-room-1/",
+        "venue": "PUC Hearing Room #1",
+        "slug": "puc-hearing-room-1",
+        "address": "400 North Street, 2nd Floor (Keystone Building)",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "website": "http://dced.pa.gov",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=70032",
+        "global_id_lineage": [
+          "dced.pa.gov?id=70032"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88064,
+      "global_id": "dced.pa.gov?id=88064",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88064"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:55:42",
+      "date_utc": "2018-12-18 19:55:42",
+      "modified": "2018-12-18 14:55:42",
+      "modified_utc": "2018-12-18 19:55:42",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-13/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88064",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-13",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-06-05 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "05",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-06-05 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "05",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-06-05 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "05",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-06-05 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "05",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88288,
+      "global_id": "dced.pa.gov?id=88288",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88288"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:52:28",
+      "date_utc": "2019-01-10 13:52:28",
+      "modified": "2019-01-10 09:22:35",
+      "modified_utc": "2019-01-10 14:22:35",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-5/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88288",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-5",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-06-19 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "19",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-06-19 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "19",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-06-19 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "19",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-06-19 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "06",
+        "day": "19",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88042,
+      "global_id": "dced.pa.gov?id=88042",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88042"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:04:06",
+      "date_utc": "2018-12-18 19:04:06",
+      "modified": "2018-12-18 14:23:53",
+      "modified_utc": "2018-12-18 19:23:53",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-4/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88042",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-4",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-07-03 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "03",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-07-03 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "03",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-07-03 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "03",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-07-03 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "03",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 87416,
+      "global_id": "dced.pa.gov?id=87416",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87416"
+      ],
+      "author": "4",
+      "status": "publish",
+      "date": "2018-10-10 14:08:26",
+      "date_utc": "2018-10-10 18:08:26",
+      "modified": "2018-10-10 14:14:24",
+      "modified_utc": "2018-10-10 18:14:24",
+      "url": "https://dced.pa.gov/event/commonwealth-financing-authority-cfa-board-meeting-4/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87416",
+      "title": "Commonwealth Financing Authority (CFA) Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "commonwealth-financing-authority-cfa-board-meeting-4",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-07-16 10:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "16",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-07-16 13:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "16",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-07-16 14:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "16",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-07-16 17:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "16",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Commonwealth Financing Authority",
+          "slug": "commonwealth-financing-authority",
+          "term_group": 0,
+          "term_taxonomy_id": 819,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 14,
+          "filter": "raw",
+          "id": 816,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/816",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 78196,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-10-02 10:06:17",
+        "date_utc": "2017-10-02 14:06:17",
+        "modified": "2018-08-29 13:09:59",
+        "modified_utc": "2018-08-29 17:09:59",
+        "url": "https://dced.pa.gov/venue/forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2/",
+        "venue": "Forest Room, CKB Meeting Center, 1st Floor (plaza) Commonwealth Keystone Building",
+        "slug": "forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "province": "PA",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": false,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=78196",
+        "global_id_lineage": [
+          "dced.pa.gov?id=78196"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88313,
+      "global_id": "dced.pa.gov?id=88313",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88313"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 09:01:59",
+      "date_utc": "2019-01-10 14:01:59",
+      "modified": "2019-01-10 09:02:28",
+      "modified_utc": "2019-01-10 14:02:28",
+      "url": "https://dced.pa.gov/event/pcd-bank-board-meeting-3/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88313",
+      "title": "PCD Bank Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pcd-bank-board-meeting-3",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-07-17 09:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "09",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-07-17 10:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-07-17 13:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-07-17 14:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PCD Bank Board Meetings",
+          "slug": "pcd-bank-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 825,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 12,
+          "filter": "raw",
+          "id": 822,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/822",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88289,
+      "global_id": "dced.pa.gov?id=88289",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88289"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:52:59",
+      "date_utc": "2019-01-10 13:52:59",
+      "modified": "2019-01-10 09:22:39",
+      "modified_utc": "2019-01-10 14:22:39",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-6/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88289",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-6",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-07-17 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-07-17 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-07-17 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-07-17 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "17",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 87548,
+      "global_id": "dced.pa.gov?id=87548",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87548"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2018-10-23 11:24:34",
+      "date_utc": "2018-10-23 15:24:34",
+      "modified": "2018-10-23 11:24:34",
+      "modified_utc": "2018-10-23 15:24:34",
+      "url": "https://dced.pa.gov/event/board-of-property-meeting-3/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87548",
+      "title": "Board of Property Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "board-of-property-meeting-3",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-07-18 14:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "18",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-07-18 15:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "18",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-07-18 18:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "18",
+        "hour": "18",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-07-18 19:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "18",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Board of Property Meetings",
+          "slug": "board-of-property-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 1698,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 8,
+          "filter": "raw",
+          "id": 1695,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/1695",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 87546,
+        "author": "16",
+        "status": "publish",
+        "date": "2018-10-23 11:19:05",
+        "date_utc": "2018-10-23 15:19:05",
+        "modified": "2018-10-23 13:07:44",
+        "modified_utc": "2018-10-23 17:07:44",
+        "url": "https://dced.pa.gov/venue/puc-hearing-room-2-first-floor-commonwealth-keystone-building/",
+        "venue": "PUC Hearing Room #2, Plaza Level, Commonwealth Keystone Building",
+        "slug": "puc-hearing-room-2-first-floor-commonwealth-keystone-building",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120-0225",
+        "phone": "1.866.466.3972",
+        "website": "dced.pa.gov",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=87546",
+        "global_id_lineage": [
+          "dced.pa.gov?id=87546"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 81566,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-01-10 12:54:27",
+          "date_utc": "2018-01-10 17:54:27",
+          "modified": "2018-01-10 12:54:27",
+          "modified_utc": "2018-01-10 17:54:27",
+          "url": "https://dced.pa.gov/organizer/kari-dwyer-administrator-2/",
+          "organizer": "Kari Dwyer, Administrator",
+          "slug": "kari-dwyer-administrator-2",
+          "email": "kadwyer@pa.gov",
+          "global_id": "dced.pa.gov?id=81566",
+          "global_id_lineage": [
+            "dced.pa.gov?id=81566"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88222,
+      "global_id": "dced.pa.gov?id=88222",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88222"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-03 11:51:17",
+      "date_utc": "2019-01-03 16:51:17",
+      "modified": "2019-01-03 11:51:17",
+      "modified_utc": "2019-01-03 16:51:17",
+      "url": "https://dced.pa.gov/event/bftda-board-meeting-3/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88222",
+      "title": "BFTDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "bftda-board-meeting-3",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-07-25 10:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "25",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-07-25 17:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "25",
+        "hour": "17",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-07-25 14:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "25",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-07-25 21:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "07",
+        "day": "25",
+        "hour": "21",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "BFTDA Board Meetings",
+          "slug": "bftda-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 1838,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 4,
+          "filter": "raw",
+          "id": 1835,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/1835",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 65337,
+        "author": "4",
+        "status": "publish",
+        "date": "2016-08-15 08:42:46",
+        "date_utc": "2016-08-15 12:42:46",
+        "modified": "2016-08-15 08:42:46",
+        "modified_utc": "2016-08-15 12:42:46",
+        "url": "https://dced.pa.gov/venue/ben-franklin-technology-partners-of-northeastern-pa/",
+        "venue": "Ben Franklin Technology Partners of Northeastern PA",
+        "slug": "ben-franklin-technology-partners-of-northeastern-pa",
+        "address": "116 Research Drive, 4th Floor Conference Area ",
+        "city": "Bethlehem",
+        "country": "United States",
+        "state": "PA",
+        "zip": "18015",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=65337",
+        "global_id_lineage": [
+          "dced.pa.gov?id=65337"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 88218,
+          "author": "16",
+          "status": "publish",
+          "date": "2019-01-03 11:44:15",
+          "date_utc": "2019-01-03 16:44:15",
+          "modified": "2019-01-03 11:44:15",
+          "modified_utc": "2019-01-03 16:44:15",
+          "url": "https://dced.pa.gov/organizer/jennifer-leinbach/",
+          "organizer": "Jennifer Leinbach",
+          "slug": "jennifer-leinbach",
+          "phone": "717.720.7388",
+          "email": "jeleinbach@pa.gov",
+          "global_id": "dced.pa.gov?id=88218",
+          "global_id_lineage": [
+            "dced.pa.gov?id=88218"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88044,
+      "global_id": "dced.pa.gov?id=88044",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88044"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 13:59:18",
+      "date_utc": "2018-12-18 18:59:18",
+      "modified": "2018-12-18 14:23:39",
+      "modified_utc": "2018-12-18 19:23:39",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-2/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88044",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-2",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-08-07 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "07",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-08-07 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "07",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-08-07 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "07",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-08-07 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "07",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88290,
+      "global_id": "dced.pa.gov?id=88290",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88290"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:53:29",
+      "date_utc": "2019-01-10 13:53:29",
+      "modified": "2019-01-10 09:22:42",
+      "modified_utc": "2019-01-10 14:22:42",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-7/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88290",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-7",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-08-21 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "21",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-08-21 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "21",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-08-21 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "21",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-08-21 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "08",
+        "day": "21",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88046,
+      "global_id": "dced.pa.gov?id=88046",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88046"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:02:40",
+      "date_utc": "2018-12-18 19:02:40",
+      "modified": "2018-12-18 14:23:23",
+      "modified_utc": "2018-12-18 19:23:23",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-3/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88046",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-3",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-09-04 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "04",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-09-04 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "04",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-09-04 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "04",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-09-04 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "04",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 87418,
+      "global_id": "dced.pa.gov?id=87418",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87418"
+      ],
+      "author": "4",
+      "status": "publish",
+      "date": "2018-10-10 14:10:38",
+      "date_utc": "2018-10-10 18:10:38",
+      "modified": "2018-10-10 14:10:38",
+      "modified_utc": "2018-10-10 18:10:38",
+      "url": "https://dced.pa.gov/event/commonwealth-financing-authority-cfa-board-meeting-5/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87418",
+      "title": "Commonwealth Financing Authority (CFA) Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "commonwealth-financing-authority-cfa-board-meeting-5",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-09-17 10:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "17",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-09-17 13:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "17",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-09-17 14:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "17",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-09-17 17:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "17",
+        "hour": "17",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Commonwealth Financing Authority",
+          "slug": "commonwealth-financing-authority",
+          "term_group": 0,
+          "term_taxonomy_id": 819,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 14,
+          "filter": "raw",
+          "id": 816,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/816",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 78196,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-10-02 10:06:17",
+        "date_utc": "2017-10-02 14:06:17",
+        "modified": "2018-08-29 13:09:59",
+        "modified_utc": "2018-08-29 17:09:59",
+        "url": "https://dced.pa.gov/venue/forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2/",
+        "venue": "Forest Room, CKB Meeting Center, 1st Floor (plaza) Commonwealth Keystone Building",
+        "slug": "forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "province": "PA",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": false,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=78196",
+        "global_id_lineage": [
+          "dced.pa.gov?id=78196"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88314,
+      "global_id": "dced.pa.gov?id=88314",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88314"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 09:03:04",
+      "date_utc": "2019-01-10 14:03:04",
+      "modified": "2019-01-10 09:03:04",
+      "modified_utc": "2019-01-10 14:03:04",
+      "url": "https://dced.pa.gov/event/pcd-bank-board-meeting-4/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88314",
+      "title": "PCD Bank Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pcd-bank-board-meeting-4",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-09-18 09:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "09",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-09-18 10:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-09-18 13:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-09-18 14:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PCD Bank Board Meetings",
+          "slug": "pcd-bank-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 825,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 12,
+          "filter": "raw",
+          "id": 822,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/822",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88291,
+      "global_id": "dced.pa.gov?id=88291",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88291"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:54:04",
+      "date_utc": "2019-01-10 13:54:04",
+      "modified": "2019-01-10 09:22:47",
+      "modified_utc": "2019-01-10 14:22:47",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-8/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88291",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-8",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-09-18 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-09-18 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-09-18 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-09-18 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "09",
+        "day": "18",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88048,
+      "global_id": "dced.pa.gov?id=88048",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88048"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:07:53",
+      "date_utc": "2018-12-18 19:07:53",
+      "modified": "2018-12-18 14:23:12",
+      "modified_utc": "2018-12-18 19:23:12",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-5/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88048",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-5",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-10-02 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "02",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-10-02 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "02",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-10-02 14:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "02",
+        "hour": "14",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-10-02 16:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "02",
+        "hour": "16",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88292,
+      "global_id": "dced.pa.gov?id=88292",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88292"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:54:40",
+      "date_utc": "2019-01-10 13:54:40",
+      "modified": "2019-01-10 09:22:50",
+      "modified_utc": "2019-01-10 14:22:50",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-9/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88292",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-9",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-10-16 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "16",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-10-16 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "16",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-10-16 15:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "16",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-10-16 16:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "16",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 87551,
+      "global_id": "dced.pa.gov?id=87551",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87551"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2018-10-23 11:25:32",
+      "date_utc": "2018-10-23 15:25:32",
+      "modified": "2018-12-11 10:34:21",
+      "modified_utc": "2018-12-11 15:34:21",
+      "url": "https://dced.pa.gov/event/board-of-property-meeting-4/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87551",
+      "title": "Board of Property Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "board-of-property-meeting-4",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-10-17 14:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "17",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-10-17 15:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "17",
+        "hour": "15",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-10-17 18:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "17",
+        "hour": "18",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-10-17 19:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "17",
+        "hour": "19",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Board of Property Meetings",
+          "slug": "board-of-property-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 1698,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 8,
+          "filter": "raw",
+          "id": 1695,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/1695",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 87546,
+        "author": "16",
+        "status": "publish",
+        "date": "2018-10-23 11:19:05",
+        "date_utc": "2018-10-23 15:19:05",
+        "modified": "2018-10-23 13:07:44",
+        "modified_utc": "2018-10-23 17:07:44",
+        "url": "https://dced.pa.gov/venue/puc-hearing-room-2-first-floor-commonwealth-keystone-building/",
+        "venue": "PUC Hearing Room #2, Plaza Level, Commonwealth Keystone Building",
+        "slug": "puc-hearing-room-2-first-floor-commonwealth-keystone-building",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120-0225",
+        "phone": "1.866.466.3972",
+        "website": "dced.pa.gov",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=87546",
+        "global_id_lineage": [
+          "dced.pa.gov?id=87546"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 81566,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-01-10 12:54:27",
+          "date_utc": "2018-01-10 17:54:27",
+          "modified": "2018-01-10 12:54:27",
+          "modified_utc": "2018-01-10 17:54:27",
+          "url": "https://dced.pa.gov/organizer/kari-dwyer-administrator-2/",
+          "organizer": "Kari Dwyer, Administrator",
+          "slug": "kari-dwyer-administrator-2",
+          "email": "kadwyer@pa.gov",
+          "global_id": "dced.pa.gov?id=81566",
+          "global_id_lineage": [
+            "dced.pa.gov?id=81566"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88225,
+      "global_id": "dced.pa.gov?id=88225",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88225"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-03 11:52:01",
+      "date_utc": "2019-01-03 16:52:01",
+      "modified": "2019-01-03 11:52:01",
+      "modified_utc": "2019-01-03 16:52:01",
+      "url": "https://dced.pa.gov/event/bftda-board-meeting-4/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88225",
+      "title": "BFTDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "bftda-board-meeting-4",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-10-24 10:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "24",
+        "hour": "10",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-10-24 17:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "24",
+        "hour": "17",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-10-24 14:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "24",
+        "hour": "14",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-10-24 21:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "10",
+        "day": "24",
+        "hour": "21",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EDT",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "BFTDA Board Meetings",
+          "slug": "bftda-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 1838,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 4,
+          "filter": "raw",
+          "id": 1835,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/1835",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 88216,
+        "author": "16",
+        "status": "publish",
+        "date": "2019-01-03 11:42:38",
+        "date_utc": "2019-01-03 16:42:38",
+        "modified": "2019-01-03 13:08:58",
+        "modified_utc": "2019-01-03 18:08:58",
+        "url": "https://dced.pa.gov/venue/keystone-building-meeting-center-forest-room/",
+        "venue": "Keystone Building Meeting Center &#8211; Forest Room (Keystone Building, First Floor)",
+        "slug": "keystone-building-meeting-center-forest-room",
+        "address": "Commonwealth Keystone Building, First Floor 400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": false,
+        "show_map_link": false,
+        "global_id": "dced.pa.gov?id=88216",
+        "global_id_lineage": [
+          "dced.pa.gov?id=88216"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 88218,
+          "author": "16",
+          "status": "publish",
+          "date": "2019-01-03 11:44:15",
+          "date_utc": "2019-01-03 16:44:15",
+          "modified": "2019-01-03 11:44:15",
+          "modified_utc": "2019-01-03 16:44:15",
+          "url": "https://dced.pa.gov/organizer/jennifer-leinbach/",
+          "organizer": "Jennifer Leinbach",
+          "slug": "jennifer-leinbach",
+          "phone": "717.720.7388",
+          "email": "jeleinbach@pa.gov",
+          "global_id": "dced.pa.gov?id=88218",
+          "global_id_lineage": [
+            "dced.pa.gov?id=88218"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88050,
+      "global_id": "dced.pa.gov?id=88050",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88050"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:12:52",
+      "date_utc": "2018-12-18 19:12:52",
+      "modified": "2018-12-18 14:23:00",
+      "modified_utc": "2018-12-18 19:23:00",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-6/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88050",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-6",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-11-06 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "06",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-11-06 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "06",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-11-06 15:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "06",
+        "hour": "15",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-11-06 17:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "06",
+        "hour": "17",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 87420,
+      "global_id": "dced.pa.gov?id=87420",
+      "global_id_lineage": [
+        "dced.pa.gov?id=87420"
+      ],
+      "author": "4",
+      "status": "publish",
+      "date": "2018-10-10 14:12:39",
+      "date_utc": "2018-10-10 18:12:39",
+      "modified": "2018-10-10 14:12:39",
+      "modified_utc": "2018-10-10 18:12:39",
+      "url": "https://dced.pa.gov/event/commonwealth-financing-authority-cfa-board-meeting-6/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/87420",
+      "title": "Commonwealth Financing Authority (CFA) Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "commonwealth-financing-authority-cfa-board-meeting-6",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-11-12 10:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "12",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-11-12 13:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "12",
+        "hour": "13",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-11-12 15:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "12",
+        "hour": "15",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-11-12 18:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "12",
+        "hour": "18",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "Commonwealth Financing Authority",
+          "slug": "commonwealth-financing-authority",
+          "term_group": 0,
+          "term_taxonomy_id": 819,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 14,
+          "filter": "raw",
+          "id": 816,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/816",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 78196,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-10-02 10:06:17",
+        "date_utc": "2017-10-02 14:06:17",
+        "modified": "2018-08-29 13:09:59",
+        "modified_utc": "2018-08-29 17:09:59",
+        "url": "https://dced.pa.gov/venue/forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2/",
+        "venue": "Forest Room, CKB Meeting Center, 1st Floor (plaza) Commonwealth Keystone Building",
+        "slug": "forest-room-ckb-meeting-center-1st-floor-plaza-commonwealth-keystone-building-ckb-2",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "province": "PA",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": false,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=78196",
+        "global_id_lineage": [
+          "dced.pa.gov?id=78196"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88315,
+      "global_id": "dced.pa.gov?id=88315",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88315"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 09:03:46",
+      "date_utc": "2019-01-10 14:03:46",
+      "modified": "2019-01-10 09:03:46",
+      "modified_utc": "2019-01-10 14:03:46",
+      "url": "https://dced.pa.gov/event/pcd-bank-board-meeting-5/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88315",
+      "title": "PCD Bank Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pcd-bank-board-meeting-5",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-11-20 09:30:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "09",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "end_date": "2019-11-20 10:30:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "10",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-11-20 14:30:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "14",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-11-20 15:30:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "15",
+        "minutes": "30",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PCD Bank Board Meetings",
+          "slug": "pcd-bank-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 825,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 12,
+          "filter": "raw",
+          "id": 822,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/822",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88293,
+      "global_id": "dced.pa.gov?id=88293",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88293"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:55:13",
+      "date_utc": "2019-01-10 13:55:13",
+      "modified": "2019-01-10 09:22:55",
+      "modified_utc": "2019-01-10 14:22:55",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-10/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88293",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-10",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-11-20 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-11-20 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-11-20 16:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-11-20 17:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "11",
+        "day": "20",
+        "hour": "17",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    },
+    {
+      "id": 88052,
+      "global_id": "dced.pa.gov?id=88052",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88052"
+      ],
+      "author": "124",
+      "status": "publish",
+      "date": "2018-12-18 14:18:02",
+      "date_utc": "2018-12-18 19:18:02",
+      "modified": "2018-12-18 14:18:02",
+      "modified_utc": "2018-12-18 19:18:02",
+      "url": "https://dced.pa.gov/event/pida-board-meeting-7/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88052",
+      "title": "PIDA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pida-board-meeting-7",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-12-04 10:15:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "04",
+        "hour": "10",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "end_date": "2019-12-04 12:15:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "04",
+        "hour": "12",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-12-04 15:15:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "04",
+        "hour": "15",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-12-04 17:15:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "04",
+        "hour": "17",
+        "minutes": "15",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": true,
+      "show_map_link": true,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PIDA Board Meetings",
+          "slug": "pida-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 823,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 24,
+          "filter": "raw",
+          "id": 820,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/820",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": [
+        {
+          "id": 87411,
+          "author": "4",
+          "status": "publish",
+          "date": "2018-10-10 14:03:20",
+          "date_utc": "2018-10-10 18:03:20",
+          "modified": "2018-10-10 14:03:20",
+          "modified_utc": "2018-10-10 18:03:20",
+          "url": "https://dced.pa.gov/organizer/jill-wawrzonek/",
+          "organizer": "Jill Wawrzonek",
+          "slug": "jill-wawrzonek",
+          "phone": "717.720.1349",
+          "email": "jwawrzonek@pa.gov",
+          "global_id": "dced.pa.gov?id=87411",
+          "global_id_lineage": [
+            "dced.pa.gov?id=87411"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 88294,
+      "global_id": "dced.pa.gov?id=88294",
+      "global_id_lineage": [
+        "dced.pa.gov?id=88294"
+      ],
+      "author": "16",
+      "status": "publish",
+      "date": "2019-01-10 08:55:44",
+      "date_utc": "2019-01-10 13:55:44",
+      "modified": "2019-01-10 09:22:58",
+      "modified_utc": "2019-01-10 14:22:58",
+      "url": "https://dced.pa.gov/event/pedfa-board-meeting-11/",
+      "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/88294",
+      "title": "PEDFA Board Meeting",
+      "description": "",
+      "excerpt": "",
+      "slug": "pedfa-board-meeting-11",
+      "image": false,
+      "all_day": false,
+      "start_date": "2019-12-18 11:00:00",
+      "start_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "18",
+        "hour": "11",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "end_date": "2019-12-18 12:00:00",
+      "end_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "18",
+        "hour": "12",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_start_date": "2019-12-18 16:00:00",
+      "utc_start_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "18",
+        "hour": "16",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "utc_end_date": "2019-12-18 17:00:00",
+      "utc_end_date_details": {
+        "year": "2019",
+        "month": "12",
+        "day": "18",
+        "hour": "17",
+        "minutes": "00",
+        "seconds": "00"
+      },
+      "timezone": "America/New_York",
+      "timezone_abbr": "EST",
+      "cost": "",
+      "cost_details": {
+        "currency_symbol": "",
+        "currency_position": "prefix",
+        "values": []
+      },
+      "website": "",
+      "show_map": false,
+      "show_map_link": false,
+      "hide_from_listings": false,
+      "sticky": false,
+      "featured": false,
+      "categories": [
+        {
+          "name": "Authorities",
+          "slug": "authorities",
+          "term_group": 0,
+          "term_taxonomy_id": 818,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 72,
+          "filter": "raw",
+          "id": 815,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/815",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        },
+        {
+          "name": "PEDFA Board Meetings",
+          "slug": "pedfa-board-meetings",
+          "term_group": 0,
+          "term_taxonomy_id": 820,
+          "taxonomy": "tribe_events_cat",
+          "description": "",
+          "parent": 0,
+          "count": 25,
+          "filter": "raw",
+          "id": 817,
+          "urls": {
+            "self": "https://dced.pa.gov/wp-json/tribe/events/v1/categories/817",
+            "collection": "https://dced.pa.gov/wp-json/tribe/events/v1/categories"
+          }
+        }
+      ],
+      "tags": [],
+      "venue": {
+        "id": 80407,
+        "author": "4",
+        "status": "publish",
+        "date": "2017-11-30 16:10:22",
+        "date_utc": "2017-11-30 21:10:22",
+        "modified": "2018-06-20 12:07:24",
+        "modified_utc": "2018-06-20 16:07:24",
+        "url": "https://dced.pa.gov/venue/desert-room-keystone-building-meeting-center/",
+        "venue": "KBMC &#8211; Desert Room, Plaza Level, Keystone Building",
+        "slug": "desert-room-keystone-building-meeting-center",
+        "address": "400 North Street",
+        "city": "Harrisburg",
+        "country": "United States",
+        "state": "PA",
+        "zip": "17120",
+        "stateprovince": "PA",
+        "show_map": true,
+        "show_map_link": true,
+        "global_id": "dced.pa.gov?id=80407",
+        "global_id_lineage": [
+          "dced.pa.gov?id=80407"
+        ]
+      },
+      "organizer": []
+    }
+  ],
+  "rest_url": "https://dced.pa.gov/wp-json/tribe/events/v1/events/?page=1&per_page=50&start_date=2019-03-09 00:00:00&end_date=2021-03-10 23:59:59&status=publish",
+  "total": "36",
+  "total_pages": 1
+}
