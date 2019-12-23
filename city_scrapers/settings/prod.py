@@ -8,12 +8,13 @@ USER_AGENT = "City Scrapers [production mode]. Learn more and say hello at https
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    "city_scrapers.pipelines.MigrationPipeline": 50,
     "city_scrapers_core.pipelines.DefaultValuesPipeline": 100,
     "city_scrapers_core.pipelines.S3DiffPipeline": 200,
     "city_scrapers_core.pipelines.MeetingPipeline": 300,
     "city_scrapers_core.pipelines.JSCalendarPipeline": 400,
 }
+
+SENTRY_DSN = os.getenv("SENTRY_DSN")
 
 # Uncomment one of the StatusExtension classes to write an SVG badge of each scraper's status to
 # Azure or S3 after each time it's run.
@@ -23,8 +24,8 @@ ITEM_PIPELINES = {
 # for S3 and Azure respectively.
 
 EXTENSIONS = {
+    "scrapy_sentry.extensions.Errors": 10,
     "city_scrapers_core.extensions.S3StatusExtension": 100,
-    # "scrapy_sentry.extensions.Errors": 10,
     "scrapy.extensions.closespider.CloseSpider": None,
 }
 

@@ -7,10 +7,9 @@ name = "pypi"
 requests = "*"
 twisted = ">=18.9.0"
 scrapy = "*"
-scrapy-sentry = "*"
-legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
 python-dateutil = "*"
-city-scrapers-core = "*"
+scrapy-sentry = "*"
+city-scrapers-core = {extras = ["aws"],version = "*"}
 
 [dev-packages]
 freezegun = "*"
@@ -18,6 +17,3 @@ pytest = "*"
 "flake8" = "*"
 isort = "*"
 yapf = "*"
-
-[pipenv]
-allow_prereleases = true
