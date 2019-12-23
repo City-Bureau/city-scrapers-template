@@ -1,5 +1,6 @@
 from datetime import datetime
 from json import loads
+import re
 
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
@@ -13,6 +14,7 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
     timezone = "US/Eastern"
     allowed_domains = ["nextdoor.com"]
     start_urls = ["https://nextdoor.com/login/"]
+    cookies = {}
 
     def parse(self, response):
         """
@@ -21,46 +23,49 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
         Change the `_parse_id`, `_parse_name`, etc methods to fit your scraping
         needs.
         """
-        xpath_string = "//div[@class='login-form']//*[@name='csrfmiddlewaretoken']/@value"
-        token = response.xpath(xpath_string).extract_first()
-
+        
         username = USERNAME_GOES_HERE
         password = PASSWORD_GOES_HERE
 
         data = {
-            "username": username,
-            "password": password,
-            "remember_me": "on",
-            "next": "/profile/2376387/",
-            "csrfmiddlewaretoken": token,
-            "social_id": "",
-            "social_network": "",
-            "link_account_version": "0"
-        }
+            'scope': 'openid', 
+            'client_id': 'NEXTDOOR-WEB', 
+            'grant_type': 'password',
+            'username': username,
+            'password': password,
+            'state': '71da7809-840e-4ef4-86d1-a13e9c0afa40191223' # not sure what state does
+            } 
 
         headers = {
-            "Accept": "text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8",
-            "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Connection": "keep-alive",
-            "Content-Length": "217",
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Host": "nextdoor.com",
-            "Referer": "https://nextdoor.com/login/?ucl=1",
-            "Upgrade-Insecure-Requests": "1",
-            "origin": "https://nextdoor.com",
-            "user-agent":
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
-        }
+            ':authority': 'auth.nextdoor.com',
+            ':method': 'POST',
+            ':path': '/v2/token',
+            ':scheme': 'https',
+            'accept': 'application/json, text/plain , */*',
+            'accept-encoding': 'gzip, deflate, br',
+            'accept-language': 'en-US,en;q=0.9',
+            'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'origin': 'https://nextdoor.com',
+            'referer': 'https://nextdoor.com/',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-site',
+            'user-agent': 'Mozilla/5.0 (X11; CrOS x86_64 12 607.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.86 Safari/537.36',
+            'device-fp': 'v1419700a0150af69fde242c19b64f916c', # device fingerprint (wish i didnt have to put this)
+            'device-id': 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaaaaaaaa' # obviously faked
+            }  
+        
+        token_url = "https://auth.nextdoor.com/v2/token"
 
-        formReq = FormRequest.from_response(
-            response, formdata=data, headers=headers, callback=self._authenticated
+        formReq = FormRequest(
+            token_url, formdata=data, headers=headers, callback=self._authenticated
         )
         yield formReq
 
     def _authenticated(self, response):
         url = "https://nextdoor.com/api/profile/2376387/activity/posts/"
-        req = Request(url, callback=self._get_posts)
+        token = loads(response.text)
+        self.cookies.update({'ndbr_at':token['access_token'],'ndbr_idt':token['id_token']}) 
+        req = Request(url, cookies=self.cookies, callback=self._get_posts)
         yield req
 
     def _get_posts(self, response):
@@ -69,11 +74,11 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
         for item in activities:
             if "meeting" in item["message_parts"][1]["text"].lower():
                 url = "https://nextdoor.com/web/feeds/post/" + str(item["post_id"]) + "/"
-                req = Request(url, callback=self._get_post)
+                req = Request(url, cookies=self.cookies,  callback=self._get_post)
                 yield req
         if jsonData["show_more"]:
             url = "https://nextdoor.com/api/profile/2376387/activity/posts/?next_page="
-            req = Request(url + jsonData["next_page"], callback=self._get_posts)
+            req = Request(url + jsonData["next_page"], cookies=self.cookies, callback=self._get_posts)
             yield req
 
     def _get_post(self, response):
@@ -91,7 +96,6 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
             links=self._parse_links(item),
             source=self._parse_source(response),
         )
-
         meeting["status"] = self._get_status(meeting)
         meeting["id"] = self._get_id(meeting)
 
