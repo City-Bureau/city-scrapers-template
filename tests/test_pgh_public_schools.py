@@ -17,14 +17,16 @@ spider = PghPublicSchoolsSpider()
 freezer = freeze_time("2019-02-26")
 freezer.start()
 
-parsed_items = [item for item in spider.parse(test_response)]
+#need to authenticate, so a test page is not so straightfowardhttps://www.pghschools.org/calendar#calendar1/20190223/month
+
+#parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
 
 def test_tests():
     print("Please write some tests for this spider or at least disable this one.")
-    assert False
+    assert True
 
 
 """
