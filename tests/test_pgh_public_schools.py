@@ -5,9 +5,9 @@ from freezegun import freeze_time
 
 from city_scrapers.spiders.pgh_public_schools import PghPublicSchoolsSpider
 
-test_response = file_response(
-    join(dirname(__file__), "files", "pgh_public_schools.html"),
-    url="https://www.pghschools.org/calendar#calendar1/20190223/month",
+test_detail_response = file_response(
+    join(dirname(__file__), "files", "pgh_public_schools", "detail.json"),
+    url="https://awsapieast1-prod2.schoolwires.com/REST/api/v4/CalendarEvents/GetEventDate/1/17864",
 )
 spider = PghPublicSchoolsSpider()
 
@@ -16,22 +16,17 @@ freezer.start()
 
 # need to authenticate, so a test page is not so straightfoward
 
-# parsed_items = [item for item in spider.parse(test_response)]
+parsed_items = [item for item in spider._parse_detail_api(test_detail_response)]
 
 freezer.stop()
-
-
-def test_tests():
-    print("Please write some tests for this spider or at least disable this one.")
-    assert True
-
-
 """
 Uncomment below
 """
 
-# def test_title():
-#     assert parsed_items[0]["title"] == "EXPECTED TITLE"
+
+def test_title():
+    assert parsed_items[0]["title"] == "2nd Report Card"
+
 
 # def test_description():
 #     assert parsed_items[0]["description"] == "EXPECTED DESCRIPTION"
