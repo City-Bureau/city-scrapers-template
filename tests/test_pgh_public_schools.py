@@ -1,10 +1,7 @@
-from datetime import datetime
 from os.path import dirname, join
 
-import pytest
-from freezegun import freeze_time
-from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
+from freezegun import freeze_time
 
 from city_scrapers.spiders.pgh_public_schools import PghPublicSchoolsSpider
 
@@ -17,9 +14,9 @@ spider = PghPublicSchoolsSpider()
 freezer = freeze_time("2019-02-26")
 freezer.start()
 
-#need to authenticate, so a test page is not so straightfowardhttps://www.pghschools.org/calendar#calendar1/20190223/month
+# need to authenticate, so a test page is not so straightfoward
 
-#parsed_items = [item for item in spider.parse(test_response)]
+# parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
