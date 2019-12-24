@@ -49,9 +49,10 @@ class PghMayorOfficeCommAffSpider(CityScrapersSpider):
             'referer': 'https://nextdoor.com/',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-site',
-            'user-agent':
-                ('Mozilla/5.0 (X11; CrOS x86_64 12 607.58.0) '
-                    'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.86 Safari/537.36'),
+            'user-agent': (
+                'Mozilla/5.0 (X11; CrOS x86_64 12 607.58.0) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.86 Safari/537.36'
+            ),
             'device-fp': 'v1419700a0150af69fde242c19b64f916c',  # device fingerprint
             # (unfortunatly device-fp is needed)
             'device-id': 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaaaaaaaa'  # obviously faked
