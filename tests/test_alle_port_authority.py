@@ -14,11 +14,10 @@ test_response = file_response(
         "https://www.portauthority.org/paac/CompanyInfoProjects/BoardofDirectors/MeetingAgendasResolutions.aspx"  # noqa
     ),
 )
-spider = AllePortAuthoritySpider()
-
 freezer = freeze_time("2019-01-23")
 freezer.start()
 
+spider = AllePortAuthoritySpider()
 parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
