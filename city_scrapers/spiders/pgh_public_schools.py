@@ -30,7 +30,13 @@ class PghPublicSchoolsSpider(CityScrapersSpider):
         api_gateway = api_server + "api/v4/"
         api_function = "CalendarEvents/GetEvents/1?"
         start_date = "2019-02-01"
-        end_date = "2019-02-28"
+        today = datetime.today()
+
+        e = today.replace(
+            year=today.year + 10, month=1, day=1, hour=0, minute=0, second=1, microsecond=1
+        )
+        # the end date will be ten years from the date that the script runs
+        end_date = str(e.year) + '-' + str(e.month).zfill(2) + '-' + str(e.day).zfill(2)
         dates = "StartDate={}&EndDate={}".format(start_date, end_date)
         modules = "&ModuleInstanceFilter="
 
