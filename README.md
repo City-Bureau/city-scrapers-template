@@ -1,8 +1,11 @@
 # City Scrapers Template
 
+[![Build status](https://github.com/bonfirefan/city-scrapers-pitt/workflows/CI/badge.svg)](https://github.com/bonfirefan/city-scrapers-pitt/actions)
+
 This is a City Scrapers project being run in Pittsburgh. We are templated off of the [City Scrapers](https://cityscrapers.org) project.
 
 ## Calendar link
+
 The meetings collected by this project is posted to: - https://city-scrapers-pittsburgh.github.io/city-scrapers-events/
 
 ## Setup
