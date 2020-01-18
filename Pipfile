@@ -5,13 +5,12 @@ name = "pypi"
 
 [packages]
 requests = "*"
-twisted = ">=18.9.0"
 scrapy = "*"
 python-dateutil = "*"
 scrapy-sentry = "*"
 city-scrapers-core = {extras = ["aws"],version = "*"}
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
-    
+
 [dev-packages]
 freezegun = "*"
 pytest = "*"
