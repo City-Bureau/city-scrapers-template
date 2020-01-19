@@ -17,31 +17,27 @@ spider = PaUtilitySpider()
 freezer = freeze_time("2020-01-16")
 freezer.start()
 
+# THIS IS NOT YIELDING MEETINGS!!!
 parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()
 
 
-def test_tests():
-    print("Please write some tests for this spider or at least disable this one.")
-    assert False
-
+def test_number_of_meetings():
+    assert len(parsed_items) == 9
 
 """
-Uncomment below
+def test_title():
+    assert parsed_items[0]["title"] == "Pennsylvania Public Utility Commission Public Meetings"
+
+
+def test_description():
+    assert parsed_items[0]["description"] == "None"
+
+
+def test_start():
+    assert parsed_items[0]["start"] == datetime(2020, 1, 16, 0, 0)
 """
-
-# def test_title():
-#     assert parsed_items[0]["title"] == "EXPECTED TITLE"
-
-
-# def test_description():
-#     assert parsed_items[0]["description"] == "EXPECTED DESCRIPTION"
-
-
-# def test_start():
-#     assert parsed_items[0]["start"] == datetime(2019, 1, 1, 0, 0)
-
 
 # def test_end():
 #     assert parsed_items[0]["end"] == datetime(2019, 1, 1, 0, 0)

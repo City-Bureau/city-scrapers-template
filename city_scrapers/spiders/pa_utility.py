@@ -1,3 +1,6 @@
+from datetime import datetime, time
+from dateutil.parser import parse
+
 from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
@@ -9,25 +12,47 @@ class PaUtilitySpider(CityScrapersSpider):
     timezone = "America/New_York"
     start_urls = ["http://www.puc.pa.gov/about_puc/public_meeting_calendar/public_meeting_audio_summaries_.aspx"]
 
+    # The meetings always seem to being at 10AM; this isn't reported on the page itself,
+    # but is derived from reading minutes/agenda pdfs.
+    default_start_time = time(hour=10)
+
     def parse(self, response):
         """
         `parse` should always `yield` Meeting items.
 
         Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
-        """
-        for item in response.css(".meetings"):
+       """
+
+        self.logger.info("PARSING")
+        content = response.css('.center').xpath('.//text()').getall()
+
+        # the following text appears before the meeting dates are listed
+        meeting_start_flag = '\r\n\tPublic Meeting Dates'
+
+        for i, item in enumerate(content):
+            if item == meeting_start_flag:
+                break
+
+        # filter to text that includes the meet dates
+        meeting_dates = [d for d in content[i + 1:] if str.startswith(d, '\r\n\t') ]
+        # self.logger.info(meeting_dates)
+
+        for date_str in meeting_dates:
+
+            self.logger.info(date_str)
+
             meeting = Meeting(
-                title=self._parse_title(item),
-                description=self._parse_description(item),
-                classification=self._parse_classification(item),
-                start=self._parse_start(item),
-                end=self._parse_end(item),
-                all_day=self._parse_all_day(item),
-                time_notes=self._parse_time_notes(item),
-                location=self._parse_location(item),
-                links=self._parse_links(item),
-                source=self._parse_source(response),
+                title=self._parse_title(date_str),
+                description=self._parse_description(date_str),
+                classification=self._parse_classification(date_str),
+                start=self._parse_start(date_str),
+                end=self._parse_end(date_str),
+                all_day=False,
+                time_notes=self._parse_time_notes(date_str),
+                location=self._parse_location(date_str),
+                links=self._parse_links(date_str),
+                source=self._parse_source(response)
             )
 
             meeting["status"] = self._get_status(meeting)
@@ -37,19 +62,19 @@ class PaUtilitySpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        return ""
+        return "Pennsylvania Public Utility Commission Public Meetings"
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
-        return ""
+        return "None"
 
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
         return NOT_CLASSIFIED
 
-    def _parse_start(self, item):
+    def _parse_start(self, date_str):
         """Parse start datetime as a naive datetime object."""
-        return None
+        return datetime.combine(parse(date_str), self.default_start_time)
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
