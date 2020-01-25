@@ -5,96 +5,124 @@ excerpt: "City Scrapers development documentation"
 last_modified_at: 2018-10-04T20:15:56-04:00
 toc: true
 ---
+# Getting Started with Development
+Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue [here](https://github.com/bonfirefan/city-scrapers-pitt/issues). Better yet, start a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls).
 
-## Setup
-
+# Installation
 Follow the following directions for cloning the repository and installing requirements.
+___
 
-### What you'll need
-
-- [Git](https://git-scm.com/)
+## Prerequisites
+- [Git](https://git-scm.com/) installed
 - [GitHub](https://github.com/) account
 - Working internet connection
 - [Python](https://www.python.org/) 3.5, 3.6, or 3.7 installed
-- [Pipenv](https://pipenv.readthedocs.io/en/latest/) for managing dependencies and virtual environments
+- Virtual environment manager (pipenv, virtualenv, virtualenv-wrapper, etc.). [Pipenv](https://pipenv.readthedocs.io/en/latest/) is the most popular option here.
 
 You can find more details on setting up these tools and other common issues in [Setup Help](/docs/setup-help/).
 
-### Clone the Repository
-
-**Note:** If you're interested in setting up and managing a group of scrapers for your area, follow these instructions for our [City-Bureau/city-scrapers-template](https://github.com/city-bureau/city-scrapers-template) repo instead.
-
+## Clone the Repository
 These steps are the same, regardless of which option below you choose.
 
-#### 1. Fork the repository
+1. Fork the [Pittsburgh City Scrapers repository](https://github.com/bonfirefan/city-scrapers-pitt/)
+2. Clone your new fork to your local machine:
 
-This can be from the repo for the local City Scrapers project you're working on or [City-Bureau/city-scrapers](https://github.com/City-Bureau/city-scrapers).
+  ```
+  git clone https://github.com/YOUR-USERNAME/city-scrapers-pitt.git
+  ```
+3. Change directories into the main project folder:
 
-#### 2. Clone the fork to your local machine
+  ```
+  cd city-scrapers-pitt
+  ```
 
-```bash
-$ git clone https://github.com/YOUR-USERNAME/city-scrapers.git
+## pipenv installation
+pipenv is package management tool for Python which combines managing dependencies and virtual environments. It’s also designed to be compatible with Windows. Without a tool like pipenv you would have to spend time manually updating all of the packages and dependencies to make sure that your code will pass in our testing environment.
+
+To setup an environment with pipenv, run:
+
+```
+pipenv sync --dev --three
+```
+The "dev" flag here means to install both develop and default packages, and the "three" flag means use Python 3 when creating virtualenv.
+
+Then, you can either activate the virtual environment similarly to tools like virtualenv-wrapper by running:
+```
+pipenv shell
 ```
 
-#### 3. Change directories into the main project folder
+After which all of your commands will be in a virtual environment. You can exit this environment by running `exit`, or by entering CTRL+D.
 
-```bash
-$ cd city-scrapers
+When inside the virtual environment your prompt will resemble
+
+```
+(city-scrapers-pitt) >
 ```
 
-### Install dependencies
-
-[Pipenv](https://pipenv.readthedocs.io/en/latest/) is package management tool for Python which combines managing dependencies and virtual environments. It's also designed to be compatible with Windows. Other tools like `virtualenv` and `virtualenv-wrapper` can be used, but our documentation will only refer to Pipenv since it's quickly being adopted as the standard for Python dependency management.
-
-To setup an environment with Pipenv, run:
-
-```bash
-$ pipenv sync --dev --three
+Now you can list the available spiders with
+```
+(city-scrapers-pitt) >scrapy list
+```
+and see output similar to this:
+```
+alle_airport
+alle_asset_district
+alle_county
+alle_health
+alle_improvements
+alle_port_authority
+pa_development
+pa_liquorboard
+pitt_art_commission
+pitt_city_council
+pitt_city_planning
+pitt_housing_opp
 ```
 
-Then, you can activate the virtual environment by running:
+Next, we can run any of the spiders in the list. For example:
 
-```bash
-$ pipenv shell
+```
+(city-scrapers-pitt) >scrapy crawl pa_development
 ```
 
-after which all of your commands will be in a virtual environment. You can exit this environment by running `exit`, or by entering CTRL+D.
+The results will contain a JSON object describing a list of meetings for the Pennsylvania Department of Community and Economic Development.
 
-Alternatively, you can prefix commands with `pipenv run`. Here's an example that will run the Chicago Public Library scraper:
+Congratulations - this means that Scrapy is working and we are ready to contribute!
 
-```bash
-$ pipenv run scrapy crawl chi_library
-```
+If you're have any trouble at this point, here are some options:
+- Talk to other contributors on [Slack](https://citybureau.slack.com/) or at our [Meetups](https://www.meetup.com/codeforpgh/). It's very likely that someone else has encountered your situation before and can *quickly* point you in the right direction.
+- See if your problem shows up in our [issues](https://github.com/bonfirefan/city-scrapers-pitt/issues) page.
+- Google the error message
+- StackOverflow
 
 ## Contribute
 
-### Ways to contribute
+---
 
-There are many ways to contribute to this project: coding a spider (webscraper), building infrastructure, improving documentation, hosting in-person code evenings, and participating in technical discussions in [Slack](https://citybureau.slack.com/){:target="\_blank"} about code and design choices. Request an invite to our Slack by filling out [this form](https://airtable.com/shrRv027NLgToRFd6){:target="\_blank"}.
+### Ways to Contribute
+There are many ways to contribute to this project: coding a spider (webscraper), building infrastructure, improving documentation, hosting in-person code evenings, and participating in technical discussions in [Slack](https://citybureau.slack.com/) about code and design choices. Request an invite to our Slack by filling out [this form](https://airtable.com/shrRv027NLgToRFd6).
 
+
+### Familiarize Yourself with how we work
 The best way to familiarize yourself with the code base is to build a spider. Follow the installation and contributing-a-spider sections below to get started. Reach out on Slack for support.
+Familiarize yourself with how we workPermalink
 
-### Familiarize yourself with how we work
-
-Please read the project's [`CONTRIBUTING.md`](https://github.com/City-Bureau/city-scrapers/blob/master/CONTRIBUTING.md){:target="\_blank"} file to learn about how we use GitHub to manage the project and our pull request policy.
+Please read the project’s CONTRIBUTING.md file to learn about how we use GitHub to manage the project and our pull request policy.
 
 ### Spider Setup
+1. Find an open issue to work on:
 
-#### 1. Find an open issue to work on
+First, find an issue within the project’s [issue tracker](https://github.com/bonfirefan/city-scrapers-pitt/issues). If the issue does not have a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls) and has no one working on it, go ahead and leave a comment to the effect of "I'm working on this". If someone has been working on the spider, but it has been more than 3-4 months since they updated anything, feel free to continue their work on that spider or start your own solution.
 
-First, find an issue labeled "help wanted" within the project's [issue tracker](https://github.com/City-Bureau/city-scrapers/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22){:target="\_blank"}. Any issue without the "claimed" label is fair game. Add a comment indicating that you're interested in the work, and once a maintainer has replied and marked the issue "claimed" you're good to go.
-
-Save and note the issue number.
-
-#### 2. Create a new branch
-
+2. Create a new branch
 Create a new branch in your fork
-
-```bash
-$ git checkout -b XXXX-spider-NAMEOFAGENCY
+```
+git checkout -b XXXX-spider-NAMEOFAGENCY
 ```
 
-`XXXX` is the zero-padded issue number and `NAMEOFAGENCY` should be something like `chi_housing`. For example, for ticket number 53 entitled "SPIDER: Chicago Housing Authority", create a branch named `0053-spider-chi_housing`.
+XXX is the zero-padded issue number and NAMEOFAGENCY should be something like alle_county. For example, for ticket number 33 entitled “Spider: Pittsburgh Public Schools”, create a branch named 0033-spider-pittsburgh_public_schools
+
+# TODO everything after this point is still in reference to Chicago. 
 
 #### 3. Create a spider
 
