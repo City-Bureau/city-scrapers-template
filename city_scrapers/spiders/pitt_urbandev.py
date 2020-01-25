@@ -143,7 +143,6 @@ class PittUrbandevSpider(CityScrapersSpider):
         except AttributeError:
             pass
 
-
         return links
 
     def _parse_source(self, response):
