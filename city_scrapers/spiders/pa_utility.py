@@ -26,17 +26,25 @@ class PaUtilitySpider(CityScrapersSpider):
 
         self.logger.info("PARSING")
         content = response.css('.center').xpath('.//text()').getall()
+        #self.logger.warning(content)
+
+        # this was necessary to make pytest consistent with scarpy
+        content = [text.lstrip('\r') for text in content]
+        #self.logger.warning(content)
 
         # the following text appears before the meeting dates are listed
-        meeting_start_flag = '\r\n\tPublic Meeting Dates'
+        meeting_start_flag = '\n\tPublic Meeting Dates'
 
         for i, item in enumerate(content):
             if item == meeting_start_flag:
                 break
+        meeting_content = content[i + 1:]
+        #self.logger.warning(meeting_content)
 
         # filter to text that includes the meet dates
-        meeting_dates = [d for d in content[i + 1:] if str.startswith(d, '\r\n\t') ]
+        meeting_dates = [d for d in meeting_content if str.startswith(d, '\n\t')]
         # self.logger.info(meeting_dates)
+        self.logger.warning(meeting_dates)
 
         for date_str in meeting_dates:
 
