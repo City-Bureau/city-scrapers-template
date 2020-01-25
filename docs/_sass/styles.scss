@@ -1,0 +1,94 @@
+.greedy-nav .visible-links li {
+  font-size: 13px;
+}
+
+.page__content p,
+.page__content li,
+.page__content dl {
+  font-size: 16px;
+}
+
+.greedy-nav a {
+  margin: 0 0.5rem;
+}
+
+.page__hero--overlay .page__title {
+  color: #000;
+  text-shadow: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+form.newsletter {
+  max-width: 450px;
+  background-color: transparent;
+  padding: 0;
+  order: 2;
+
+  .field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  p,
+  .input,
+  .btn {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+    display: inline-block;
+  }
+
+  .input {
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #000;
+    font-weight: normal;
+    width: auto;
+    flex-grow: 1;
+  }
+
+  .btn {
+    border: solid 1px #fff;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:hover,
+    &:active {
+      color: red;
+    }
+  }
+}
+
+.page__footer-invite {
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+  }
+  form.newsletter {
+    order: 1;
+  }
+  .theme-footer {
+    order: 2;
+  }
+}
