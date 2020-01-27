@@ -5,12 +5,14 @@ from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
+url = "http://www.puc.pa.gov/about_puc/public_meeting_calendar/public_meeting_audio_summaries_.aspx"
+
 
 class PaUtilitySpider(CityScrapersSpider):
     name = "pa_utility"
     agency = "PA Public Utility Commission"
     timezone = "America/New_York"
-    start_urls = ["http://www.puc.pa.gov/about_puc/public_meeting_calendar/public_meeting_audio_summaries_.aspx"]
+    start_urls = [url]
 
     # The meetings always seem to being at 10AM; this isn't reported on the page itself,
     # but is derived from reading minutes/agenda pdfs.
@@ -26,11 +28,11 @@ class PaUtilitySpider(CityScrapersSpider):
 
         self.logger.info("PARSING")
         content = response.css('.center').xpath('.//text()').getall()
-        #self.logger.warning(content)
+        # self.logger.warning(content)
 
         # this was necessary to make pytest consistent with scarpy
         content = [text.lstrip('\r') for text in content]
-        #self.logger.warning(content)
+        # self.logger.warning(content)
 
         # the following text appears before the meeting dates are listed
         meeting_start_flag = '\n\tPublic Meeting Dates'
@@ -39,7 +41,7 @@ class PaUtilitySpider(CityScrapersSpider):
             if item == meeting_start_flag:
                 break
         meeting_content = content[i + 1:]
-        #self.logger.warning(meeting_content)
+        # self.logger.warning(meeting_content)
 
         # filter to text that includes the meet dates
         meeting_dates = [d for d in meeting_content if str.startswith(d, '\n\t')]
