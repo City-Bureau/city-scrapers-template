@@ -1,7 +1,7 @@
 from datetime import datetime
 from os.path import dirname, join
 
-# import pytest
+import pytest
 # from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.utils import file_response
 from freezegun import freeze_time
@@ -36,6 +36,11 @@ def test_description():
 
 def test_start():
     assert parsed_items[0]["start"] == datetime(2020, 1, 16, 10, 0)
+
+
+@pytest.mark.parametrize("item", parsed_items)
+def test_all_day(item):
+    assert item["all_day"] is False
 
 
 # def test_end():

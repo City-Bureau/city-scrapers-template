@@ -1,6 +1,6 @@
 from datetime import datetime, time
 
-from city_scrapers_core.constants import NOT_CLASSIFIED
+from city_scrapers_core.constants import COMMISSION
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 from dateutil.parser import parse
@@ -80,7 +80,7 @@ class PaUtilitySpider(CityScrapersSpider):
 
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
-        return NOT_CLASSIFIED
+        return COMMISSION
 
     def _parse_start(self, date_str):
         """Parse start datetime as a naive datetime object."""
@@ -99,10 +99,10 @@ class PaUtilitySpider(CityScrapersSpider):
         return False
 
     def _parse_location(self, item):
-        """Parse or generate location."""
+        """Seems like the meeting is always in the same place given the info in the Agenda PDFs."""
         return {
-            "address": "",
-            "name": "",
+            "address": "400 North St, Harrisburg, PA 17120",
+            "name": "MAIN HEARING ROOM NO. 1 SECOND FLOOR COMMONWEALTH KEYSTONE BUILDING",
         }
 
     def _parse_links(self, item):
