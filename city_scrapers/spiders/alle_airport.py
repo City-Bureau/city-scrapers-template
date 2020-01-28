@@ -5,6 +5,16 @@ from city_scrapers_core.constants import NOT_CLASSIFIED
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
+DEBUG_MODE = False
+# I didn't know how to list defualt locations and time other than
+# hard code them in.
+# It was elsewhere in the page in a paragraph
+DEFAULT_LOCATION = [
+    "Pittsburgh International Airport", "Conference Room A, 4th Flr Mezzanine, Landside Terminal"
+]
+DEFAULT_TIME = [11, 30, 0]
+TITLE = "Allegheny County Airport Authority Board Meeting"
+
 
 class AlleAirportSpider(CityScrapersSpider):
     name = "alle_airport"
@@ -13,6 +23,10 @@ class AlleAirportSpider(CityScrapersSpider):
     allowed_domains = ["flypittsburgh.com"]
     start_urls = ["https://www.flypittsburgh.com/about-us/leadership"]
 
+    def print_debug_message(self, str):
+        if DEBUG_MODE:
+            print(str)
+
     def parse(self, response):
         """
         `parse` should always `yield` Meeting items.
@@ -20,59 +34,37 @@ class AlleAirportSpider(CityScrapersSpider):
         Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
         """
-
-        # I didn't know how to list defualt locations and time other than
-        # hard code them in.
-        # It was elsewhere in the page in a paragraph
-
-        DEFAULT_LOCATION = [
-            "Pittsburgh International Airport",
-            "Conference Room A, 4th Flr Mezzanine, Landside Terminal",
-            "Pittsburgh International Airport"
-        ]
-        DEFAULT_TIME = [11, 30, 0]
-
-        print("\n\n\n\n\nBEGIN SPIDER\n\n\n\n")
+        self.print_debug_message("\n\n\n\n\nBEGIN SPIDER\n\n\n\n")
         # takes page HTML and and parses into date time and location
-        datetimeLocationList = self.responseProcessing(response, DEFAULT_LOCATION, DEFAULT_TIME)
-        print(datetimeLocationList)
-        print("\n\n\n\n\n")
-        for dtL in datetimeLocationList:
-            print("IN LOOP")
+        events = self.responseProcessing(response, DEFAULT_LOCATION, DEFAULT_TIME)
+        self.print_debug_message(events)
+        self.print_debug_message("\n\n\n\n\n")
+        for event in events:
+            self.print_debug_message("IN LOOP")
             meeting = Meeting(
-                title="Allegheny County Airport Authority Board Meeting",
+                title=TITLE,
                 description="",
-                classification=self._parse_classification(dtL),
-                start=dtL[0],
+                classification=self._parse_classification(event),
+                start=event[0],
                 end=None,
-                all_day=self._parse_all_day(dtL),
-                time_notes=self._parse_time_notes(dtL),
-                location=self._parse_location(dtL),
+                all_day=self._parse_all_day(event),
+                time_notes=self._parse_time_notes(event),
+                location=self._parse_location(event),
                 links=self._parse_links(response),
                 source=self._parse_source(response),
             )
-            # NOT SURE WHAT THESE DO
-            # TODO: LOOK INTO AT NEXT MEETING
-            # meeting["status"] = self._get_status(meeting)
-            # meeting["id"] = self._get_id(meeting)
+            meeting["status"] = self._get_status(meeting)
+            meeting["id"] = self._get_id(meeting)
             yield meeting
-            print("AFTER YIELD")
-
-    def _parse_title(self, item):
-        """Parse or generate meeting title."""
-        return ""
+            self.print_debug_message("AFTER YIELD")
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
-        return ""
+        return "None"
 
     def _parse_classification(self, item):
         """Parse or generate classification from allowed options."""
         return NOT_CLASSIFIED
-
-    def _parse_start(self, item):
-        """Parse start datetime as a naive datetime object."""
-        return item
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
@@ -86,11 +78,11 @@ class AlleAirportSpider(CityScrapersSpider):
         """Parse or generate all-day status. Defaults to False."""
         return False
 
-    def _parse_location(self, dtL):
+    def _parse_location(self, event):
         """Parse or generate location."""
         return {
-            "address": dtL[1][1],
-            "name": dtL[1][0],
+            "address": DEFAULT_LOCATION[1],
+            "name": DEFAULT_LOCATION[0],
         }
 
     def _parse_links(self, response):
