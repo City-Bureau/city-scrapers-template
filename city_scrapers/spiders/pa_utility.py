@@ -102,7 +102,7 @@ class PaUtilitySpider(CityScrapersSpider):
         """Seems like the meeting is always in the same place given the info in the Agenda PDFs."""
         return {
             "address": "400 North St, Harrisburg, PA 17120",
-            "name": "MAIN HEARING ROOM NO. 1 SECOND FLOOR COMMONWEALTH KEYSTONE BUILDING",
+            "name": "Main Hearing Room No. 1 Second Floor Commonwealth Keystone Building"
         }
 
     def _parse_links(self, item):
