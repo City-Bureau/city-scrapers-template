@@ -16,7 +16,6 @@ test_response = file_response(join(dirname(__file__), "files", "pa_utility.html"
 freezer = freeze_time("2020-01-16")
 freezer.start()
 
-# THIS IS NOT YIELDING MEETINGS!!!
 parsed_items = [item for item in spider.parse(test_response)]
 
 freezer.stop()

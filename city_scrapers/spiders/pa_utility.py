@@ -7,16 +7,20 @@ from dateutil.parser import parse
 
 url = "http://www.puc.pa.gov/about_puc/public_meeting_calendar/public_meeting_audio_summaries_.aspx"
 
+# Pulled this information from the site's PDFs
+ADDRESS = "400 North St, Harrisburg, PA 17120",
+LOCATION_NAME = "MAIN HEARING ROOM NO. 1 SECOND FLOOR COMMONWEALTH KEYSTONE BUILDING",
+
+# The meetings always seem to being at 10AM; this isn't reported on the page itself,
+# but is derived from reading minutes/agenda pdfs.
+DEFAULT_START_TIME = time(hour=10)
+
 
 class PaUtilitySpider(CityScrapersSpider):
     name = "pa_utility"
     agency = "PA Public Utility Commission"
     timezone = "America/New_York"
     start_urls = [url]
-
-    # The meetings always seem to being at 10AM; this isn't reported on the page itself,
-    # but is derived from reading minutes/agenda pdfs.
-    default_start_time = time(hour=10)
 
     def parse(self, response):
         """
@@ -45,12 +49,10 @@ class PaUtilitySpider(CityScrapersSpider):
 
         # filter to text that includes the meet dates
         meeting_dates = [d for d in meeting_content if str.startswith(d, '\n\t')]
-        # self.logger.info(meeting_dates)
-        self.logger.warning(meeting_dates)
+        # self.logger.warning(meeting_dates)
 
         for date_str in meeting_dates:
-
-            self.logger.info(date_str)
+            # self.logger.info(date_str)
 
             meeting = Meeting(
                 title=self._parse_title(date_str),
@@ -84,7 +86,7 @@ class PaUtilitySpider(CityScrapersSpider):
 
     def _parse_start(self, date_str):
         """Parse start datetime as a naive datetime object."""
-        return datetime.combine(parse(date_str), self.default_start_time)
+        return datetime.combine(parse(date_str), DEFAULT_START_TIME)
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
@@ -101,8 +103,8 @@ class PaUtilitySpider(CityScrapersSpider):
     def _parse_location(self, item):
         """Seems like the meeting is always in the same place given the info in the Agenda PDFs."""
         return {
-            "address": "400 North St, Harrisburg, PA 17120",
-            "name": "MAIN HEARING ROOM NO. 1 SECOND FLOOR COMMONWEALTH KEYSTONE BUILDING",
+            "address": ADDRESS,
+            "name": LOCATION_NAME,
         }
 
     def _parse_links(self, item):
