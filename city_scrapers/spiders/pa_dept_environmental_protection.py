@@ -32,13 +32,11 @@ class PaDeptEnvironmentalProtectionSpider(CityScrapersSpider):
                     links=self._parse_links(meetingChunk),
                     source=self._parse_source(meetingChunk),
                     classification=self._parse_classification(meetingChunk),
-
-                    # classification=self._parse_classification(item),
-                    # all_day=self._parse_all_day(item),
+                    all_day=self._parse_all_day(meetingChunk),
                 )
 
-                # meeting["status"] = self._get_status(meeting)
-                # meeting["id"] = self._get_id(meeting)
+                meeting["status"] = self._get_status(meeting)
+                meeting["id"] = self._get_id(meeting)
 
                 yield meeting
 
