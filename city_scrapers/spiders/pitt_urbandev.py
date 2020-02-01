@@ -8,6 +8,7 @@ from city_scrapers_core.spiders import CityScrapersSpider
 BASE_URL = "https://www.ura.org"
 EXPECTED_START_HOUR = "2 p.m."
 EXPECTED_START_HOUR_AS_INT = 14
+TITLE = "URA Board Meeting"
 
 
 class PittUrbandevSpider(CityScrapersSpider):
@@ -44,7 +45,7 @@ class PittUrbandevSpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        return "URA Board Meeting"
+        return TITLE
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
