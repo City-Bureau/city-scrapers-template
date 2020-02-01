@@ -14,7 +14,7 @@ TITLE = "URA Board Meeting"
 class PittUrbandevSpider(CityScrapersSpider):
     name = "pitt_urbandev"
     agency = "Urban Redevelopment Authority of Pittsburgh"
-    timezone = "America/Chicago"
+    timezone = "America/New_York"
     start_urls = ["https://www.ura.org/pages/board-meeting-notices-agendas-and-minutes"]
 
     def parse(self, response):
