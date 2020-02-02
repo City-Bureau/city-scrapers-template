@@ -49,13 +49,6 @@ def test_source():
     assert parsed_items[0]["source"] == ref
 
 
-def test_links():
-    assert parsed_items[0]["links"][0] == {
-        "href": "",
-        "title": ""
-    }
-
-
 def test_classification():
     assert parsed_items[0]["classification"] == BOARD
 
