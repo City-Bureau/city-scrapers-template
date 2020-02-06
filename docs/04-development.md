@@ -2,7 +2,6 @@
 title: "Development"
 permalink: /docs/development/
 excerpt: "City Scrapers development documentation"
-last_modified_at: 2018-10-04T20:15:56-04:00
 toc: true
 ---
 
@@ -28,7 +27,7 @@ These steps are the same, regardless of which option below you choose.
 
 #### 1. Fork the repository
 
-This can be from the repo for the local City Scrapers project you're working on or [City-Bureau/city-scrapers](https://github.com/City-Bureau/city-scrapers).
+[Fork the Pittsburgh City Scrapers repo.](https://github.com/bonfirefan/city-scrapers-pitt/)
 
 #### 2. Clone the fork to your local machine
 
