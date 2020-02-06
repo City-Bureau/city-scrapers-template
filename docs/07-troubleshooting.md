@@ -50,7 +50,7 @@ git merge upstream/master
 ## Twisted Error using `pipenv install twisted`
 Problem: A dependency is missing.
 
-At least three contributors have had this problem, possible for different reasons.
+At least three contributors have had this problem, possibly for different reasons.
 
 Solution: [Try the steps described here](https://github.com/bonfirefan/city-scrapers-pitt/issues/36)
 
