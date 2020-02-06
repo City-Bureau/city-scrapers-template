@@ -410,10 +410,12 @@ When setting values for `classification` or `status` (although `status` should g
 
 #### Statuses
 
-- `CANCELLED`
-- `TENTATIVE`
-- `CONFIRMED`
-- `PASSED`
+- `CANCELLED`: This event is cancelled.
+- `TENTATIVE`: This event is tentative.
+- `CONFIRMED`: This event is confirmed.
+- `PASSED`: This event occurred in the past.
+- `RESCHEDULED`: This even was moved to a new date. 
+- `UPDATED`: This event is the new meeting time of a meeting.
 
 ### Spider attributes
 

@@ -2,179 +2,249 @@
 title: "Development"
 permalink: /docs/development/
 excerpt: "City Scrapers development documentation"
-last_modified_at: 2018-10-04T20:15:56-04:00
+last_modified_at: 2020-2-1T00:00:00-04:00
 toc: true
 ---
+# Getting Started with Development
+Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue [here](https://github.com/bonfirefan/city-scrapers-pitt/issues). Better yet, start a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls).
 
-## Setup
-
+# Installation
 Follow the following directions for cloning the repository and installing requirements.
+___
 
-### What you'll need
-
-- [Git](https://git-scm.com/)
+## Prerequisites
+- [Git](https://git-scm.com/) installed
 - [GitHub](https://github.com/) account
 - Working internet connection
 - [Python](https://www.python.org/) 3.5, 3.6, or 3.7 installed
-- [Pipenv](https://pipenv.readthedocs.io/en/latest/) for managing dependencies and virtual environments
+- Virtual environment manager (pipenv, virtualenv, virtualenv-wrapper, etc.). [Pipenv](https://pipenv.readthedocs.io/en/latest/) is the most popular option here.
 
 You can find more details on setting up these tools and other common issues in [Setup Help](/docs/setup-help/).
 
-### Clone the Repository
-
-**Note:** If you're interested in setting up and managing a group of scrapers for your area, follow these instructions for our [City-Bureau/city-scrapers-template](https://github.com/city-bureau/city-scrapers-template) repo instead.
-
+## Clone the Repository
 These steps are the same, regardless of which option below you choose.
 
-#### 1. Fork the repository
+1. Fork the [Pittsburgh City Scrapers repository](https://github.com/bonfirefan/city-scrapers-pitt/)
+2. Clone your new fork to your local machine:
 
-This can be from the repo for the local City Scrapers project you're working on or [City-Bureau/city-scrapers](https://github.com/City-Bureau/city-scrapers).
+  ```bash
+  git clone https://github.com/YOUR-USERNAME/city-scrapers-pitt.git
+  ```
+3. Change directories into the main project folder:
 
-#### 2. Clone the fork to your local machine
+  ```bash
+  cd city-scrapers-pitt
+  ```
 
-```bash
-$ git clone https://github.com/YOUR-USERNAME/city-scrapers.git
-```
+## pipenv installation
+pipenv is package management tool for Python which combines managing dependencies and virtual environments. It’s also designed to be compatible with Windows. Without a tool like pipenv you would have to spend time manually updating all of the packages and dependencies to make sure that your code will pass in our testing environment.
 
-#### 3. Change directories into the main project folder
-
-```bash
-$ cd city-scrapers
-```
-
-### Install dependencies
-
-[Pipenv](https://pipenv.readthedocs.io/en/latest/) is package management tool for Python which combines managing dependencies and virtual environments. It's also designed to be compatible with Windows. Other tools like `virtualenv` and `virtualenv-wrapper` can be used, but our documentation will only refer to Pipenv since it's quickly being adopted as the standard for Python dependency management.
-
-To setup an environment with Pipenv, run:
+To setup an environment with pipenv, run:
 
 ```bash
-$ pipenv sync --dev --three
+pipenv sync --dev --three
+```
+The "dev" flag here means to install both develop and default packages, and the "three" flag means use Python 3 when creating virtualenv.
+
+Then, you can either activate the virtual environment similarly to tools like virtualenv-wrapper by running:
+```bash
+pipenv shell
 ```
 
-Then, you can activate the virtual environment by running:
+After which all of your commands will be in a virtual environment. You can exit this environment by running `exit`, or by entering CTRL+D.
+
+When inside the virtual environment your prompt will resemble
 
 ```bash
-$ pipenv shell
+(city-scrapers-pitt) $
 ```
 
-after which all of your commands will be in a virtual environment. You can exit this environment by running `exit`, or by entering CTRL+D.
+Now you can list the available spiders with
+```bash
+(city-scrapers-pitt) $scrapy list
+```
+and see output similar to this:
+```bash
+alle_airport
+alle_asset_district
+alle_county
+alle_health
+alle_improvements
+alle_port_authority
+pa_development
+pa_liquorboard
+pitt_art_commission
+pitt_city_council
+pitt_city_planning
+pitt_housing_opp
+```
 
-Alternatively, you can prefix commands with `pipenv run`. Here's an example that will run the Chicago Public Library scraper:
+Next, we can run any of the spiders in the list. For example:
 
 ```bash
-$ pipenv run scrapy crawl chi_library
+(city-scrapers-pitt) $scrapy crawl pa_development
 ```
+
+The results will contain a JSON object describing a list of meetings for the Pennsylvania Department of Community and Economic Development.
+
+Congratulations - this means that Scrapy is working and we are ready to contribute!
+
+If you're having any issues at this point, here are some options:
+- Talk to other contributors on [Slack](https://citybureau.slack.com/) or at our [Meetups](https://www.meetup.com/codeforpgh/). It's very likely that someone else has encountered your situation before and can *quickly* point you in the right direction.
+- See if your problem shows up in our [issues](https://github.com/bonfirefan/city-scrapers-pitt/issues) page.
+- Google the error message
+- StackOverflow
 
 ## Contribute
 
-### Ways to contribute
+---
 
-There are many ways to contribute to this project: coding a spider (webscraper), building infrastructure, improving documentation, hosting in-person code evenings, and participating in technical discussions in [Slack](https://citybureau.slack.com/){:target="\_blank"} about code and design choices. Request an invite to our Slack by filling out [this form](https://airtable.com/shrRv027NLgToRFd6){:target="\_blank"}.
+### Ways to Contribute
+There are many ways to contribute to this project: coding a spider (webscraper), building infrastructure, improving documentation, hosting in-person code evenings, and participating in technical discussions in [Slack](https://citybureau.slack.com/) about code and design choices. Request an invite to our Slack by filling out [this form](https://airtable.com/shrRv027NLgToRFd6).
 
+
+### Familiarize Yourself with how we work
 The best way to familiarize yourself with the code base is to build a spider. Follow the installation and contributing-a-spider sections below to get started. Reach out on Slack for support.
+Familiarize yourself with how we workPermalink
 
-### Familiarize yourself with how we work
-
-Please read the project's [`CONTRIBUTING.md`](https://github.com/City-Bureau/city-scrapers/blob/master/CONTRIBUTING.md){:target="\_blank"} file to learn about how we use GitHub to manage the project and our pull request policy.
+Please read the project’s CONTRIBUTING.md file to learn about how we use GitHub to manage the project and our pull request policy.
 
 ### Spider Setup
+1. Find an open issue to work on:
 
-#### 1. Find an open issue to work on
+First, find an issue within the project’s [issue tracker](https://github.com/bonfirefan/city-scrapers-pitt/issues). If the issue does not have a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls) and has no one working on it, go ahead and leave a comment to the effect of "I'm working on this". If someone has been working on the spider, but it has been more than 3-4 months since they updated anything, feel free to continue their work on that spider or start your own solution.
 
-First, find an issue labeled "help wanted" within the project's [issue tracker](https://github.com/City-Bureau/city-scrapers/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22){:target="\_blank"}. Any issue without the "claimed" label is fair game. Add a comment indicating that you're interested in the work, and once a maintainer has replied and marked the issue "claimed" you're good to go.
+As an example we will use the Urban Redevelopment Authority of Pittsburgh, or URA for short. It has an [issue](https://github.com/bonfirefan/city-scrapers-pitt/issues/5). Someone started work on it but appears to have moved on to other commitments. I'll leave a comment and proceed to step 2.
 
-Save and note the issue number.
-
-#### 2. Create a new branch
-
-Create a new branch in your fork
+2. Create a new branch
+Before leaving the master branch, sync your fork to the project's repository. This will save time later on when trying to add your spider to the project. To do this run:
 
 ```bash
-$ git checkout -b XXXX-spider-NAMEOFAGENCY
+git remote add upstream https://github.com/bonfirefan/city-scrapers-pitt.git
+git fetch upstream
+git merge upstream/master
 ```
 
-`XXXX` is the zero-padded issue number and `NAMEOFAGENCY` should be something like `chi_housing`. For example, for ticket number 53 entitled "SPIDER: Chicago Housing Authority", create a branch named `0053-spider-chi_housing`.
+Now that we're all in sync, create a new branch in your fork:
+```bash
+git checkout -b XXXX-spider-NAMEOFAGENCY
+```
+
+XXX is the zero-padded issue number and NAMEOFAGENCY should be something like alle_county.
+
+For the URA, I would use `0005` as my issue number and `pitt_urbandev` as NAMEOFAGENCY as follows:
+
+```bash
+git checkout -b 0005-spider-pitt_urbandev
+```
+
+Now when we run 'git branch' we will see
+```bash
+$git branch
+* 0005-spider-pitt_urbandev
+  master
+```
+
+We have a branch! Move on to step 3.
 
 #### 3. Create a spider
 
 Create a spider from our template with a spider slug, agency name, and a URL to start scraping. Inside your virtual environment following the previous examples (or prefixed by `pipenv run`) run:
 
 ```bash
-(city-scrapers)$ scrapy genspider chi_housing "Chicago Housing Authority" http://www.thecha.org
+scrapy genspider pitt_urbandev "Urban Redevelopment Authority of Pittsburgh" https://www.ura.org/pages/board-meeting-notices-agendas-and-minutes
 ```
 
 You should see some output like:
-
 ```bash
-Created file: /Users/eads/Code/city-scrapers/city_scrapers/spiders/chi_housing.py
-Created file: /Users/eads/Code/city-scrapers/tests/test_chi_housing.py
-Created file: /Users/eads/Code/city-scrapers/tests/files/chi_housing.html
+Created file: /Users/ben/Desktop/documentation/example/city-scrapers-pitt/tests/files/pitt_urbandev.html
+Created file: /Users/ben/Desktop/documentation/example/city-scrapers-pitt/city_scrapers/spiders/pitt_urbandev.py
+Created file: /Users/ben/Desktop/documentation/example/city-scrapers-pitt/tests/test_pitt_urbandev.py
 ```
+
+Now you have a bare-bones spider! Move on to step 4.
 
 #### 4. Test crawling
 
-You now have a spider named `chi_housing`. To run it (admittedly, not much will happen until you start editing the scraper), run:
+You now have a spider named `pitt_urbandev`. To run it (admittedly, not much will happen until you start editing the scraper), run:
 
 ```bash
-(city-scrapers)$ scrapy crawl chi_housing
+(city-scrapers-pitt)$scrapy crawl pitt_urbandev
 ```
 
-If there are no error messages, congratulations! You have a barebones spider.
+If there are no error messages, congratulations! Move on to step 5.
 
 #### 5. Run the automated tests
 
-We use the [`pytest`](https://docs.pytest.org/en/latest/){:target="\_blank"} testing framework to verify the behavior of the project's code. To run this, simply run `pytest` in your project environment.
+We use the [`pytest`](https://docs.pytest.org/en/latest/) testing framework to verify the behavior of the project's code. To run this, simply run `pytest` in your project environment.
 
 ```bash
-(city-scrapers)$ pytest
+(city-scrapers-pitt)$pytest
 ```
 
 Whoops! The tests for new spiders fail by default. Here's typical output:
 
 ```bash
-====================================== test session starts =======================================
-platform darwin -- Python 3.6.2, pytest-3.1.3, py-1.4.34, pluggy-0.4.0
-rootdir: /Users/eads/projects/city-scrapers, inifile:
-collected 59 items
+(city-scrapers-pitt) $pytest
+==================================================================== test session starts ====================================================================
+platform darwin -- Python 3.7.5, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/ben/Desktop/documentation/example/city-scrapers-pitt, inifile: setup.cfg
+collected 214 items                                                                                                                                         
 
-tests/test_chi_housing.py F
-tests/test_idph.py .......................................................
-tests/test_tasks.py ...
+tests/test_alle_airport.py .........                                                                                                                  [  4%]
+tests/test_alle_county.py .............                                                                                                               [ 10%]
+tests/test_alle_health.py ..                                                                                                                          [ 11%]
+tests/test_alle_improvements.py .....................                                                                                                 [ 21%]
+tests/test_alle_port_authority.py ......................                                                                                              [ 31%]
+tests/test_pa_dept_environmental_protection.py ........                                                                                               [ 35%]
+tests/test_pa_development.py ...............................................                                                                          [ 57%]
+tests/test_pa_liquorboard.py .                                                                                                                        [ 57%]
+tests/test_pgh_mayor_office_comm_aff.py .                                                                                                             [ 57%]
+tests/test_pgh_public_schools.py .                                                                                                                    [ 58%]
+tests/test_pitt_art_commission.py ..........                                                                                                          [ 63%]
+tests/test_pitt_city_council.py ...........................................................                                                           [ 90%]
+tests/test_pitt_city_planning.py .......                                                                                                              [ 93%]
+tests/test_pitt_housing_opp.py ............                                                                                                           [ 99%]
+tests/test_pitt_urbandev.py F                                                                                                                         [100%]
 
-============================================ FAILURES ============================================
-___________________________________________ test_tests ___________________________________________
+========================================================================= FAILURES ==========================================================================
+________________________________________________________________________ test_tests _________________________________________________________________________
 
     def test_tests():
-        print('Please write some tests for this spider or at least disable this one.')
+        print("Please write some tests for this spider or at least disable this one.")
 >       assert False
 E       assert False
 
-tests/test_chi_housing.py:8: AssertionError
--------------------------------------- Captured stdout call --------------------------------------
+tests/test_pitt_urbandev.py:27: AssertionError
+------------------------------------------------------------------- Captured stdout call --------------------------------------------------------------------
 Please write some tests for this spider or at least disable this one.
-============================== 1 failed, 58 passed in 0.95 seconds ==============================
+=============================================================== 1 failed, 213 passed in 2.68s ===============================================================
+(city-scrapers-pitt) $
 ```
 
-That's OK.
+This is normal since you have not written any tests for your new spider and the assertion  `assert False` will always fail. Move on to step 6.
 
 #### 6. Run linting and style-checking tools
 
-We use [`flake8`](http://flake8.pycqa.org/en/latest/){:target="\_blank"}, [`isort`](https://isort.readthedocs.io/en/stable/){:target="\_blank"}, and [`yapf`](https://github.com/google/yapf){:target="\_blank"} to check that all code is written in the proper style. To run these tools individually, you can run the following commands:
+We use [`flake8`](http://flake8.pycqa.org/en/latest/), [`isort`](https://isort.readthedocs.io/en/stable/), and [`yapf`](https://github.com/google/yapf) to check that all code is written in the proper style. To run these tools individually, you can run the following commands:
 
 ```bash
-$ pipenv run flake8
-$ pipenv run isort
-$ pipenv run style
+(city-scrapers-pitt) $flake8
+(city-scrapers-pitt) $isort
+(city-scrapers-pitt) $yapf --diff --recursive ./city_scrapers/ ./tests/
 ```
 
-Most text editors can be configured to fix style issues for you based off of the configuration settings in `setup.cfg`. See an example of this for VSCode in [Setup Help](/docs/setup-help/).
+Some of these tests might not pass right now, but they should before you are finished with the spider. For example, flake8 dutifully informs us that pytest is imported but unused in the new test file. Since we have not written any tests with pytest method decorations yet, pytest is not being used, so this warning is to be expected.
+
+*Run these commands early and often!* They will help you learn the language and style, discover bugs sooner, and avoid the nasty experience of having to fix dozens of style complaints all at once.
+
+Good news! If you're lazy like us, most text editors can be configured to fix style issues for you based off of the configuration settings in `setup.cfg`. See an example of this for VSCode in [Setup Help](/docs/setup-help/).
 
 ### Building a spider
 
 #### A. Write parse methods in the spider
 
-Open `city_scrapers/spiders/chi_housing.py` to work on your spider. A simple structure has been created for you to use. Let's look at the basics.
+Open `city_scrapers/spiders/pitt_urbandev.py` to work on your spider. A simple structure has been created for you to use. Let's look at the basics.
 
 The spider should look something like this:
 
@@ -184,17 +254,17 @@ from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
 
-class ChiHousingSpider(CityScrapersSpider):
-    name = 'chi_housing'
-    agency = 'Chicago Housing Authority'
-    timezone = 'America/Chicago'
-    start_urls = ['http://thecha.org']
+class PittUrbandevSpider(CityScrapersSpider):
+    name = "pitt_urbandev"
+    agency = "Urban Redevelopment Authority of Pittsburgh"
+    timezone = "America/Chicago"
+    start_urls = ["https://www.ura.org/pages/board-meeting-notices-agendas-and-minutes"]
 
     def parse(self, response):
         """
-        `parse` should always `yield` a Meeting item.
+        `parse` should always `yield` Meeting items.
 
-        Change the `_parse_id`, `_parse_title`, etc methods to fit your scraping
+        Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
         """
         for item in response.css(".meetings"):
@@ -231,78 +301,89 @@ class ChiHousingSpider(CityScrapersSpider):
     # ...
 ```
 
-The `ChiHousingSpider.parse(...)` method is a standard part of Scrapy and handles returning data in the correct format and any subsequent requests to be made.
+Every spider inherits from our custom `CityScrapersSpider` class, defined in the `city_scrapers_core` package which provides some of the helper functions like `_get_id` and `_get_status`. Each spider should yield `Meeting` items in the `parse` method (or another helper method depending on the page). See a more [detailed description of `Meeting` items below](#meeting-items).
 
-Every spider inherits from our custom `CityScrapersSpider` class, defined in the `city_scrapers_core` package which adds some provides some of the helper functions like `_get_id` and `_get_status`. Each spider should yield `Meeting` items in the `parse` method (or another helper method depending on the page). See a more [detailed description of `Meeting` items below](#meeting-items).
+There are pre-defined values for things like the spider's name, agency, etc. Check that these all make sense. For example, for Eastern Standard Time we would want to change the timezone from `"America/Chicago"` to `"America/New_York"`.
 
-There are pre-defined helper methods for every major field in the data. It's your job to fill them in.
+There also are pre-defined helper methods for every major field in the data. It's your job to fill them in.
 
-For example, `_parse_title` could be:
+For example, `_parse_title` could be filled in as:
 
 ```python
-class ChiHousingSpider(Spider):
+TITLE = "URA Board Meeting" # This is a constant
+
+class PittUrbandevSpider(Spider):
 
     # ...
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        title = item.css(".title::text").extract_first()
-        return title
+        # In this situation, the title did not change from one
+        # meeting to the next, so we simply return a constant string:
+        return TITLE
 
     # ...
 ```
 
-Often a value for meetings returned by a spider will be the same regardless of meeting content (an example is that most meetings will always have `False` for the `all_day` value). For fields like `classification`, `all_day`, and `title` (sometimes), feel free to remove the `_parse_*` method for that field, and simply include the value in each dictionary (so `'all_day': False` in this example rather than `'all_day': self._parse_all_day(item)`).
+Often a value for meetings returned by a spider will be the same regardless of meeting content. For example, most meetings will always have `False` for the `all_day` value. For fields like `classification`, `all_day`, and `title` (sometimes), feel free to remove the `_parse_*` method for that field, and simply include the value in each dictionary (so `'all_day': False` in this example rather than `'all_day': self._parse_all_day(item)`).
 
-However, scheduling details like time and location should be pulled from the page, even if the value is always the same. In some cases it can be easier to make sure that an expected value is there and raise an error if not than to parse it every time. An example of raising an error if information has changed can be found in [`chi_license_appeal`](https://github.com/City-Bureau/city-scrapers/blob/bb127e3c4243bf7bf9aa59cf7a7b4b43d1d48c0a/city_scrapers/spiders/chi_license_appeal.py#L67-L70)
+So we could refactor our previous example as:
+
+```python
+TITLE = "URA Board Meeting" # This is a constant
+
+class PittUrbandevSpider(Spider):
+
+    # ...
+    def parse(self, response):
+      # ...
+
+        for item in response.css(".meetings"):
+            meeting = Meeting(
+                title=TITLE,
+                # ...
+            )
+```
+
+*Caveat:* Scheduling details like time and location should be pulled from the page, even if the value is always the same. In some cases it can be easier to make sure that an expected value is there and raise an error if not than to parse it every time. An example of raising an error if information has changed can be found in [`chi_license_appeal`](https://github.com/City-Bureau/city-scrapers/blob/bb127e3c4243bf7bf9aa59cf7a7b4b43d1d48c0a/city_scrapers/spiders/chi_license_appeal.py#L67-L70)
 
 #### B. Write tests
 
+How can we write better code, refactor with confidence, and document precisely how your spider was intended to behave? Tests.
+
 Our general approach to writing tests is to save a copy of a site's HTML in `tests/files` and then use that HTML to verify the behavior of each spider. In this way, we avoid needing a network connection to run tests and our tests don't break every time a site's content is updated.
+
+
+This is a great opportunity to practice [test-driven-development](https://www.agilealliance.org/glossary/tdd/):
+> - write a “single” unit test describing an aspect of the program
+> - run the test, which should fail because the program lacks that feature    
+> - write “just enough” code, the simplest possible, to make the test pass
+> - “refactor” the code until it conforms to the simplicity criteria
+> - repeat, “accumulating” unit tests over time
 
 Here is the test setup and an example test:
 
 ```python
-from datetime import datetime
-from os.path import dirname, join
-
-import pytest
-from city_scrapers_core.utils import file_response
-from freezegun import freeze_time
-
-from city_scrapers.spiders.chi_housing import ChiHousingSpider
-
+...
+# Load the copy of the site's HTML response.
 test_response = file_response(
-    join(dirname(__file__), "files", "chi_housing.html"),
-    url="https://www.thecha.org/"
+    join(dirname(__file__), "files", "pitt_urbandev.html"),
+    url="https://www.ura.org/pages/board-meeting-notices-agendas-and-minutes",
 )
-spider = ChiHousingSpider()
-
-freezer = freeze_time("2018-10-12")
+# Instantiate a spider.
+spider = PittUrbandevSpider()
+# Freeze time.
+freezer = freeze_time("2020-01-25")
 freezer.start()
-
+# Get the events .
 parsed_items = [item for item in spider.parse(test_response)]
-
-freezer.stop()
-
-
-def test_start():
-    assert parsed_items[0]["start"] == datetime(2018, 1, 16, 14, 0)
+# Test that the description of the first event is right.
+def test_description():
+    assert parsed_items[0]["description"] == "Rescheduled board meeting"
+...
 ```
 
 You'll notice that the `freeze_time` function is called from the `freezegun` library before items are parsed from the spider. This is because some of our functions, `_get_status` in particular, are time-sensitive and their outputs will change depending when they're executed. Calling `freeze_time` with the date the test HTML was initially scraped ensures that we will get the same output in our tests no matter when we run them.
-
-It is also possible to execute a function over every element in the `parsed_items` list. In the following example, the `test_all_day` function will be invoked once for each element in `parsed_items` list.
-
-```python
-@pytest.mark.parametrize("item", parsed_items)
-def test_all_day(item):
-    assert item["all_day"] is False
-```
-
-Parameterized test functions are best used to assert something about every event such as the existence of a field or a value all events will share.
-
-You can read more about parameterized test functions [in the pytest docs](https://docs.pytest.org/en/latest/parametrize.html#pytest-mark-parametrize){:target="\_blank"}.
 
 You generally want to verify that a spider:
 
@@ -310,11 +391,12 @@ You generally want to verify that a spider:
 - Extracts the correct values from a single event.
 - Parses any date and time values, combining them as needed.
 
+
 #### C. Create a Pull Request
 
-If your ready to submit your code to the project, you should create a pull request on GitHub. You can do this as early as you would like in order to get feedback from others working on the project.
+If your ready to submit your code to the project, you should create a [pull request on GitHub](https://github.com/bonfirefan/city-scrapers-pitt/pulls). You can do this as early as you would like in order to get feedback from others working on the project.
 
-When you go to open a pull request, you'll see a template with details pre-populated including a checklist of tasks to complete. Fill out the information as best you can (it's alright if you can't check everything off yet). It's designed to provide some reminders for tasks to complete as well as making review easier. You can use the rest of the description to explain anything you'd like a reviewer to know about the code. See [CONTRIBUTING.md](https://github.com/City-Bureau/city-scrapers/blob/master/CONTRIBUTING.md){:target="\_blank"} for more details.
+When you go to open a pull request, you'll see a template with details pre-populated including a checklist of tasks to complete. Fill out the information as best you can (it's alright if you can't check everything off yet). It's designed to provide some reminders for tasks to complete as well as making review easier. You can use the rest of the description to explain anything you'd like a reviewer to know about the code. See [CONTRIBUTING.md](https://github.com/bonfirefan/city-scrapers-pitt/blob/master/CONTRIBUTING.md) for more details.
 
 ### `Meeting` Items
 
@@ -420,10 +502,13 @@ When setting values for `classification` or `status` (although `status` should g
 In addition, each spider records the following data as attributes:
 
 ```python
-class ChiAnimalSpider(CityScrapersSpider):
-    name = "chi_animal"                                    # name of spider in lowercase
-    agency = "Chicago Animal Care and Control Commission"  # name of agency
-    timezone = "America/Chicago"                           # timezone of the events in tzinfo format
+class PittUrbandevSpider(CityScrapersSpider):
+  # name of spider in lowercase
+    name = "pitt_urbandev"
+    # name of agency
+    agency = "Urban Redevelopment Authority of Pittsburgh"
+    # timezone of the events in tzinfo format
+    timezone = "America/New_York"
 ```
 
 #### `agency`
@@ -436,7 +521,7 @@ Many government websites share similar technology stacks, and we've built out so
 
 ### Legistar
 
-Legistar is a software platform provided by Granicus that many governments use to hold their legislative information. If you run into a site using Legistar (typically you'll know because `legistar.com` will be in the URL), then you should use the `legistar` package to run the scraper and avoid unnecessary work. You can refer to spiders like `chi_parks` or `cook_board` to see examples of this approach.
+Legistar is a software platform provided by Granicus that many governments use to hold their legislative information. If you run into a site using Legistar (typically you'll know because `legistar.com` will be in the URL), then you should use the `legistar` package to run the scraper and avoid unnecessary work. You can refer to spiders like `alle_county` or `pitt_city_council` to see examples of this approach.
 
 ### ASP.NET Sites
 
