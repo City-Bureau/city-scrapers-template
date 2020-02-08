@@ -23,6 +23,7 @@ These steps are the same, regardless of which option below you choose.
   ```bash
   git clone https://github.com/YOUR-USERNAME/city-scrapers-pitt.git
   ```
+
 3. Change directories into the main project folder:
 
   ```bash
@@ -49,12 +50,12 @@ After which all of your commands will be in a virtual environment. You can exit 
 When inside the virtual environment your prompt will resemble
 
 ```bash
-(city-scrapers-pitt) $
+(city-scrapers-pitt)$
 ```
 
 Now you can list the available spiders with
 ```bash
-(city-scrapers-pitt) $scrapy list
+(city-scrapers-pitt)$ scrapy list
 ```
 and see output similar to this:
 ```bash
@@ -75,10 +76,28 @@ pitt_housing_opp
 Next, we can run any of the spiders in the list. For example:
 
 ```bash
-(city-scrapers-pitt) $scrapy crawl pa_development
+(city-scrapers-pitt)$ scrapy crawl pa_development
 ```
 
 The results will contain a JSON object describing a list of meetings for the Pennsylvania Department of Community and Economic Development.
+Here is an example of one of the JSON records:
+
+```
+{'all_day': False,
+ 'classification': 'Board',
+ 'description': '',
+ 'end': datetime.datetime(2020, 4, 23, 14, 0),
+ 'id': 'pa_development/202004231000/x/bftda_board_meeting',
+ 'links': [{'href': '', 'title': ''}],
+ 'location': {'address': '400 North Street, Harrisburg, PA, 17120',
+              'name': 'KBMC – Desert Room, First Floor, Commonwealth Keystone '
+                      'Building'},
+ 'source': 'https://dced.pa.gov/event/bftda-board-meeting-2020-04-23/',
+ 'start': datetime.datetime(2020, 4, 23, 10, 0),
+ 'status': 'tentative',
+ 'time_notes': '',
+ 'title': 'BFTDA Board Meeting'}
+```
 
 Congratulations - this means that Scrapy is working and we are ready to contribute!
 
@@ -133,7 +152,7 @@ git checkout -b 0005-spider-pitt_urbandev
 
 Now when we run 'git branch' we will see
 ```bash
-$git branch
+$ git branch
 * 0005-spider-pitt_urbandev
   master
 ```
@@ -162,7 +181,7 @@ Now you have a bare-bones spider! Move on to step 4.
 You now have a spider named `pitt_urbandev`. To run it (admittedly, not much will happen until you start editing the scraper), run:
 
 ```bash
-(city-scrapers-pitt)$scrapy crawl pitt_urbandev
+(city-scrapers-pitt)$ scrapy crawl pitt_urbandev
 ```
 
 If there are no error messages, congratulations! Move on to step 5.
@@ -172,13 +191,13 @@ If there are no error messages, congratulations! Move on to step 5.
 We use the [`pytest`](https://docs.pytest.org/en/latest/) testing framework to verify the behavior of the project's code. To run this, simply run `pytest` in your project environment.
 
 ```bash
-(city-scrapers-pitt)$pytest
+(city-scrapers-pitt)$ pytest
 ```
 
 Whoops! The tests for new spiders fail by default. Here's typical output:
 
 ```bash
-(city-scrapers-pitt) $pytest
+(city-scrapers-pitt)$ pytest
 ==================================================================== test session starts ====================================================================
 platform darwin -- Python 3.7.5, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
 rootdir: /Users/ben/Desktop/documentation/example/city-scrapers-pitt, inifile: setup.cfg
@@ -212,7 +231,7 @@ tests/test_pitt_urbandev.py:27: AssertionError
 ------------------------------------------------------------------- Captured stdout call --------------------------------------------------------------------
 Please write some tests for this spider or at least disable this one.
 =============================================================== 1 failed, 213 passed in 2.68s ===============================================================
-(city-scrapers-pitt) $
+(city-scrapers-pitt)$
 ```
 
 This is normal since you have not written any tests for your new spider and the assertion  `assert False` will always fail. Move on to step 6.
@@ -222,9 +241,9 @@ This is normal since you have not written any tests for your new spider and the 
 We use [`flake8`](http://flake8.pycqa.org/en/latest/), [`isort`](https://isort.readthedocs.io/en/stable/), and [`yapf`](https://github.com/google/yapf) to check that all code is written in the proper style. To run these tools individually, you can run the following commands:
 
 ```bash
-(city-scrapers-pitt) $flake8
-(city-scrapers-pitt) $isort
-(city-scrapers-pitt) $yapf --diff --recursive ./city_scrapers/ ./tests/
+(city-scrapers-pitt)$ flake8
+(city-scrapers-pitt)$ isort
+(city-scrapers-pitt)$ yapf --diff --recursive ./city_scrapers/ ./tests/
 ```
 
 Some of these tests might not pass right now, but they should before you are finished with the spider. For example, flake8 dutifully informs us that pytest is imported but unused in the new test file. Since we have not written any tests with pytest method decorations yet, pytest is not being used, so this warning is to be expected.
