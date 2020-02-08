@@ -1,5 +1,7 @@
 # Getting Started with Development
-Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue [here](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues). Better yet, start a [pull request](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls).
+Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue <a href="https://github.com/pgh-public-meetings/city-scrapers-pitt/issues" target="_blank">here</a>.  
+
+Better yet, start a [pull request](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls).
 
 # Installation
 Follow the following directions for cloning the repository and installing requirements.
