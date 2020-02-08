@@ -1,15 +1,17 @@
----
-layout: splash
-permalink: /
-header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/map-bg.png
-  og_image: /assets/images/cityscrapers.png
-nav: docs
----
+# City Scrapers Pittsburgh
 
-Public meetings are important spaces for democracy where any resident can participate in civic life and hold public figures accountable. But how does the public know when meetings are happening? It isn't easy! These events are spread across dozens of websites, rarely in useful data formats.
+This is a City Scrapers project being run in Pittsburgh. We are templated off of the [City Scrapers](https://cityscrapers.org) project.
 
-That's why we worked with a team of civic coders to develop and coordinate the City Scrapers project, an open source community designed to standardize, scrape and share these meetings in a central database, in collaboration with [City Bureau's Documenters program](https://www.documenters.org/){:target="\_blank"}.
+## Calendar link
+The meetings collected by this project is posted to: - https://city-scrapers-pittsburgh.github.io/city-scrapers-events/
 
-Are public governance meetings in your city and county spread across multiple websites? Use our City Scrapers guide to create an open source community project designed to increase access and transparency in your area.
+## Setup
+
+- [Fill out this form](https://airtable.com/shrsdRcYVzp019U22) to join our [Slack channel](https://citybureau.slack.com/#labs_city_scrapers)
+- Refer to our documentation on [getting started with development](https://github.com/bonfirefan/city-scrapers-pitt/blob/master/docs/_docs/04-development.md)
+
+## Getting started
+Start with our documentation below:
+[Intro](01-intro.md)
+[Getting Started](02-getting-started.md)
+[Team](03-team.md)
