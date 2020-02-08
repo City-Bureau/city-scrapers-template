@@ -4,6 +4,10 @@
 
 This is a City Scrapers project being run in Pittsburgh. We are templated off of the [City Scrapers](https://cityscrapers.org) project.
 
+## Documenters
+
+Get started by going through our: https://pgh-public-meetings.github.io/city-scrapers-pitt
+
 ## Calendar link
 
 The meetings collected by this project is posted to: - https://city-scrapers-pittsburgh.github.io/city-scrapers-events/
