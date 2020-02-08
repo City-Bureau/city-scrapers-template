@@ -1,4 +1,4 @@
-# City Scrapers Template
+# City Scrapers Pittsburgh
 
 [![Build status](https://github.com/bonfirefan/city-scrapers-pitt/workflows/CI/badge.svg)](https://github.com/bonfirefan/city-scrapers-pitt/actions)
 
