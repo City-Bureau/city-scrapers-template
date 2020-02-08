@@ -15,7 +15,6 @@ ___
 You can find more details on setting up these tools and other common issues in [Setup Help](/docs/setup-help/).
 
 ## Clone the Repository
-These steps are the same, regardless of which option below you choose.
 
 1. Fork the [Pittsburgh City Scrapers repository](https://github.com/pgh-public-meetings/city-scrapers-pitt/)
 
