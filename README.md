@@ -6,11 +6,11 @@ This is a City Scrapers project being run in Pittsburgh. We are templated off of
 
 ## Documenters
 
-Get started by going through our: https://pgh-public-meetings.github.io/city-scrapers-pitt
+Get started by going through our [Documentation](https://pgh-public-meetings.github.io/city-scrapers-pitt)
 
 ## Calendar link
 
-The meetings collected by this project is posted to: - https://city-scrapers-pittsburgh.github.io/city-scrapers-events/
+The meetings collected by this project is posted to this [calendar](https://city-scrapers-pittsburgh.github.io/city-scrapers-events/)
 
 ## Setup
 
