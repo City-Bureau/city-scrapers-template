@@ -79,8 +79,7 @@ Next, we can run any of the spiders in the list. For example:
 (city-scrapers-pitt)$ scrapy crawl pa_development
 ```
 
-The results will contain a JSON object describing a list of meetings for the Pennsylvania Department of Community and Economic Development.
-Here is an example of one of the JSON records:
+The results will contain JSON objects describing a list of meetings for the Pennsylvania Department of Community and Economic Development, along with debug output from `scrapy`. Here is a basic example of what one of the meeting JSON records looks like. Your local run of `scrapy` might not return this exact record, as it depends on the current status of the website. Note that your output will include other data as well such as `scrapy` debug messages.
 
 ```
 {'all_day': False,
