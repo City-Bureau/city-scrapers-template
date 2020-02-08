@@ -1,12 +1,5 @@
----
-title: "Development"
-permalink: /docs/development/
-excerpt: "City Scrapers development documentation"
-last_modified_at: 2020-2-1T00:00:00-04:00
-toc: true
----
 # Getting Started with Development
-Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue [here](https://github.com/bonfirefan/city-scrapers-pitt/issues). Better yet, start a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls).
+Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue [here](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues). Better yet, start a [pull request](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls).
 
 # Installation
 Follow the following directions for cloning the repository and installing requirements.
@@ -24,7 +17,10 @@ You can find more details on setting up these tools and other common issues in [
 ## Clone the Repository
 These steps are the same, regardless of which option below you choose.
 
-1. Fork the [Pittsburgh City Scrapers repository](https://github.com/bonfirefan/city-scrapers-pitt/)
+1. Fork the [Pittsburgh City Scrapers repository](https://github.com/pgh-public-meetings/city-scrapers-pitt/)
+
+![alt text](resources/fork.png)
+
 2. Clone your new fork to your local machine:
 
   ```bash
@@ -91,7 +87,7 @@ Congratulations - this means that Scrapy is working and we are ready to contribu
 
 If you're having any issues at this point, here are some options:
 - Talk to other contributors on [Slack](https://citybureau.slack.com/) or at our [Meetups](https://www.meetup.com/codeforpgh/). It's very likely that someone else has encountered your situation before and can *quickly* point you in the right direction.
-- See if your problem shows up in our [issues](https://github.com/bonfirefan/city-scrapers-pitt/issues) page.
+- See if your problem shows up in our [issues](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues) page.
 - Google the error message
 - StackOverflow
 
@@ -112,15 +108,15 @@ Please read the project’s CONTRIBUTING.md file to learn about how we use GitHu
 ### Spider Setup
 1. Find an open issue to work on:
 
-First, find an issue within the project’s [issue tracker](https://github.com/bonfirefan/city-scrapers-pitt/issues). If the issue does not have a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls) and has no one working on it, go ahead and leave a comment to the effect of "I'm working on this". If someone has been working on the spider, but it has been more than 3-4 months since they updated anything, feel free to continue their work on that spider or start your own solution.
+First, find an issue within the project’s [issue tracker](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues). If the issue does not have a [pull request](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls) and has no one working on it, go ahead and leave a comment to the effect of "I'm working on this". If someone has been working on the spider, but it has been more than 3-4 months since they updated anything, feel free to continue their work on that spider or start your own solution.
 
-As an example we will use the Urban Redevelopment Authority of Pittsburgh, or URA for short. It has an [issue](https://github.com/bonfirefan/city-scrapers-pitt/issues/5). Someone started work on it but appears to have moved on to other commitments. I'll leave a comment and proceed to step 2.
+As an example we will use the Urban Redevelopment Authority of Pittsburgh, or URA for short. It has an [issue](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues/5). Someone started work on it but appears to have moved on to other commitments. I'll leave a comment and proceed to step 2.
 
 2. Create a new branch
 Before leaving the master branch, sync your fork to the project's repository. This will save time later on when trying to add your spider to the project. To do this run:
 
 ```bash
-git remote add upstream https://github.com/bonfirefan/city-scrapers-pitt.git
+git remote add upstream https://github.com/pgh-public-meetings/city-scrapers-pitt.git
 git fetch upstream
 git merge upstream/master
 ```
@@ -394,9 +390,9 @@ You generally want to verify that a spider:
 
 #### C. Create a Pull Request
 
-If your ready to submit your code to the project, you should create a [pull request on GitHub](https://github.com/bonfirefan/city-scrapers-pitt/pulls). You can do this as early as you would like in order to get feedback from others working on the project.
+If your ready to submit your code to the project, you should create a [pull request on GitHub](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls). You can do this as early as you would like in order to get feedback from others working on the project.
 
-When you go to open a pull request, you'll see a template with details pre-populated including a checklist of tasks to complete. Fill out the information as best you can (it's alright if you can't check everything off yet). It's designed to provide some reminders for tasks to complete as well as making review easier. You can use the rest of the description to explain anything you'd like a reviewer to know about the code. See [CONTRIBUTING.md](https://github.com/bonfirefan/city-scrapers-pitt/blob/master/CONTRIBUTING.md) for more details.
+When you go to open a pull request, you'll see a template with details pre-populated including a checklist of tasks to complete. Fill out the information as best you can (it's alright if you can't check everything off yet). It's designed to provide some reminders for tasks to complete as well as making review easier. You can use the rest of the description to explain anything you'd like a reviewer to know about the code. See [CONTRIBUTING.md](https://github.com/pgh-public-meetings/city-scrapers-pitt/blob/master/CONTRIBUTING.md) for more details.
 
 ### `Meeting` Items
 
