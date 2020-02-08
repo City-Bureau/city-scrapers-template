@@ -12,6 +12,6 @@ The meetings collected by this project is posted to: - https://city-scrapers-pit
 
 ## Getting started
 Start with our documentation below:
-[Intro](01-intro.md)
-[Getting Started](02-getting-started.md)
-[Team](03-team.md)
+1. [Intro](01-intro.md)
+2. [Getting Started](02-getting-started.md)
+3. [Team](03-team.md)
