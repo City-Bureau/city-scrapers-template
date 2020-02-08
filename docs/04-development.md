@@ -348,7 +348,7 @@ class PittUrbandevSpider(Spider):
 
 How can we write better code, refactor with confidence, and document precisely how your spider was intended to behave? Tests.
 
-Our general approach to writing tests is to save a copy of a site's HTML in `tests/files` and then use that HTML to verify the behavior of each spider. In this way, we avoid needing a network connection to run tests and our tests don't break every time a site's content is updated.
+Our general approach to writing tests is to save a copy of a site's HTML in `tests/files` and then use that HTML to verify the behavior of each spider. By saving a copy we avoid needing a network connection to run tests, and our tests don't break every time a site's content is updated.
 
 
 This is a great opportunity to practice [test-driven-development](https://www.agilealliance.org/glossary/tdd/):
@@ -391,7 +391,7 @@ You generally want to verify that a spider:
 
 #### C. Create a Pull Request
 
-If your ready to submit your code to the project, you should create a [pull request on GitHub](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls). You can do this as early as you would like in order to get feedback from others working on the project.
+If you are ready to submit your code to the project, you should create a [pull request on GitHub](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls). You can do this as early as you would like in order to get feedback from others working on the project.
 
 When you go to open a pull request, you'll see a template with details pre-populated including a checklist of tasks to complete. Fill out the information as best you can (it's alright if you can't check everything off yet). It's designed to provide some reminders for tasks to complete as well as making review easier. You can use the rest of the description to explain anything you'd like a reviewer to know about the code. See [CONTRIBUTING.md](https://github.com/pgh-public-meetings/city-scrapers-pitt/blob/master/CONTRIBUTING.md) for more details.
 
