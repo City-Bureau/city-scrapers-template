@@ -1,10 +1,3 @@
----
-title: "Development"
-permalink: /docs/development/
-excerpt: "City Scrapers development documentation"
-last_modified_at: 2020-2-1T00:00:00-04:00
-toc: true
----
 # Getting Started with Development
 Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue [here](https://github.com/bonfirefan/city-scrapers-pitt/issues). Better yet, start a [pull request](https://github.com/bonfirefan/city-scrapers-pitt/pulls).
 

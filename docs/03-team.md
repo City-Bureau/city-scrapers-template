@@ -1,11 +1,3 @@
----
-title: "Team"
-permalink: /docs/team/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: true
----
-
 The City Scrapers project was a diverse, inclusive open-source project. We're proud of the community that grew out of the project, but it was a more intense and long-drawn-out process because of it. We've outlined that process below but if you have an on-staff developer or a budget to contract a developer, they should be able to knock out all the scrapers within a couple months, depending on the scope of the project.
 
 ## Staff developer

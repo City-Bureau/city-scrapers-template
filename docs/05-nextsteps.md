@@ -1,10 +1,3 @@
----
-title: "Next Steps"
-permalink: /docs/next-steps/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: true
----
 
 ## City Scrapers and Documenters
 
