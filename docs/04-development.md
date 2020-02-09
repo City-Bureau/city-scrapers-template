@@ -27,6 +27,7 @@ You can find more details on setting up these tools and other common issues in [
   ```bash
   git clone https://github.com/YOUR-USERNAME/city-scrapers-pitt.git
   ```
+
 3. Change directories into the main project folder:
 
   ```bash
@@ -53,12 +54,12 @@ After which all of your commands will be in a virtual environment. You can exit 
 When inside the virtual environment your prompt will resemble
 
 ```bash
-(city-scrapers-pitt) $
+(city-scrapers-pitt)$
 ```
 
 Now you can list the available spiders with
 ```bash
-(city-scrapers-pitt) $scrapy list
+(city-scrapers-pitt)$ scrapy list
 ```
 and see output similar to this:
 ```bash
@@ -79,10 +80,27 @@ pitt_housing_opp
 Next, we can run any of the spiders in the list. For example:
 
 ```bash
-(city-scrapers-pitt) $scrapy crawl pa_development
+(city-scrapers-pitt)$ scrapy crawl pa_development
 ```
 
-The results will contain a JSON object describing a list of meetings for the Pennsylvania Department of Community and Economic Development.
+The results will contain JSON objects describing a list of meetings for the Pennsylvania Department of Community and Economic Development, along with debug output from `scrapy`. Here is a basic example of what one of the meeting JSON records looks like. Your local run of `scrapy` might not return this exact record, as it depends on the current status of the website. Note that your output will include other data as well such as `scrapy` debug messages.
+
+```
+{'all_day': False,
+ 'classification': 'Board',
+ 'description': '',
+ 'end': datetime.datetime(2020, 4, 23, 14, 0),
+ 'id': 'pa_development/202004231000/x/bftda_board_meeting',
+ 'links': [{'href': '', 'title': ''}],
+ 'location': {'address': '400 North Street, Harrisburg, PA, 17120',
+              'name': 'KBMC – Desert Room, First Floor, Commonwealth Keystone '
+                      'Building'},
+ 'source': 'https://dced.pa.gov/event/bftda-board-meeting-2020-04-23/',
+ 'start': datetime.datetime(2020, 4, 23, 10, 0),
+ 'status': 'tentative',
+ 'time_notes': '',
+ 'title': 'BFTDA Board Meeting'}
+```
 
 Congratulations - this means that Scrapy is working and we are ready to contribute!
 
@@ -137,7 +155,7 @@ git checkout -b 0005-spider-pitt_urbandev
 
 Now when we run 'git branch' we will see
 ```bash
-$git branch
+$ git branch
 * 0005-spider-pitt_urbandev
   master
 ```
@@ -166,7 +184,7 @@ Now you have a bare-bones spider! Move on to step 4.
 You now have a spider named `pitt_urbandev`. To run it (admittedly, not much will happen until you start editing the scraper), run:
 
 ```bash
-(city-scrapers-pitt)$scrapy crawl pitt_urbandev
+(city-scrapers-pitt)$ scrapy crawl pitt_urbandev
 ```
 
 If there are no error messages, congratulations! Move on to step 5.
@@ -176,13 +194,13 @@ If there are no error messages, congratulations! Move on to step 5.
 We use the [`pytest`](https://docs.pytest.org/en/latest/) testing framework to verify the behavior of the project's code. To run this, simply run `pytest` in your project environment.
 
 ```bash
-(city-scrapers-pitt)$pytest
+(city-scrapers-pitt)$ pytest
 ```
 
 Whoops! The tests for new spiders fail by default. Here's typical output:
 
 ```bash
-(city-scrapers-pitt) $pytest
+(city-scrapers-pitt)$ pytest
 ==================================================================== test session starts ====================================================================
 platform darwin -- Python 3.7.5, pytest-5.3.2, py-1.8.1, pluggy-0.13.1
 rootdir: /Users/ben/Desktop/documentation/example/city-scrapers-pitt, inifile: setup.cfg
@@ -216,7 +234,7 @@ tests/test_pitt_urbandev.py:27: AssertionError
 ------------------------------------------------------------------- Captured stdout call --------------------------------------------------------------------
 Please write some tests for this spider or at least disable this one.
 =============================================================== 1 failed, 213 passed in 2.68s ===============================================================
-(city-scrapers-pitt) $
+(city-scrapers-pitt)$
 ```
 
 This is normal since you have not written any tests for your new spider and the assertion  `assert False` will always fail. Move on to step 6.
@@ -226,9 +244,9 @@ This is normal since you have not written any tests for your new spider and the 
 We use [`flake8`](http://flake8.pycqa.org/en/latest/), [`isort`](https://isort.readthedocs.io/en/stable/), and [`yapf`](https://github.com/google/yapf) to check that all code is written in the proper style. To run these tools individually, you can run the following commands:
 
 ```bash
-(city-scrapers-pitt) $flake8
-(city-scrapers-pitt) $isort
-(city-scrapers-pitt) $yapf --diff --recursive ./city_scrapers/ ./tests/
+(city-scrapers-pitt)$ flake8
+(city-scrapers-pitt)$ isort
+(city-scrapers-pitt)$ yapf --diff --recursive ./city_scrapers/ ./tests/
 ```
 
 Some of these tests might not pass right now, but they should before you are finished with the spider. For example, flake8 dutifully informs us that pytest is imported but unused in the new test file. Since we have not written any tests with pytest method decorations yet, pytest is not being used, so this warning is to be expected.
@@ -511,15 +529,3 @@ class PittUrbandevSpider(CityScrapersSpider):
 #### `agency`
 
 The agency name initially supplied on creating the spider should be the overall governmental body that spider relates to, even if the body is already represented in another scraper. An example of this is in the `chi_schools`, `chi_school_actions`, and `chi_school_community_action_council` spiders. All of these spiders relate to different subdivisions of Chicago Public Schools, but they're split into separate spiders because they scrape different websites. In situations like this, the meeting name should clarify the subdivision holding the actual meeting, specifying the respective school actions and community action councils in this case.
-
-## Scenarios
-
-Many government websites share similar technology stacks, and we've built out some common approaches to a few of these.
-
-### Legistar
-
-Legistar is a software platform provided by Granicus that many governments use to hold their legislative information. If you run into a site using Legistar (typically you'll know because `legistar.com` will be in the URL), then you should use the `legistar` package to run the scraper and avoid unnecessary work. You can refer to spiders like `alle_county` or `pitt_city_council` to see examples of this approach.
-
-### ASP.NET Sites
-
-ASP.NET sites can be a challenge because they're often inconsistent and require maintaining a level of state across requests. You can see an example of handling this behavior in the [`cuya_administrative_rules`](https://github.com/City-Bureau/city-scrapers-cle/blob/master/city_scrapers/spiders/cuya_administrative_rules.py) spider.
