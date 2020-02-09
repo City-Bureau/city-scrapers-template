@@ -8,11 +8,11 @@ Follow the following directions for cloning the repository and installing requir
 ___
 
 ## Prerequisites
-- [Git](https://git-scm.com/) installed
+- [Git](https://git-scm.com/downloads) installed
 - [GitHub](https://github.com/) account
 - Working internet connection
-- [Python](https://www.python.org/) 3.5, 3.6, or 3.7 installed
-- Virtual environment manager (pipenv, virtualenv, virtualenv-wrapper, etc.). [Pipenv](https://pipenv.readthedocs.io/en/latest/) is the most popular option here.
+- [Python](https://www.python.org/downloads/) 3.5, 3.6, or 3.7 installed
+- Virtual environment manager (pipenv, virtualenv, virtualenv-wrapper, etc.). [Pipenv](https://pipenv.readthedocs.io/en/latest/#install-pipenv-today) is the most popular option here.
 
 You can find more details on setting up these tools and other common issues in [Setup Help](/docs/setup-help/).
 

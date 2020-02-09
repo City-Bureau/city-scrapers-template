@@ -4,15 +4,15 @@ This document covers some of the issues associated with first-time development e
 
 ### Installing Git
 
-Please refer to the [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="\_blank"} according to your operating system to install Git.
+Please refer to the [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) according to your operating system to install Git.
 
 ### Git 101
 
-For a primer on Git for first-time users, see the [try.github.io](https://try.github.io/levels/1/challenges/1){:target="\_blank"} or watch the [following video](https://www.youtube.com/watch?list=PLyCZ96_3y5LXfPVZkHjhHRuIWhcjvCyQA&v=m_MjzgvVZ28){:target="\_blank"} on how to (1) find an issue, (2) fork the code, (3) edit code, (4) open a pull request.
+For a primer on Git for first-time users, see the [try.github.io](https://try.github.io/levels/1/challenges/1) or watch the [following video](https://www.youtube.com/watch?list=PLyCZ96_3y5LXfPVZkHjhHRuIWhcjvCyQA&v=m_MjzgvVZ28) on how to (1) find an issue, (2) fork the code, (3) edit code, (4) open a pull request.
 
-Once you have forked the code and have begun contribution, [syncing your fork](https://help.github.com/articles/syncing-a-fork/){:target="\_blank"} periodically with the main City Bureau repository will be useful in staying up-to-date with the project.
+Once you have forked the code and have begun contribution, [syncing your fork](https://help.github.com/articles/syncing-a-fork/) periodically with the main City Bureau repository will be useful in staying up-to-date with the project.
 
-\1. You must first [add a remote link](https://help.github.com/articles/configuring-a-remote-for-a-fork/){:target="\_blank"} from which Git can track the main City Bureau project. The remote URL is `<https://github.com/City-Bureau/city-scrapers.git>`. Conventionally we name this remote source `upstream`. The remote source for your original cloned repository is usually named `origin`.
+\1. You must first [add a remote link](https://help.github.com/articles/configuring-a-remote-for-a-fork/) from which Git can track the main City Bureau project. The remote URL is `<https://github.com/City-Bureau/city-scrapers.git>`. Conventionally we name this remote source `upstream`. The remote source for your original cloned repository is usually named `origin`.
 
 ```shell
 $ git remote add upstream https://github.com/City-Bureau/city-scrapers.git
@@ -37,7 +37,7 @@ $ git merge upstream/master
 
 ### Creating a GitHub account
 
-If you do not have an account already, go to [GitHub](https://github.com){:target="\_blank"} and sign up for an account.
+If you do not have an account already, go to [GitHub](https://github.com) and sign up for an account.
 
 ## Python and Pipenv
 
@@ -46,7 +46,7 @@ If you do not have an account already, go to [GitHub](https://github.com){:targe
 Here are some helpful links for setting up Python on your computer:
 
 - [Codecademy: Set-up Python](https://www.codecademy.com/articles/setup-python)
-- [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners){:target="\_blank"}
+- [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners)
 
 ### Installing and using Pipenv
 
@@ -56,7 +56,7 @@ You can see installation instructions for Pipenv in the [Installing Pipenv](http
 
 ### Configuring your code editor
 
-Most text editors can be configured to fix code style issues for you based off of the configuration settings in `setup.cfg`. Here's an example for VSCode using the [standard Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python){:target="\_blank"} (which can be modified/added at `.vscode/settings.json` in your project directory):
+Most text editors can be configured to fix code style issues for you based off of the configuration settings in `setup.cfg`. Here's an example for VSCode using the [standard Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) (which can be modified/added at `.vscode/settings.json` in your project directory):
 
 ```json
 {
@@ -81,4 +81,4 @@ Most text editors can be configured to fix code style issues for you based off o
 }
 ```
 
-This configuration will run linting and style checks for you, and also make necessary changes automatically any time you save. Packages are available for [Atom](https://atom.io/packages/linter-flake8){:target="\_blank"} and [Sublime Text](https://fosstack.com/setup-sublime-python/){:target="\_blank"} as well.
+This configuration will run linting and style checks for you, and also make necessary changes automatically any time you save. Packages are available for [Atom](https://atom.io/packages/linter-flake8) and [Sublime Text](https://fosstack.com/setup-sublime-python/) as well.
