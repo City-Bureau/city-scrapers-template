@@ -10,9 +10,9 @@ Get started by going through our [documentation](https://pgh-public-meetings.git
 
 ## Calendar link
 
-The meetings collected by this project is posted to this [calendar](https://city-scrapers-pittsburgh.github.io/city-scrapers-events/)
+The meetings collected by this project is posted to this [calendar](https://pgh-public-meetings.github.io/events/)
 
-## Setup
+## Join our community
 
 - [Fill out this form](https://airtable.com/shrsdRcYVzp019U22) to join our [Slack channel](https://citybureau.slack.com/#labs_city_scrapers)
-- Refer to our documentation on [getting started with development](https://github.com/bonfirefan/city-scrapers-pitt/blob/master/docs/_docs/04-development.md)
+
