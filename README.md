@@ -1,6 +1,6 @@
 # City Scrapers Pittsburgh
 
-[![Build status](https://github.com/bonfirefan/city-scrapers-pitt/workflows/CI/badge.svg)](https://github.com/bonfirefan/city-scrapers-pitt/actions)
+[![Build status](https://github.com/pgh-public-meetings/city-scrapers-pitt/workflows/CI/badge.svg)](https://github.com/pgh-public-meetings/city-scrapers-pitt/actions)
 
 This is a City Scrapers project being run in Pittsburgh. We are templated off of the [City Scrapers](https://cityscrapers.org) project.
 
@@ -15,4 +15,3 @@ The meetings collected by this project is posted to this [calendar](https://pgh-
 ## Join our community
 
 - [Fill out this form](https://airtable.com/shrsdRcYVzp019U22) to join our [Slack channel](https://citybureau.slack.com/#labs_city_scrapers)
-
