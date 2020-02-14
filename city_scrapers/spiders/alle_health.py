@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 
-from city_scrapers_core.constants import NOT_CLASSIFIED
+from city_scrapers_core.constants import BOARD
 from city_scrapers_core.items import Meeting
 from city_scrapers_core.spiders import CityScrapersSpider
 
@@ -9,7 +9,7 @@ from city_scrapers_core.spiders import CityScrapersSpider
 class AlleHealthSpider(CityScrapersSpider):
     name = "alle_health"
     agency = "Allegheny County Board of Health"
-    timezone = "America/Chicago"
+    timezone = "America/New_York"
     allowed_domains = ["www.alleghenycounty.us"]
     start_urls = [
         "https://www.alleghenycounty.us/Health-Department/Resources" +
@@ -23,15 +23,12 @@ class AlleHealthSpider(CityScrapersSpider):
         Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
         """
-
         unicode_text = response.text
-        #        page_encoding = response.encoding
 
         paragraphs = re.findall(r'<p.*?</p>', unicode_text, re.S)
 
         next_event_src = [p for p in paragraphs if re.search(' next ', p)][0]
         next_event_date_re = r'>[^<>]*?([a-zA-Z]*\s+\d+,\s+20[12]\d)'
-        print("L33: agency is |" + AlleHealthSpider.agency + "|")
 
         try:
             next_event_date1 = re.search(next_event_date_re, next_event_src)
@@ -49,7 +46,6 @@ class AlleHealthSpider(CityScrapersSpider):
             else:
                 next_format = "%B %d, %Y"
 
-            print("L47: next_event_datetime1 is |" + str(next_event_datetime1) + "|")
             next_datetime = datetime.strptime(next_event_datetime1, next_format)
             if not next_datetime:
                 raise RuntimeError('Error2')
@@ -57,9 +53,10 @@ class AlleHealthSpider(CityScrapersSpider):
             next_meeting = Meeting(
                 title=AlleHealthSpider.agency + " " + next_event_datetime1,
                 start=next_datetime,
-                source=AlleHealthSpider.start_urls[0]
+                source=AlleHealthSpider.start_urls[0],
+                classification=BOARD
             )
-            #                    next_meeting["status"] = self._get_status(next_meeting)
+            next_meeting["status"] = self._get_status(next_meeting)
             next_meeting["id"] = self._get_id(next_meeting)
             yield next_meeting
         except RuntimeError:
@@ -80,9 +77,10 @@ class AlleHealthSpider(CityScrapersSpider):
                     meeting = Meeting(
                         title=AlleHealthSpider.agency + " " + mdate2,
                         start=mdate,
-                        source=AlleHealthSpider.start_urls[0]
+                        source=AlleHealthSpider.start_urls[0],
+                        classification=BOARD
                     )
-                    #                    meeting["status"] = self._get_status(meeting)
+                    meeting["status"] = self._get_status(meeting)
                     meeting["id"] = self._get_id(meeting)
                     yield meeting
                 except ValueError:
@@ -95,10 +93,6 @@ class AlleHealthSpider(CityScrapersSpider):
     def _parse_description(self, item):
         """Parse or generate meeting description."""
         return ""
-
-    def _parse_classification(self, item):
-        """Parse or generate classification from allowed options."""
-        return NOT_CLASSIFIED
 
     def _parse_start(self, item):
         """Parse start datetime as a naive datetime object."""

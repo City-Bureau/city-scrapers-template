@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 
 from city_scrapers_core.constants import BOARD
@@ -14,6 +15,10 @@ class PaLiquorboardSpider(CityScrapersSpider):
     timezone = "America/New_York"
     allowed_domains = ["www.lcb.pa.gov"]
     start_urls = ["https://www.lcb.pa.gov/About-Us/Board/Pages/Public-Meetings.aspx"]
+    BUILDING_NAME = "Pennsylvania Liquor Control Board Headquarters"
+    ADDRESS = "Room 117, 604 Northwest Office Building, Harrisburg, PA 17124"
+    EXPECTED_START_HOUR = "11:00 AM"
+    EXPECTED_START_HOUR_AS_INT = 11
 
     # List of urls that we are going to scrape content from
     # We are extracting the entire html content -- all of the html content and saving it
@@ -29,13 +34,15 @@ class PaLiquorboardSpider(CityScrapersSpider):
         select_txt = "//*[@id='" + sel_id + "']" + sel_path
         # Identify CSS node or XPath you're interested in
         meetings = response.xpath(select_txt).extract()  # Make variable of that text
+        start_hour = self._parse_starting_hour(response)
 
         for item in meetings:
+
             meeting = Meeting(
                 title=self._parse_title(item),
                 description=self._parse_description(item),
                 classification=self._parse_classification(item),
-                start=self._parse_start(item),
+                start=self._parse_start(item, start_hour),
                 end=self._parse_end(item),
                 all_day=self._parse_all_day(item),
                 time_notes=self._parse_time_notes(item),
@@ -44,10 +51,10 @@ class PaLiquorboardSpider(CityScrapersSpider):
                 source=self._parse_source(response),
             )
 
-            # meeting["status"] = self._get_status(meeting)
-            # meeting["id"] = self._get_id(meeting)
+            meeting["status"] = self._get_status(meeting)
+            meeting["id"] = self._get_id(meeting)
 
-            yield meeting  # This is what you want to have
+            yield meeting
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
@@ -61,10 +68,29 @@ class PaLiquorboardSpider(CityScrapersSpider):
         """Parse or generate classification from allowed options."""
         return BOARD
 
-    def _parse_start(self, item):  # Put regular expression to clean, get day here
+    def _parse_start(self, item: str, start_hour: int):
         """Parse start datetime as a naive datetime object."""
-        date_object = datetime.date(datetime.strptime(" ".join(item.split()[-3:]), '%B %d, %Y'))
-        return date_object
+        # Remove garbage from our date item:
+        clean_item = item
+        clean_item = re.sub('- ', '', item)
+        clean_item = re.sub('\\xa0', ' ', clean_item)
+        start_time = datetime.strptime(clean_item, '%A, %B %d, %Y')
+
+        try:
+            if self.EXPECTED_START_HOUR in start_hour:
+                start_time = start_time.replace(hour=self.EXPECTED_START_HOUR_AS_INT)
+                return start_time
+            else:
+                return None
+        except ValueError:
+            return None
+
+    def _parse_starting_hour(self, response):
+        raw = response.css('#container > div.content > div > p > span > span').get().upper()
+
+        if self.EXPECTED_START_HOUR in raw:
+            found_start_hour = self.EXPECTED_START_HOUR
+        return found_start_hour
 
     def _parse_end(self, item):
         """Parse end datetime as a naive datetime object. Added by pipeline if None"""
@@ -81,8 +107,8 @@ class PaLiquorboardSpider(CityScrapersSpider):
     def _parse_location(self, item):  # Put function to get location
         """Parse or generate location."""
         return {
-            "address": "Room 117, 604 Northwest Office Building, Harrisburg, PA 17124",
-            "name": "Pennsylvania Liquor Control Board Headquarters",
+            "address": self.ADDRESS,
+            "name": self.BUILDING_NAME,
         }
 
     def _parse_links(self, item):

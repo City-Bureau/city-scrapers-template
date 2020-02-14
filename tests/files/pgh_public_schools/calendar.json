@@ -1,0 +1,34 @@
+[
+  {
+    "Id": 18726,
+    "EventID": 15159,
+    "ModuleInstanceID": 1,
+    "RecurringEvent": false,
+    "RegisteredUsers": false,
+    "Title": "Groundhog Day",
+    "Start": "2019-02-02T00:00:00",
+    "End": "2019-02-02T23:59:00",
+    "CategoryColor": "#E1E1E1",
+    "CategoryTitle": "",
+    "EventSource": "District Calendar",
+    "RecurringInfo": "TBD",
+    "AllDay": true,
+    "NoEndTime": 0
+  },
+  {
+    "Id": 18946,
+    "EventID": 15371,
+    "ModuleInstanceID": 1,
+    "RecurringEvent": false,
+    "RegisteredUsers": false,
+    "Title": "AP Check Point: Saturday Study Session",
+    "Start": "2019-02-02T09:00:00",
+    "End": "2019-02-02T13:30:00",
+    "CategoryColor": "#F5AC63",
+    "CategoryTitle": "Special Event",
+    "EventSource": "District Calendar",
+    "RecurringInfo": "TBD",
+    "AllDay": false,
+    "NoEndTime": 0
+  }
+]
