@@ -9,7 +9,7 @@ from city_scrapers_core.spiders import CityScrapersSpider
 class AlleFinanceDevSpider(CityScrapersSpider):
     name = "alle_finance_dev"
     agency = "Allegheny County Finance and Development Commission"
-    timezone = "America/Chicago"
+    timezone = "America/New_York"
     root_url = "https://alleghenycounty.us"
     start_urls = [root_url + "/economic-development/authorities/meetings-reports/fdc/meetings.aspx"]
     TIME = "9:30 am"
