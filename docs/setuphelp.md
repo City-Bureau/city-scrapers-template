@@ -81,4 +81,4 @@ Most text editors can be configured to fix code style issues for you based off o
 }
 ```
 
-This configuration will run linting and style checks for you, and also make necessary changes automatically any time you save. Packages are available for [Atom](https://atom.io/packages/linter-flake8) and [Sublime Text](https://fosstack.com/setup-sublime-python/) as well.
+This configuration will run linting and style checks for you, and also make necessary changes automatically any time you save. Packages are available for [Atom](https://atom.io/packages/linter-flake8) and Sublime Text as well.
