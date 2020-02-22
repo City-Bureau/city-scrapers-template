@@ -1,11 +1,3 @@
----
-title: "Next Steps"
-permalink: /docs/next-steps/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: true
----
-
 ## City Scrapers and Documenters
 
 There are important differences between the City Scrapers code and City Bureau’s Documenters program. The code was developed by City Bureau and a team of volunteer coders to solve a problem we see in cities and towns across the country: public meetings for local, county and state government agencies are often spread across dozens of locations, making it difficult for members of the public to access locations, dates and times for these important democratic spaces.

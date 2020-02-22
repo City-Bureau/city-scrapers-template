@@ -74,10 +74,10 @@ Written by: India Daniels, Darryl Holliday
 
 ### Partners
 
-![Democracy Fund](/assets/images/democracy_fund.png "Democracy Fund")
+![Democracy Fund](resources/democracy_fund.png "Democracy Fund")
 
-![Field Foundation](/assets/images/field_foundation.png "Field Foundation")
+![Field Foundation](resources/field_foundation.png "Field Foundation")
 
-![DJEF](/assets/images/djef.png "DJEF")
+![DJEF](resources/djef.png "DJEF")
 
-![ProPublica](/assets/images/propublica.png "ProPublica")
+![ProPublica](resources/propublica.png "ProPublica")

@@ -1,11 +1,3 @@
----
-title: "Introduction"
-permalink: /docs/introduction/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: true
----
-
 ## City Scrapers mission
 
 Public meetings are important spaces for democracy where any resident can participate in civic life and hold public officials accountable. But how does the public know when meetings are happening? It isn't easy! These events are spread across dozens of websites, rarely in useful data formats. That's why City Bureau worked with a team of civic coders to develop and coordinate the open-source City Scrapers project, which standardizes, scrapes and shares these meetings in a central database, in collaboration with [City Bureau's Documenters program](https://www.documenters.org/).

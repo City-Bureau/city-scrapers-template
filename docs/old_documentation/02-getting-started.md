@@ -1,11 +1,3 @@
----
-title: "Getting Started"
-permalink: /docs/getting-started/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: true
----
-
 ## Review your state's Open Meetings Act (OMA)
 
 Each state has its own Open Meetings Act. With reasonable exceptions, all public bodies are required to hold meetings open to public and to give adequate notice of when these meetings are held. It's a good idea to familiarize yourself with your state's open meetings laws and Ballotpedia's state-by-state [list](https://ballotpedia.org/State_open_meetings_laws) is a great place to start.
