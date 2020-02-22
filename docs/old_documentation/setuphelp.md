@@ -1,11 +1,3 @@
----
-title: "Setup Help"
-permalink: /docs/setup-help/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: false
----
-
 This document covers some of the issues associated with first-time development environment setup and with collaboration using Git.
 
 ## Git and GitHub

@@ -1,11 +1,11 @@
 # Getting Started with Development
-Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue <a href="https://github.com/pgh-public-meetings/city-scrapers-pitt/issues" target="_blank">here</a>.  
+Note: This documentation is in-progress. Please comment with any specific suggestions or corrections by creating an issue <a href="https://github.com/pgh-public-meetings/city-scrapers-pitt/issues">here</a>.  
 
 Better yet, start a [pull request](https://github.com/pgh-public-meetings/city-scrapers-pitt/pulls).
 
-# Installation
+## Installation
 Follow the following directions for cloning the repository and installing requirements.
-___
+
 
 ## Prerequisites
 - [Git](https://git-scm.com/downloads) installed
@@ -14,7 +14,7 @@ ___
 - [Python](https://www.python.org/downloads/) 3.5, 3.6, or 3.7 installed
 - Virtual environment manager (pipenv, virtualenv, virtualenv-wrapper, etc.). [Pipenv](https://pipenv.readthedocs.io/en/latest/#install-pipenv-today) is the most popular option here.
 
-You can find more details on setting up these tools and other common issues in [Setup Help](/docs/setup-help/).
+You can find more details on setting up these tools and other common issues in [Setup Help](setuphelp.md).
 
 ## Clone the Repository
 
@@ -68,13 +68,17 @@ alle_asset_district
 alle_county
 alle_health
 alle_improvements
-alle_port_authority
+pa_dept_environmental_protection
 pa_development
 pa_liquorboard
+pa_utility
+pgh_mayor_office_comm_aff
+pgh_public_schools
 pitt_art_commission
 pitt_city_council
 pitt_city_planning
 pitt_housing_opp
+pitt_urbandev
 ```
 
 Next, we can run any of the spiders in the list. For example:
@@ -107,8 +111,8 @@ Congratulations - this means that Scrapy is working and we are ready to contribu
 If you're having any issues at this point, here are some options:
 - Talk to other contributors on [Slack](https://citybureau.slack.com/) or at our [Meetups](https://www.meetup.com/codeforpgh/). It's very likely that someone else has encountered your situation before and can *quickly* point you in the right direction.
 - See if your problem shows up in our [issues](https://github.com/pgh-public-meetings/city-scrapers-pitt/issues) page.
-- Google the error message
-- StackOverflow
+- [Googling the error message](http://www.meh.ro/wp-content/uploads/2017/01/meh.ro12456.jpg)
+- [StackOverflow](https://stackoverflow.com/)
 
 ## Contribute
 
@@ -253,7 +257,7 @@ Some of these tests might not pass right now, but they should before you are fin
 
 *Run these commands early and often!* They will help you learn the language and style, discover bugs sooner, and avoid the nasty experience of having to fix dozens of style complaints all at once.
 
-Good news! If you're lazy like us, most text editors can be configured to fix style issues for you based off of the configuration settings in `setup.cfg`. See an example of this for VSCode in [Setup Help](/docs/setup-help/).
+Good news! If you're lazy like us, most text editors can be configured to fix style issues for you based off of the configuration settings in `setup.cfg`. See an example of this for VSCode in [Setup Help](setuphelp.md).
 
 ### Building a spider
 

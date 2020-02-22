@@ -1,11 +1,3 @@
----
-title: "Further Reading"
-permalink: /docs/further-reading/
-excerpt: "Intro to City Scrapers"
-last_modified_at: 2018-10-04T20:15:56-04:00
-toc: true
----
-
 ## City Scrapers Webinar
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qQq_BpV4alo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

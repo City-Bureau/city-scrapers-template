@@ -11,7 +11,7 @@ The meetings collected by this project is posted to: - https://city-scrapers-pit
 - Refer to our documentation on [getting started with development](04-development.md)
 
 ## Development
-1. [New to Github or Python](setup.md)
+1. [New to Github or Python](setuphelp.md)
 2. [Development](04-development.md)
 
 ## Context

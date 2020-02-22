@@ -1,11 +1,3 @@
----
-title: "Troubleshooting"
-permalink: /docs/troubleshooting/
-excerpt: "City Scrapers troubleshooting documentation"
-last_modified_at: 2020-02-02T20:15:56-04:00
-toc: true
----
-
 # Troubleshooting
 This page covers common errors that we run into. If you don't find an answer here, reach out to us on Slack or make an issue on the GitHub repository. Troubleshooting itself is a great skill, but we hope you spend more time coding and less time staring at error messages. In most cases, we've seen your problem before. There are no stupid questions!
 

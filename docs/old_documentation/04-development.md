@@ -1,10 +1,3 @@
----
-title: "Development"
-permalink: /docs/development/
-excerpt: "City Scrapers development documentation"
-toc: true
----
-
 ## Setup
 
 Follow the following directions for cloning the repository and installing requirements.
@@ -413,7 +406,7 @@ When setting values for `classification` or `status` (although `status` should g
 - `TENTATIVE`: This event is tentative.
 - `CONFIRMED`: This event is confirmed.
 - `PASSED`: This event occurred in the past.
-- `RESCHEDULED`: This even was moved to a new date. 
+- `RESCHEDULED`: This even was moved to a new date.
 - `UPDATED`: This event is the new meeting time of a meeting.
 
 ### Spider attributes
