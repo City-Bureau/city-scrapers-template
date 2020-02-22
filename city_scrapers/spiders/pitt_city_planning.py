@@ -82,6 +82,8 @@ class PittCityPlanningSpider(CityScrapersSpider):
         date_text = date_text.replace(' at ', ' ')
         # remove commas since those aren't consistently used
         date_text = date_text.replace(',', '')
+        # remove periods
+        date_text = date_text.replace('.', '')
         # remove leading and trailing spaces
         date_text = date_text.strip()
         try:
