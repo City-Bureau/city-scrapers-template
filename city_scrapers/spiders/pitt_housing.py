@@ -36,9 +36,7 @@ class PittHousingSpider(CityScrapersSpider):
                     end=None,
                     all_day=False,
                     time_notes="",
-                    location={
-                        'address': location_str.strip()
-                    },
+                    location={'address': location_str.strip()},
                     links=[],
                     source=response.url
                 )
