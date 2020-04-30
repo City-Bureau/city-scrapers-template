@@ -79,9 +79,9 @@ If that still fails, go [here](https://stackoverflow.com/questions/44649449/brew
 Problem: The city-scrapers-core module, which provides helper methods for running spiders, is missing.
 
 Solution:
-0. First, make sure you are in the correct directory. If you're not in the proper directory path, this module may not be found. Make sure you are in the topmost location of your cityscrapers directory. 
+1. First, make sure you are in the correct directory. If you're not in the proper directory path, this module may not be found. Make sure you are in the topmost location of your cityscrapers directory. 
 1. Try uninstalling and reinstalling city-scrapers-core with `pipenv install city-scrapers-core`
-2. Sync your fork:
+1. Sync your fork:
 ```bash
 git remote add upstream https://github.com/pgh-public-meetings/city-scrapers-pitt.git
 git fetch upstream
