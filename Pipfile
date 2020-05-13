@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-twisted = "*"
 scrapy = "*"
 scrapy-sentry = "*"
 legistar = {git = "https://github.com/opencivicdata/python-legistar-scraper"}
