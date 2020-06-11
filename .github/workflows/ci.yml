@@ -47,9 +47,9 @@ jobs:
         run: |
           pipenv run isort --check-only --diff || exit 1
 
-      - name: Check style with yapf
+      - name: Check style with black
         run: |
-          pipenv run yapf --diff --recursive ./city_scrapers/ ./tests/ || exit 1
+          pipenv run black ./city_scrapers/ ./tests/ --check
 
       - name: Lint with flake8
         run: |
