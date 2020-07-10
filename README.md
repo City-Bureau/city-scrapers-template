@@ -8,44 +8,44 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
 1. Create a new repo in your GitHub account or organization by [using this repo as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) or forking it.
 
-  - You should change the name to something specific to your area (i.e. `city-scrapers-il` for scrapers in Illinois)
-  - If you forked the repo, enable issues for your fork by going to Settings, and checking the box next to Issues in the Features section.
+   - You should change the name to something specific to your area (i.e. `city-scrapers-il` for scrapers in Illinois)
+   - If you forked the repo, enable issues for your fork by going to Settings, and checking the box next to Issues in the Features section.
 
 2. Clone the repo you created (substituting your account and repo name) with:
 
-  ```shell
-  git clone https://github.com/{ACCOUNT}/city-scrapers-{AREA}.git
-  ```
+   ```shell
+   git clone https://github.com/{ACCOUNT}/city-scrapers-{AREA}.git
+   ```
 
 3. Update `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `README.md` with info on your group or organization so that people know what your project is and how they can contribute.
 
 4. Create a Python 3.7 virtual environment and install development dependencies with:
 
-  ```shell
-  pipenv install --dev --python 3.7
-  ```
+   ```shell
+   pipenv install --dev --python 3.7
+   ```
 
-  If you want to use a version other than 3.7 (3.6 and above are supported), you can change the version for the `--python` flag.
+   If you want to use a version other than 3.7 (3.6 and above are supported), you can change the version for the `--python` flag.
 
 5. Decide whether you want to output static files to AWS S3 or Microsoft Azure Blob Storage, and update the `city-scrapers-core` package with the necessary extras:
 
-  ```shell
-  # To use AWS S3
-  pipenv install 'city-scrapers-core[aws]'
-  # To use Microsoft Azure
-  pipenv install 'city-scrapers-core[azure]`
-  ```
+   ```shell
+   # To use AWS S3
+   pipenv install 'city-scrapers-core[aws]'
+   # To use Microsoft Azure
+   pipenv install 'city-scrapers-core[azure]`
+   ```
 
-  Once you've updated `city-scrapers-core`, you'll need to update [`./city_scrapers/settings/prod.py`](./city_scrapers/settings/prod.py) by uncommenting the extension and storages related to your platform.
+   Once you've updated `city-scrapers-core`, you'll need to update [`./city_scrapers/settings/prod.py`](./city_scrapers/settings/prod.py) by uncommenting the extension and storages related to your platform.
 
-  **Note:** You can reach out to us at [documenters@citybureau.org](mailto:documenters@citybureau.org) or on our [Slack](https://airtable.com/shrRv027NLgToRFd6) if you want free hosting on either platform and we'll create a bucket/container and share credentials with you. Otherwise you can use your own credentials.
+   **Note:** You can reach out to us at [documenters@citybureau.org](mailto:documenters@citybureau.org) or on our [Slack](https://airtable.com/shrRv027NLgToRFd6) if you want free hosting on either platform and we'll create a bucket/container and share credentials with you. Otherwise you can use your own credentials.
 
 6. Create a free account on [Sentry](https://sentry.io/), and make sure to [apply for a sponsored open source account](https://sentry.io/for/open-source/) to take advantage of additional features.
 
 7. The project template uses [GitHub Actions](https://docs.github.com/en/actions) for testing and running scrapers. All of the workflows are stored in the `./.github/workflows` directory.
 
-  - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR, and can be enabled by uncommenting the `on` block.
-  - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3 or Azure. You can enable this by uncommenting the `on` block and setting the `cron` expression to when you want your scrapers to run (in UTC, not the local timezone).
+   - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR, and can be enabled by uncommenting the `on` block.
+   - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3 or Azure. You can enable this by uncommenting the `on` block and setting the `cron` expression to when you want your scrapers to run (in UTC, not the local timezone).
 
 8. In order for the scraped results to access S3 or Azure as well as report errors to Sentry, you'll need to set [encrypted secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) for your actions. Set all of the secrets for your storage backend as well as `SENTRY_DSN` for both of them, and then uncomment the values you've set in the `env` section of `cron.yml`. If the `cron.yml` workflow is enabled, it will now be able to access these values as environment variables.
 
