@@ -14,5 +14,5 @@ pypiwin32 = {version = "*", sys_platform = "== 'win32'"}
 freezegun = "*"
 pytest = "*"
 "flake8" = "*"
-isort = "*"
+isort = "<5.0"
 black = "==19.10b0"

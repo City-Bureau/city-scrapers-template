@@ -42,6 +42,8 @@ DOWNLOADER_MIDDLEWARES = {
     "scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware": 543,
 }
 
+SPIDER_MIDDLEWARES = {}
+
 # Use commands from city_scrapers_core package
 
 COMMANDS_MODULE = "city_scrapers_core.commands"
