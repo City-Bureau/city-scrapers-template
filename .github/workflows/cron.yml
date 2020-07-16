@@ -1,9 +1,10 @@
-name: Cron Build
+name: Cron
 
-# on:
-#   schedule:
-#     # Set any time that you'd like scrapers to run (in UTC)
-#     - cron: "1 6 * * *"
+on:
+  schedule:
+    # Set any time that you'd like scrapers to run (in UTC)
+    - cron: "1 6 * * *"
+  workflow_dispatch:
 
 env:
   CI: true

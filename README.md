@@ -1,5 +1,8 @@
 # City Scrapers Template
 
+[![CI build status](https://github.com/City-Bureau/city-scrapers-template/workflows/CI/badge.svg)](https://github.com/City-Bureau/city-scrapers-template/actions?query=workflow%3ACI)
+[![Cron build status](https://github.com/City-Bureau/city-scrapers-template/workflows/Cron/badge.svg)](https://github.com/City-Bureau/city-scrapers-template/actions?query=workflow%3ACron)
+
 Template repo for creating a [City Scrapers](https://cityscrapers.org/) project in your area to scrape, standardize and share public meetings from local government websites. You can find more information on the [project homepage](https://cityscrapers.org/) or in the original City Scrapers repo for the Chicago area: [City-Bureau/city-scrapers](https://github.com/City-Bureau/city-scrapers).
 
 ## Setup
@@ -42,10 +45,11 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
 6. Create a free account on [Sentry](https://sentry.io/), and make sure to [apply for a sponsored open source account](https://sentry.io/for/open-source/) to take advantage of additional features.
 
-7. The project template uses [GitHub Actions](https://docs.github.com/en/actions) for testing and running scrapers. All of the workflows are stored in the `./.github/workflows` directory.
+7. The project template uses [GitHub Actions](https://docs.github.com/en/actions) for testing and running scrapers. All of the workflows are stored in the `./.github/workflows` directory. You'll need to make sure Actions are [enabled for your repository](https://docs.github.com/en/github/administering-a-repository/disabling-or-limiting-github-actions-for-a-repository).
 
-   - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR, and can be enabled by uncommenting the `on` block.
-   - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3 or Azure. You can enable this by uncommenting the `on` block and setting the `cron` expression to when you want your scrapers to run (in UTC, not the local timezone).
+   - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR.
+   - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3 or Azure. You can set the `cron` expression to when you want your scrapers to run (in UTC, not your local timezone).
+   - Once you've made sure your workflows are configured, you can change the URLs for the status badges at the top of your `README.md` file so that they display and link to the status of the most recent workflow runs. If you don't change the workflow names, all you should need to change is the account and repo names in the URLs.
 
 8. In order for the scraped results to access S3 or Azure as well as report errors to Sentry, you'll need to set [encrypted secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) for your actions. Set all of the secrets for your storage backend as well as `SENTRY_DSN` for both of them, and then uncomment the values you've set in the `env` section of `cron.yml`. If the `cron.yml` workflow is enabled, it will now be able to access these values as environment variables.
 

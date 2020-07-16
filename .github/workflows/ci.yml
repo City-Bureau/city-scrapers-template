@@ -1,7 +1,6 @@
-name: CI Checks
+name: CI
 
-# Uncomment to enable
-# on: [push, pull_request]
+on: [push, pull_request]
 
 env:
   CI: true
