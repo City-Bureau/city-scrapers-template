@@ -22,13 +22,13 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
 3. Update `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `README.md` with info on your group or organization so that people know what your project is and how they can contribute.
 
-4. Create a Python 3.7 virtual environment and install development dependencies with:
+4. Create a Python 3.8 virtual environment and install development dependencies with:
 
    ```shell
-   pipenv install --dev --python 3.7
+   pipenv install --dev --python 3.8
    ```
 
-   If you want to use a version other than 3.7 (3.6 and above are supported), you can change the version for the `--python` flag.
+   If you want to use a version other than 3.8 (3.6 and above are supported), you can change the version for the `--python` flag.
 
 5. Decide whether you want to output static files to AWS S3 or Microsoft Azure Blob Storage, and update the `city-scrapers-core` package with the necessary extras:
 
@@ -49,6 +49,7 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
    - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR.
    - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3 or Azure. You can set the `cron` expression to when you want your scrapers to run (in UTC, not your local timezone).
+   - [`./.github/workflows/archive.yml`](./.github/workflows/archive.yml) runs all scrapers daily and submits all scraped URLs to the Internet Archive's [Wayback Machine](https://archive.org/web/). This is run separately to avoid slowing down general scraper runs, but adds to a valuable public archive of website information.
    - Once you've made sure your workflows are configured, you can change the URLs for the status badges at the top of your `README.md` file so that they display and link to the status of the most recent workflow runs. If you don't change the workflow names, all you should need to change is the account and repo names in the URLs.
 
 8. In order for the scraped results to access S3 or Azure as well as report errors to Sentry, you'll need to set [encrypted secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) for your actions. Set all of the secrets for your storage backend as well as `SENTRY_DSN` for both of them, and then uncomment the values you've set in the `env` section of `cron.yml`. If the `cron.yml` workflow is enabled, it will now be able to access these values as environment variables.
