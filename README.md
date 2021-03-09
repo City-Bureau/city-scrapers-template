@@ -30,29 +30,31 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
    If you want to use a version other than 3.8 (3.6 and above are supported), you can change the version for the `--python` flag.
 
-5. Decide whether you want to output static files to AWS S3 or Microsoft Azure Blob Storage, and update the `city-scrapers-core` package with the necessary extras:
+5. Decide whether you want to output static files to AWS S3, Microsoft Azure Blob Storage, or Google Cloud Storage, and update the `city-scrapers-core` package with the necessary extras:
 
    ```shell
    # To use AWS S3
    pipenv install 'city-scrapers-core[aws]'
    # To use Microsoft Azure
-   pipenv install 'city-scrapers-core[azure]`
+   pipenv install 'city-scrapers-core[azure]'
+   # To use Google Cloud Storage
+   pipenv install 'city-scrapers-core[gcs]'
    ```
 
    Once you've updated `city-scrapers-core`, you'll need to update [`./city_scrapers/settings/prod.py`](./city_scrapers/settings/prod.py) by uncommenting the extension and storages related to your platform.
 
-   **Note:** You can reach out to us at [documenters@citybureau.org](mailto:documenters@citybureau.org) or on our [Slack](https://airtable.com/shrRv027NLgToRFd6) if you want free hosting on either platform and we'll create a bucket/container and share credentials with you. Otherwise you can use your own credentials.
+   **Note:** You can reach out to us at [documenters@citybureau.org](mailto:documenters@citybureau.org) or on our [Slack](https://airtable.com/shrRv027NLgToRFd6) if you want free hosting on either S3 or Azure and we'll create a bucket/container and share credentials with you. Otherwise you can use your own credentials.
 
 6. Create a free account on [Sentry](https://sentry.io/), and make sure to [apply for a sponsored open source account](https://sentry.io/for/open-source/) to take advantage of additional features.
 
 7. The project template uses [GitHub Actions](https://docs.github.com/en/actions) for testing and running scrapers. All of the workflows are stored in the `./.github/workflows` directory. You'll need to make sure Actions are [enabled for your repository](https://docs.github.com/en/github/administering-a-repository/disabling-or-limiting-github-actions-for-a-repository).
 
    - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR.
-   - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3 or Azure. You can set the `cron` expression to when you want your scrapers to run (in UTC, not your local timezone).
+   - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3, Azure, or GCS. You can set the `cron` expression to when you want your scrapers to run (in UTC, not your local timezone).
    - [`./.github/workflows/archive.yml`](./.github/workflows/archive.yml) runs all scrapers daily and submits all scraped URLs to the Internet Archive's [Wayback Machine](https://archive.org/web/). This is run separately to avoid slowing down general scraper runs, but adds to a valuable public archive of website information.
    - Once you've made sure your workflows are configured, you can change the URLs for the status badges at the top of your `README.md` file so that they display and link to the status of the most recent workflow runs. If you don't change the workflow names, all you should need to change is the account and repo names in the URLs.
 
-8. In order for the scraped results to access S3 or Azure as well as report errors to Sentry, you'll need to set [encrypted secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) for your actions. Set all of the secrets for your storage backend as well as `SENTRY_DSN` for both of them, and then uncomment the values you've set in the `env` section of `cron.yml`. If the `cron.yml` workflow is enabled, it will now be able to access these values as environment variables.
+8. In order for the scraped results to access S3, Azure, or GCS as well as report errors to Sentry, you'll need to set [encrypted secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) for your actions. Set all of the secrets for your storage backend as well as `SENTRY_DSN` for both of them, and then uncomment the values you've set in the `env` section of `cron.yml`. If the `cron.yml` workflow is enabled, it will now be able to access these values as environment variables.
 
 9. Once you've set the storage backend and configured GitHub Actions you're ready to write some scrapers! Check out our [development docs](https://cityscrapers.org/docs/development/) to get started.
 
