@@ -73,7 +73,7 @@ FEED_STORAGES = {
 # (Important for certain providers, such as Github Actions integration.)
 # Uncomment the following code block if using GCS.
 # path = "{}/google-cloud-storage-credentials.json".format(os.getcwd())
-# credentials_content = os.get_env("GOOGLE_APPLICATION_CREDENTIALS")
+# credentials_content = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 # if not os.path.exists(credentials_content):
 #    with open(path, "w") as f:
 #        f.write(credentials_content)
