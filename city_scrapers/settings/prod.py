@@ -67,6 +67,18 @@ FEED_STORAGES = {
 # GCS_BUCKET = os.getenv("GCS_BUCKET")
 # CITY_SCRAPERS_STATUS_BUCKET = GCS_BUCKET
 
+# https://jansonh.github.io/scrapinghub-gcs/
+# If "GOOGLE_APPLICATION_CREDENTIALS" is the credential rather than a path,
+# we need to write a local file with the credential.
+# (Important for certain providers, such as Github Actions integration.)
+# Uncomment the following code block if using GCS.
+# path = "{}/google-cloud-storage-credentials.json".format(os.getcwd())
+# credentials_content = os.get_env("GOOGLE_APPLICATION_CREDENTIALS")
+# if not os.path.exists(credentials_content):
+#    with open(path, "w") as f:
+#        f.write(credentials_content)
+#    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path
+
 
 # Uncomment the FEED_URI for whichever provider you're using
 

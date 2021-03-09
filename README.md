@@ -43,7 +43,7 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
    Once you've updated `city-scrapers-core`, you'll need to update [`./city_scrapers/settings/prod.py`](./city_scrapers/settings/prod.py) by uncommenting the extension and storages related to your platform.
 
-   **Note:** You can reach out to us at [documenters@citybureau.org](mailto:documenters@citybureau.org) or on our [Slack](https://airtable.com/shrRv027NLgToRFd6) if you want free hosting on either platform and we'll create a bucket/container and share credentials with you. Otherwise you can use your own credentials.
+   **Note:** You can reach out to us at [documenters@citybureau.org](mailto:documenters@citybureau.org) or on our [Slack](https://airtable.com/shrRv027NLgToRFd6) if you want free hosting on either S3 or Azure and we'll create a bucket/container and share credentials with you. Otherwise you can use your own credentials.
 
 6. Create a free account on [Sentry](https://sentry.io/), and make sure to [apply for a sponsored open source account](https://sentry.io/for/open-source/) to take advantage of additional features.
 
