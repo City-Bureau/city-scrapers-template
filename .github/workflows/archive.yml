@@ -25,8 +25,8 @@ jobs:
           python-version: 3.8
 
       - name: Install Pipenv
-        uses: dschep/install-pipenv-action@v1
-
+        run: pip install --user pipenv
+  
       - name: Cache Python dependencies
         uses: actions/cache@v1
         with:
