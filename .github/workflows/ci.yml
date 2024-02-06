@@ -56,7 +56,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pipenv run pytest
+          pipenv run pytest || [ $? -eq 5 ]
 
       - name: Validate output with scrapy
         if: github.event_name == 'pull_request'
