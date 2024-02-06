@@ -8,6 +8,7 @@ on:
 
 env:
   CI: true
+  PYTHON_VERSION: 3.9
   PIPENV_VENV_IN_PROJECT: true
   SCRAPY_SETTINGS_MODULE: city_scrapers.settings.prod
   WAYBACK_ENABLED: true
@@ -32,27 +33,27 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v1
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Install Pipenv
         run: pip install --user pipenv
 
       - name: Cache Python dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: .venv
-          key: pip-3.8-${{ hashFiles('**/Pipfile.lock') }}
+          key: ${{ env.PYTHON_VERSION }}-${{ hashFiles('**/Pipfile.lock') }}
           restore-keys: |
-            pip-3.8-
+            ${{ env.PYTHON_VERSION }}-
             pip-
 
       - name: Install dependencies
         run: pipenv sync
         env:
-          PIPENV_DEFAULT_PYTHON_VERSION: 3.8
+          PIPENV_DEFAULT_PYTHON_VERSION: ${{ env.PYTHON_VERSION }}
 
       - name: Run scrapers
         run: |
