@@ -7,7 +7,7 @@ Template repo for creating a [City Scrapers](https://cityscrapers.org/) project 
 
 ## Setup
 
-In order to set up a City Scrapers project for your area you'll need a GitHub account as well as git, Python 3.6 or above and [Pipenv](https://pipenv.pypa.io/en/latest/) installed. If you want to make it easy to share access and onboard new contributors, [GitHub organizations](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams) are a free and easy way of doing that.
+In order to set up a City Scrapers project for your area you'll need a GitHub account as well as git, Python 3.9 or above and [Pipenv](https://pipenv.pypa.io/en/latest/) installed. If you want to make it easy to share access and onboard new contributors, [GitHub organizations](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams) are a free and easy way of doing that.
 
 1. Create a new repo in your GitHub account or organization by [using this repo as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) or forking it.
 
@@ -22,13 +22,11 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
 3. Update `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `README.md` with info on your group or organization so that people know what your project is and how they can contribute.
 
-4. Create a Python 3.8 virtual environment and install development dependencies with:
+4. Create a Python 3.9 virtual environment and install development dependencies with:
 
    ```shell
-   pipenv install --dev --python 3.8
+   pipenv install --dev --python 3.9
    ```
-
-   If you want to use a version other than 3.8 (3.6 and above are supported), you can change the version for the `--python` flag.
 
 5. Decide whether you want to output static files to AWS S3, Microsoft Azure Blob Storage, or Google Cloud Storage, and update the `city-scrapers-core` package with the necessary extras:
 
