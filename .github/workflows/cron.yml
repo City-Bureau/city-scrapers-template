@@ -22,6 +22,7 @@ env:
   # AZURE_ACCOUNT_KEY: ${{ secrets.AZURE_ACCOUNT_KEY }}
   # AZURE_ACCOUNT_NAME: ${{ secrets.AZURE_ACCOUNT_NAME }}
   # AZURE_CONTAINER: ${{ secrets.AZURE_CONTAINER }}
+  # AZURE_STATUS_CONTAINER = os.getenv("AZURE_STATUS_CONTAINER")
   # GOOGLE_APPLICATION_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
   # GCS_BUCKET = os.getenv("GCS_BUCKET")
   # Setup Sentry, add the DSN to secrets and uncomment here
