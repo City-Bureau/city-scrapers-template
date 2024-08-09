@@ -18,10 +18,10 @@ jobs:
   crawl:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
@@ -29,7 +29,7 @@ jobs:
         run: pip install --user pipenv
 
       - name: Cache Python dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .venv
           key: ${{ env.PYTHON_VERSION }}-${{ hashFiles('**/Pipfile.lock') }}
