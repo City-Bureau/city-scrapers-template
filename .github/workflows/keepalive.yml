@@ -1,0 +1,25 @@
+name: Keepalive
+
+# This workflow prevents GitHub from automatically disabling scheduled workflows
+# due to repository inactivity. GitHub disables workflows after 60 days of no commits.
+# This workflow uses the GitHub API to keep workflows active without creating commits.
+
+on:
+  schedule:
+    # Run every 45 days to prevent the 60-day inactivity timeout
+    - cron: "0 0 */45 * *"
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Keep workflows active
+        uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          use_api: true
+          # This will keep all scheduled workflows active in the repository
