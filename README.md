@@ -3,7 +3,7 @@
 [![CI build status](https://github.com/City-Bureau/city-scrapers-template/workflows/CI/badge.svg)](https://github.com/City-Bureau/city-scrapers-template/actions?query=workflow%3ACI)
 [![Cron build status](https://github.com/City-Bureau/city-scrapers-template/workflows/Cron/badge.svg)](https://github.com/City-Bureau/city-scrapers-template/actions?query=workflow%3ACron)
 
-Template repo for creating a [City Scrapers](https://cityscrapers.org/) project in your area to scrape, standardize and share public meetings from local government websites. You can find more information on the [project homepage](https://cityscrapers.org/) or in the original City Scrapers repo for the Chicago area: [City-Bureau/city-scrapers](https://github.com/City-Bureau/city-scrapers).
+Template repo for creating a [City Scrapers](https://city-scrapers.org/) project in your area to scrape, standardize and share public meetings from local government websites. You can find more information on the [project homepage](https://city-scrapers.org/) or in the original City Scrapers repo for the Chicago area: [City-Bureau/city-scrapers](https://github.com/City-Bureau/city-scrapers).
 
 ## Setup
 
@@ -54,7 +54,7 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
 8. In order for the scraped results to access S3, Azure, or GCS as well as report errors to Sentry, you'll need to set [encrypted secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) for your actions. Set all of the secrets for your storage backend as well as `SENTRY_DSN` for both of them, and then uncomment the values you've set in the `env` section of `cron.yml`. If the `cron.yml` workflow is enabled, it will now be able to access these values as environment variables.
 
-9. Once you've set the storage backend and configured GitHub Actions you're ready to write some scrapers! Check out our [development docs](https://cityscrapers.org/docs/development/) to get started.
+9. Once you've set the storage backend and configured GitHub Actions you're ready to write some scrapers! Check out our [development docs](https://city-scrapers.org/docs/development/) to get started.
 
 10. We're encouraging people to contribute to issues on repos marked with the [`city-scrapers`](https://github.com/topics/city-scrapers) topic, so be sure to set that on your repo and add labels like "good first issue" and "help wanted" so people know where they can get started.
 
@@ -62,6 +62,6 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 
 ## Next Steps
 
-There's a lot involved in starting a City Scrapers project beyond the code itself, so you can check out our [Introduction to City Scrapers](https://cityscrapers.org/docs/introduction/) in our documentation for some notes on how to grow your project.
+There's a lot involved in starting a City Scrapers project beyond the code itself, so you can check out our [Introduction to City Scrapers](https://city-scrapers.org/docs/introduction/) in our documentation for some notes on how to grow your project.
 
 If you want to ask questions or just talk to others working on City Scrapers projects you can [fill out this form](https://airtable.com/shrRv027NLgToRFd6) to join our Slack channel or reach out directly at [documenters@citybureau.org](mailto:documenters@citybureau.org).
