@@ -31,6 +31,8 @@ env:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - uses: actions/checkout@v4
 
@@ -67,7 +69,6 @@ jobs:
           pipenv run scrapy combinefeeds -s LOG_ENABLED=False
 
       - name: Prevent workflow deactivation
-        uses: gautamkrishnar/keepalive-workflow@v1
+        uses: gautamkrishnar/keepalive-workflow@v2
         with:
-          committer_username: "citybureau-bot"
-          committer_email: "documenters@citybureau.org"
+          use_api: true
