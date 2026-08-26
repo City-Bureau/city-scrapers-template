@@ -65,7 +65,7 @@ Once a scraper is submitted, pull requests go through three review phases before
 1. Open the PR as a **draft** to signal it's ready for an initial review but not yet for merging.
 2. A maintainer performs a QA check, verifying that the scraper output is consistent with the source website, and a code review, leaving feedback on any corrections or improvements needed.
 3. Once all feedback has been addressed, mark the PR as **Ready for Review** and add the appropriate reviewers from the **PDW team**, who perform a secondary code review and minor QA on the Documenters side.
-4. After the PDW review is complete, the PR is merged into the **staging** branch but kept open. The scraper output then becomes available on the staging environment of the Documenters site for a third round of QA by the **City Bureau (CB) team**. Any changes requested at this stage can be pushed to the PR branch and re-merged to staging as needed.
+4. After the PDW review is complete, the PR content is added into the **staging** branch but kept open. The scraper output then becomes available on the staging environment of the Documenters site for a third round of QA by the **City Bureau (CB) team**. Any changes requested at this stage can be pushed to the PR branch and re-merged to staging as needed.
 5. Once the CB team is satisfied, the scraper is marked ready for launch in the Airtable backlog. The PR is then merged into **main** and closed, making the scraper live on the public-facing Documenters site.
 
 ## Next Steps
