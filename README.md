@@ -10,7 +10,6 @@ Template repo for creating a [City Scrapers](https://city-scrapers.org/) project
 In order to set up a City Scrapers project for your area you'll need a GitHub account as well as git, Python 3.9 or above and [Pipenv](https://pipenv.pypa.io/en/latest/) installed. If you want to make it easy to share access and onboard new contributors, [GitHub organizations](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams) are a free and easy way of doing that.
 
 1. Create a new repo in your GitHub account or organization by [using this repo as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) or forking it.
-
    - You should change the name to something specific to your area (i.e. `city-scrapers-il` for scrapers in Illinois)
    - If you forked the repo, enable issues for your fork by going to Settings, and checking the box next to Issues in the Features section.
 
@@ -46,7 +45,6 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 6. Create a free account on [Sentry](https://sentry.io/), and make sure to [apply for a sponsored open source account](https://sentry.io/for/open-source/) to take advantage of additional features.
 
 7. The project template uses [GitHub Actions](https://docs.github.com/en/actions) for testing and running scrapers. All of the workflows are stored in the `./.github/workflows` directory. You'll need to make sure Actions are [enabled for your repository](https://docs.github.com/en/github/administering-a-repository/disabling-or-limiting-github-actions-for-a-repository).
-
    - [`./.github/workflows/ci.yml`](./.github/workflows/ci.yml) runs automated tests and style checks on every commit and PR.
    - [`./.github/workflows/cron.yml`](./.github/workflows/cron.yml) runs all scrapers daily and writes the output to S3, Azure, or GCS. You can set the `cron` expression to when you want your scrapers to run (in UTC, not your local timezone).
    - [`./.github/workflows/archive.yml`](./.github/workflows/archive.yml) runs all scrapers daily and submits all scraped URLs to the Internet Archive's [Wayback Machine](https://archive.org/web/). This is run separately to avoid slowing down general scraper runs, but adds to a valuable public archive of website information.
@@ -59,6 +57,16 @@ In order to set up a City Scrapers project for your area you'll need a GitHub ac
 10. We're encouraging people to contribute to issues on repos marked with the [`city-scrapers`](https://github.com/topics/city-scrapers) topic, so be sure to set that on your repo and add labels like "good first issue" and "help wanted" so people know where they can get started.
 
 11. If you want an easy way of sharing your scraper results, check out our [`city-scrapers-events`](https://github.com/City-Bureau/city-scrapers-events) template repo for a site that will display the meetings you've scraped for free on [GitHub Pages](https://pages.github.com/).
+
+## Current PR Review Process
+
+Once a scraper is submitted, pull requests go through three review phases before reaching production. Note that specific reviewer assignments, branch names, and Airtable status labels may change over time. Check with your project lead for current values.
+
+1. Open the PR as a **draft** to signal it's ready for an initial review but not yet for merging.
+2. A maintainer performs a QA check, verifying that the scraper output is consistent with the source website, and a code review, leaving feedback on any corrections or improvements needed.
+3. Once all feedback has been addressed, mark the PR as **Ready for Review** and add the appropriate reviewers from the **PDW team**, who perform a secondary code review and minor QA on the Documenters side.
+4. After the PDW review is complete, the PR is merged into the **staging** branch but kept open. The scraper output then becomes available on the staging environment of the Documenters site for a third round of QA by the **City Bureau (CB) team**. Any changes requested at this stage can be pushed to the PR branch and re-merged to staging as needed.
+5. Once the CB team is satisfied, the scraper is marked ready for launch in the Airtable backlog. The PR is then merged into **main** and closed, making the scraper live on the public-facing Documenters site.
 
 ## Next Steps
 
